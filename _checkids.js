@@ -1,6 +1,6 @@
 /* 静态检查脚本：核对 JS 里引用的 DOM id 是否都存在于 index.html（含 JS 动态生成的 id） */
 const fs = require('fs');
-const path = 'D:\\雪梨英语管理系统\\Game3\\index.html';
+const path = 'D:\\雪梨英语管理系统\\Game3\\legacy.html';
 const html = fs.readFileSync(path, 'utf8');
 
 const ids = new Set();

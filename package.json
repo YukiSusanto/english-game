@@ -4,11 +4,14 @@
   "description": "",
   "main": "_checkids.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node tests/v5-core.cjs",
     "remotion": "remotion",
     "remotion:studio": "remotion studio remotion/src/index.ts",
     "remotion:render": "remotion render remotion/src/index.ts Opening assets/story/opening.mp4",
-    "remotion:preview": "remotion still remotion/src/index.ts Opening assets/story/opening-preview.png --frame=300"
+    "remotion:preview": "remotion still remotion/src/index.ts Opening assets/story/opening-preview.png --frame=300",
+    "dev": "node tools/serve-v5.cjs",
+    "test:browser": "node tests/v5-browser.cjs",
+    "test:legacy": "node _selftest.js"
   },
   "keywords": [],
   "author": "",

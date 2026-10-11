@@ -7,7 +7,7 @@
 const fs = require('fs');
 const vm = require('vm');
 
-const HTML = fs.readFileSync('D:\\雪梨英语管理系统\\Game3\\index.html', 'utf8');
+const HTML = fs.readFileSync('D:\\雪梨英语管理系统\\Game3\\legacy.html', 'utf8');
 const i = HTML.indexOf('<script>'), j = HTML.lastIndexOf('</script>');
 const CODE = HTML.slice(i + 8, j);
 
@@ -1119,7 +1119,7 @@ ok(W.Game.run().floor === 1, '战斗中跳关照样推进了 floor（战斗前 i
 
 /* 悬浮按钮：只在地图和战斗界面出现 */
 ok(!!getById('dbgFab'), '悬浮按钮 #dbgFab 在 HTML 里');
-const srcDbg = require('fs').readFileSync('D:\\雪梨英语管理系统\\Game3\\index.html', 'utf8');
+const srcDbg = require('fs').readFileSync('D:\\雪梨英语管理系统\\Game3\\legacy.html', 'utf8');
 ok(/<button class="dbgFab" id="dbgFab"/.test(srcDbg), '悬浮按钮声明时带着 dbgFab 类');
 ok(/syncForScreen\(screenId\)/.test(srcDbg) && /scr-map' \|\| screenId==='scr-battle/.test(srcDbg),
    '悬浮按钮只在地图/战斗界面出现（标题页不出现，免得误触）');
@@ -1231,7 +1231,7 @@ ok(getById('modalBox').innerHTML.indexOf('dbgSkip') < 0, '换一个弹窗之后�
    ========================================================================= */
 section('19b. 玩法清晰度四件套');
 
-const srcUI = require('fs').readFileSync('D:\\雪梨英语管理系统\\Game3\\index.html', 'utf8');
+const srcUI = require('fs').readFileSync('D:\\雪梨英语管理系统\\Game3\\legacy.html', 'utf8');
 
 /* ---------------- ① HUD 指标有名字 + 有解释 ---------------- */
 W.Game.startRun(1);
@@ -2341,7 +2341,7 @@ ok(!!canvas, '演出画布存在');
    简笔画的 0 和 100 必须落在同一个正方形里，实物图也用这个正方形 */
 const srcCode = (function () {
   const fs = require('fs');
-  const html = fs.readFileSync('D:\\雪梨英语管理系统\\Game3\\index.html', 'utf8');
+  const html = fs.readFileSync('D:\\雪梨英语管理系统\\Game3\\legacy.html', 'utf8');
   return html.slice(html.indexOf('<script>') + 8, html.lastIndexOf('</script>'));
 })();
 ok(/function box\(\)\{[\s\S]{0,160}?side=Math\.min\(W,H\)/.test(srcCode),
@@ -2693,7 +2693,7 @@ ok(missingSeg.length === 0,
 
 /* ★ 数据写了还不够 —— 每一段都必须在代码里有【触发点】，否则永远不会播。
    这条正是这次发现的现状本身（写好的剧情没人读），所以要守死。 */
-const srcAll = fs.readFileSync('D:\\雪梨英语管理系统\\Game3\\index.html', 'utf8');
+const srcAll = fs.readFileSync('D:\\雪梨英语管理系统\\Game3\\legacy.html', 'utf8');
 ok(/Story\.playOnce\('ch'\+id\+'_open'/.test(srcAll), '开章剧情有触发点（章节选择 → 落地图之前）');
 ok(/Story\.playOnce\('ch'\+ch\.id\+'_mid'/.test(srcAll), '中段剧情有触发点（第一次进谜题节点）');
 ok(/Story\.playOnce\(tailKey/.test(srcAll), '通关剧情有触发点（Boss 胜利 → 结算之前）');
