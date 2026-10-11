@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>实物像素图 · 对齐对照表</title>
+<style>
+:root{--ink:#241a2e;--paper:#f7e7c6;--cream:#fff8e8;--gold:#ffd447;}
+*{box-sizing:border-box}
+body{margin:0;padding:20px;background:var(--ink);color:var(--paper);
+  font:14px/1.5 'Courier New',monospace}
+h1{color:var(--gold);font-size:22px;margin:0 0 6px}
+.sum{opacity:.85;margin-bottom:18px}
+.sum b{color:#7bd389}.sum i{color:#ff8f8c;font-style:normal}
+.row{display:grid;grid-template-columns:220px 1fr 1fr 1fr;gap:14px;align-items:center;
+  padding:12px;margin-bottom:10px;border-radius:10px;background:#2e2340;
+  border-left:6px solid #c98a1a}
+.row.ok{border-left-color:#2f7d3c}
+.hd{display:flex;flex-direction:column;gap:2px}
+.hd b{color:var(--gold);font-size:16px}
+.hd span{opacity:.8;font-size:12px;word-break:break-all}
+.hd em{color:#7bd389;font-style:normal;font-size:12px}
+.hd small{opacity:.6;font-size:11px;word-break:break-all}
+.pane{display:flex;flex-direction:column;align-items:center;gap:4px}
+.cap{font-size:11px;opacity:.65}
+.cv{position:relative;width:150px;height:150px;background:#fdf6e5;border-radius:8px;overflow:hidden;
+  border:2px solid var(--ink)}
+.cv svg{width:100%;height:100%;display:block}
+.lay{position:absolute;inset:0;width:100%;height:100%}
+.lay.pixel{image-rendering:pixelated}
+.nope{display:flex;align-items:center;justify-content:center;color:#a03030;font-size:12px}
+.oline{position:absolute;inset:0}
+footer{margin-top:24px;opacity:.6;font-size:12px}
+@media(max-width:900px){.row{grid-template-columns:1fr 1fr}.hd{grid-column:1/-1}}
+</style></head><body>
+<h1>实物像素图 · 对齐对照表</h1>
+<div class="sum">共 57 个图形　·　<b>★ 真图 57</b>　·　<i>◆ 程序化占位 0</i>
+　·　<b>第三格的红线是简笔画</b>，贴着实物轮廓 = 对齐了<br>第三格用 SVG 的 fill-rule 直接填色，和游戏里洪泛填色的几何是同一套，所以看到的就是游戏里的效果。</div>
+
+  <div class="row ok">
+    <div class="hd">
+      <b>aunt</b>
+      <span>aunt</span>
+      
+      <small>★ 真图 · assets/sprites/aunt.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 36 22 L 30 40 L 34 56 L 50 66 L 66 56 L 70 40 L 64 22 M 34 56 L 26 86 L 50 90 L 74 86 L 66 56 M 42 48 L 58 48 M 66 56 L 80 68 L 76 82 L 64 72" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABs0lEQVR42u2YzU0DQQyFtwxOSBw4UQOil/TAhQqogRNHpLQQbrnQABINcKaDIB8WGcs7Y+/sj+3xk54SJdmV3mePMzvDkEqlUqlUKpXaR/e315fuApfcdfiwIG6u7i7g88uD2PD7UAA04cNBgCA/H69/pu2Ov6O/cR26FJDz19vTP2MQ7rqhVmEJALDLwYirTwGMA5EuC/z5FAA3XdA9gNKQawHgYhnQ6i8NwHwX1AC0DMFQALiwIQBM7e21HcBtmMzPAa76WhBc1d10gQRADYLkerMANI+7FIT2WrfV5yDMuc5kF8wJMteuZ0CrTf8Vdlv9rbrA5U6wKwBrLwOX5wFdVX98pF0LgIsZAPt5eH1+PIp9On5WTc8OTAPQhNcCwCC6BmAaghZAKAhzAUgg0LNEkxDWAjCGxBC+3w/2ILQAKEHAAeE9hMc2AaE1vKYLKABwCACSLggPoAZhKnx4AFxwMwCWDD8FoXsAJQghAUgh4IewUOFLEMaKdwmAboqww4XnINCgu1YetqBbA+Ag7HoEtgUAkxDo+qNeIjS9p3kAEjiSoNJ7Dt4kCZpKpVKp1Pr6BX7GOturY8IgAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABs0lEQVR42u2YzU0DQQyFtwxOSBw4UQOil/TAhQqogRNHpLQQbrnQABINcKaDIB8WGcs7Y+/sj+3xk54SJdmV3mePMzvDkEqlUqlUKpXaR/e315fuApfcdfiwIG6u7i7g88uD2PD7UAA04cNBgCA/H69/pu2Ov6O/cR26FJDz19vTP2MQ7rqhVmEJALDLwYirTwGMA5EuC/z5FAA3XdA9gNKQawHgYhnQ6i8NwHwX1AC0DMFQALiwIQBM7e21HcBtmMzPAa76WhBc1d10gQRADYLkerMANI+7FIT2WrfV5yDMuc5kF8wJMteuZ0CrTf8Vdlv9rbrA5U6wKwBrLwOX5wFdVX98pF0LgIsZAPt5eH1+PIp9On5WTc8OTAPQhNcCwCC6BmAaghZAKAhzAUgg0LNEkxDWAjCGxBC+3w/2ILQAKEHAAeE9hMc2AaE1vKYLKABwCACSLggPoAZhKnx4AFxwMwCWDD8FoXsAJQghAUgh4IewUOFLEMaKdwmAboqww4XnINCgu1YetqBbA+Ag7HoEtgUAkxDo+qNeIjS9p3kAEjiSoNJ7Dt4kCZpKpVKp1Pr6BX7GOturY8IgAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 36 22 L 30 40 L 34 56 L 50 66 L 66 56 L 70 40 L 64 22 M 34 56 L 26 86 L 50 90 L 74 86 L 66 56 M 42 48 L 58 48 M 66 56 L 80 68 L 76 82 L 64 72" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>baby</b>
+      <span>baby</span>
+      
+      <small>★ 真图 · assets/sprites/baby.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 22 L 64 30 L 64 48 L 50 62 L 36 48 L 36 30 L 50 22 M 36 40 L 24 52 L 30 60 M 64 40 L 76 52 L 70 60 M 44 36 L 56 36 M 56 40 L 64 44" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABPElEQVR42u2ZzwnCMBSHO4ZXz4JDeHUER3ADrw5SL4KruIDgAuLRDZQWIiHmv2mTpt8H71ba9/uSlxbaNAAAAAAAAAAwNMvF6q2r2QTfb9baqlqELfgsRIQIkEXMNnxVu6EL8Lqe+oqVUI0AlwjdNVUKCKkqBZikmK6d9MfOP6svS5iMiFShJzkOKcI/d8e+Jich9coLEbpxKkqCbdZtUu6Xw0+5RBR3LtgCiuZidoYsxXWgZpPgEz6FAFlCMeeCbTXUZtTZbW8PZ3XXyeF9x21UAers2hoQTbuCb9vzt9TwJqk6UaML8Hm4z+rLAlz3jOkh+ckf0kBVAnRN5BSQ9XXo04jv4ScLsEkoJrzvVhQjE7oDTPfKvvVjV0T+qDG9/lxfeEWtvilc7P+BIZ4DAAAAAAAAAAAAAAAg+AAhgnPVY4RlhgAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABPElEQVR42u2ZzwnCMBSHO4ZXz4JDeHUER3ADrw5SL4KruIDgAuLRDZQWIiHmv2mTpt8H71ba9/uSlxbaNAAAAAAAAAAwNMvF6q2r2QTfb9baqlqELfgsRIQIkEXMNnxVu6EL8Lqe+oqVUI0AlwjdNVUKCKkqBZikmK6d9MfOP6svS5iMiFShJzkOKcI/d8e+Jich9coLEbpxKkqCbdZtUu6Xw0+5RBR3LtgCiuZidoYsxXWgZpPgEz6FAFlCMeeCbTXUZtTZbW8PZ3XXyeF9x21UAers2hoQTbuCb9vzt9TwJqk6UaML8Hm4z+rLAlz3jOkh+ckf0kBVAnRN5BSQ9XXo04jv4ScLsEkoJrzvVhQjE7oDTPfKvvVjV0T+qDG9/lxfeEWtvilc7P+BIZ4DAAAAAAAAAAAAAAAg+AAhgnPVY4RlhgAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 22 L 64 30 L 64 48 L 50 62 L 36 48 L 36 30 L 50 22 M 36 40 L 24 52 L 30 60 M 64 40 L 76 52 L 70 60 M 44 36 L 56 36 M 56 40 L 64 44" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>bag</b>
+      <span>schoolbag</span>
+      
+      <small>★ 真图 · assets/sprites/bag.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 28 32 L 28 16 L 72 16 L 72 32 M 16 32 L 84 32 L 84 90 L 16 90 L 16 32 M 38 32 L 38 54 L 62 54 L 62 32" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA10lEQVR42u3auw3CMBRA0YxBS80Q2QM6ClpYhgYJNkmXkjkQW0DLnwjF8XM4V3odkqMjlK+rSpIkSfqp6WR2yTkhAOr1IcsAiAiQ+i8fGmCIAxp6PQAAAAAAAODDbe++Pd9N6vuAruslA3g8gIgDAEBGgPn2mHyyPSQB6Bng9qw9WoDFavNyTs3yad79FgAAAOUC9HFdBwAgEEC7q79OSoAu6wMAACDGSbDPz2BFXgUAAPhzAC9EAAAAAAAAAAAAAAAYD0CubbEhttACyLw1vqht9JKkAroCICK/z1YAURoAAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA10lEQVR42u3auw3CMBRA0YxBS80Q2QM6ClpYhgYJNkmXkjkQW0DLnwjF8XM4V3odkqMjlK+rSpIkSfqp6WR2yTkhAOr1IcsAiAiQ+i8fGmCIAxp6PQAAAAAAAODDbe++Pd9N6vuAruslA3g8gIgDAEBGgPn2mHyyPSQB6Bng9qw9WoDFavNyTs3yad79FgAAAOUC9HFdBwAgEEC7q79OSoAu6wMAACDGSbDPz2BFXgUAAPhzAC9EAAAAAAAAAAAAAAAYD0CubbEhttACyLw1vqht9JKkAroCICK/z1YAURoAAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 28 32 L 28 16 L 72 16 L 72 32 M 16 32 L 84 32 L 84 90 L 16 90 L 16 32 M 38 32 L 38 54 L 62 54 L 62 32" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>bathroom</b>
+      <span>bathroom</span>
+      
+      <small>★ 真图 · assets/sprites/bathroom.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 16 54 L 84 54 L 80 76 L 70 86 L 30 86 L 20 76 L 16 54 M 70 54 L 70 24 L 82 18 M 82 18 L 92 18 L 92 28 M 28 36 L 34 30 L 40 36 L 46 30 L 52 36 M 62 36 L 68 30 L 74 36" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABg0lEQVR42u2ZMY7CMBBFc4xtqfesXGAbKk5CtQ3brHIESoSQ0myTVZAGhpHHDiR2JuP/pS/hyIk9D2ewh6aBIAiCIAiCIBfafHz21QY++HBse/pMriL47df+5gGAtFsQFBgFrwEgCG6/dTK9Au4ByOD5EtcguAEQCj62KrS+LgDIgKoCEApG/vyFbGJDMmUiMQCr2ZEBAAA4BBDKyFo71Tf1HJNZHQDYZHbtqU8BGPq8CoDuW8UKmCsnrPYVAAAAeCiUE+S9PCekcknoFFhV6cvNwWZOACYOQFYAVFENSuWUIgDGnL/n9vna3a0t82wAYpPhkm1+PdR3bH8+nnSRQggF/Xv5u1kDoOkdANozpPmcsi55PmAMQGzyuQDw1VAEgDRJtvm1KddDY3JnB8AhDLs0a84ePAAAwHMesBY8AABAV2bfL3eBVlzs0AMAAFA5AA3C909bzIsGr0FYCsCiFR8OYQkAJspdBKE0AHP/C7hNeNYgmK7yliiMNhAEQRAEQTPoH3bmp5D2Caq6AAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABg0lEQVR42u2ZMY7CMBBFc4xtqfesXGAbKk5CtQ3brHIESoSQ0myTVZAGhpHHDiR2JuP/pS/hyIk9D2ewh6aBIAiCIAiCIBfafHz21QY++HBse/pMriL47df+5gGAtFsQFBgFrwEgCG6/dTK9Au4ByOD5EtcguAEQCj62KrS+LgDIgKoCEApG/vyFbGJDMmUiMQCr2ZEBAAA4BBDKyFo71Tf1HJNZHQDYZHbtqU8BGPq8CoDuW8UKmCsnrPYVAAAAeCiUE+S9PCekcknoFFhV6cvNwWZOACYOQFYAVFENSuWUIgDGnL/n9vna3a0t82wAYpPhkm1+PdR3bH8+nnSRQggF/Xv5u1kDoOkdANozpPmcsi55PmAMQGzyuQDw1VAEgDRJtvm1KddDY3JnB8AhDLs0a84ePAAAwHMesBY8AABAV2bfL3eBVlzs0AMAAFA5AA3C909bzIsGr0FYCsCiFR8OYQkAJspdBKE0AHP/C7hNeNYgmK7yliiMNhAEQRAEQTPoH3bmp5D2Caq6AAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 16 54 L 84 54 L 80 76 L 70 86 L 30 86 L 20 76 L 16 54 M 70 54 L 70 24 L 82 18 M 82 18 L 92 18 L 92 28 M 28 36 L 34 30 L 40 36 L 46 30 L 52 36 M 62 36 L 68 30 L 74 36" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>bed</b>
+      <span>bed</span>
+      
+      <small>★ 真图 · assets/sprites/bed.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 10 26 L 10 86 M 10 26 L 72 26 M 72 26 L 72 52 M 10 52 L 64 52 M 18 36 L 36 36 L 36 52 M 18 86 L 18 94 M 72 86 L 72 94" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA7UlEQVR42u3asQnCQBSA4Yxha+0KgnuIO9i4io2gvXtYuoAbWFkI1opgIUFDEnIvZ/x+eJ2Q5OPIYbiikCRJkiRJejUeTe6/MEkBTptF1gMAQGKA/Wqa9fS6AqJfduEAVQjJL1xjRYbcAwAAAFq/BAe/At67XG/3cl3fYDYA5Yf/BtA1AgAAAAAA6APg0wPX2Qbff9vFpN5mGwF8a3s4h07Iv0EAAAAAqNtsuQubLHeBZ/P1sZMBAAAAAAAAAAAAAABA/wC5zCeE3g5JhH2YrPgwGnJKpOq0xuABqi4MAAAAAH8FEH5YucF9FFLrHoRWgepjwKq1AAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA7UlEQVR42u3asQnCQBSA4Yxha+0KgnuIO9i4io2gvXtYuoAbWFkI1opgIUFDEnIvZ/x+eJ2Q5OPIYbiikCRJkiRJejUeTe6/MEkBTptF1gMAQGKA/Wqa9fS6AqJfduEAVQjJL1xjRYbcAwAAAFq/BAe/At67XG/3cl3fYDYA5Yf/BtA1AgAAAAAA6APg0wPX2Qbff9vFpN5mGwF8a3s4h07Iv0EAAAAAqNtsuQubLHeBZ/P1sZMBAAAAAAAAAAAAAABA/wC5zCeE3g5JhH2YrPgwGnJKpOq0xuABqi4MAAAAAH8FEH5YucF9FFLrHoRWgepjwKq1AAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 10 26 L 10 86 M 10 26 L 72 26 M 72 26 L 72 52 M 10 52 L 64 52 M 18 36 L 36 36 L 36 52 M 18 86 L 18 94 M 72 86 L 72 94" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>bedroom</b>
+      <span>bedroom</span>
+      
+      <small>★ 真图 · assets/sprites/bedroom.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 14 20 L 86 20 L 86 88 L 14 88 L 14 20 M 22 58 L 78 58 L 78 82 L 22 82 L 22 58 M 22 58 L 22 42 L 78 42 L 78 58 M 30 48 L 44 48 L 44 58" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABOUlEQVR42u3aMQrCMBTGcY/h6uLiFQQ3DyHewcXVY7g4uHsXL+AlHARn5Q2BUJ42bZOXtPl/8A0FxeaHNm3MbEYIIYQQQgghRM9ivvqMtdEAnq/36AoAAABMB0C7wFUDsDlc1badVzIAOb4d161NOfgQBAByAezOdzOAIn4CbsApAJoIp+0yaPBmADJYH8A/TnFBFIDs06AG4AZdDcDjsi+uAABgeCdYPYDUn/rkNaEJuYnq2izPAm2Dl9nACgEAawCZj137APjvj1UAADAGcOkDEDvmAFI/GoIlQJZZoJkmQnUAOVM0gP/IHKOhK0OTAGhbEiseIHQAMco3AAAAAAAAgMgA//4GKwng1zkORgAAAADUNfgUKzpDq50nAAAAMBxAq3YClnuAu3y+2Qbq3Bu42dZOCCEd8wUDFeRm+8R/EgAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABOUlEQVR42u3aMQrCMBTGcY/h6uLiFQQ3DyHewcXVY7g4uHsXL+AlHARn5Q2BUJ42bZOXtPl/8A0FxeaHNm3MbEYIIYQQQgghRM9ivvqMtdEAnq/36AoAAABMB0C7wFUDsDlc1badVzIAOb4d161NOfgQBAByAezOdzOAIn4CbsApAJoIp+0yaPBmADJYH8A/TnFBFIDs06AG4AZdDcDjsi+uAABgeCdYPYDUn/rkNaEJuYnq2izPAm2Dl9nACgEAawCZj137APjvj1UAADAGcOkDEDvmAFI/GoIlQJZZoJkmQnUAOVM0gP/IHKOhK0OTAGhbEiseIHQAMco3AAAAAAAAgMgA//4GKwng1zkORgAAAADUNfgUKzpDq50nAAAAMBxAq3YClnuAu3y+2Qbq3Bu42dZOCCEd8wUDFeRm+8R/EgAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 14 20 L 86 20 L 86 88 L 14 88 L 14 20 M 22 58 L 78 58 L 78 82 L 22 82 L 22 58 M 22 58 L 22 42 L 78 42 L 78 58 M 30 48 L 44 48 L 44 58" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>beef</b>
+      <span>beef</span>
+      
+      <small>★ 真图 · assets/sprites/beef.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 18 38 L 30 26 L 62 26 L 78 34 L 82 56 L 68 72 L 34 72 L 20 58 L 18 38 M 78 40 L 90 34 L 94 42 L 90 50 L 80 48 M 34 42 L 44 38 M 54 58 L 64 54" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABXElEQVR42u2ZsW3DMBBFPUZa1+nSuvYSGSGjBJkkY3gP1/YEbhUkiAyCECmejnc62e8BVwmw+B/JE2XtdgAAAAAAAAAAsJz9y+tgUZsKf/386Fqn92N8EVbhRwFjhRRhGX5KQigRHuFLElYX4Rm+JCAV0dqYNxW+FromIQ08XL6H4Xa+l1qEJvzfYLLSBs+3wz10WomAUYJKwO8NNaFLtSR4KqD42xYCWiRMDsBIQqsAdR9IBdRE5NbnJGhmf1bAf3VphFMCmiUYLH3pKjATkEooXbcMXxXQswfMSVizHlpAy2p5OAHSLeP2em0pQHNecHsvsBLQ49DkIkEqoGXgkvDhBSx51PU6Lq8mQPtsbwn/dXirlut/A1Z9YAwjCe4evpeElmBhw0sk5AOWzm7Y8FMSpAGk+zxc+FyCdkbDNj1PCZub/VzC04b3kLC5b4VP+aEUAAAAAAAAACAyP03REa3TP98xAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABXElEQVR42u2ZsW3DMBBFPUZa1+nSuvYSGSGjBJkkY3gP1/YEbhUkiAyCECmejnc62e8BVwmw+B/JE2XtdgAAAAAAAAAAsJz9y+tgUZsKf/386Fqn92N8EVbhRwFjhRRhGX5KQigRHuFLElYX4Rm+JCAV0dqYNxW+FromIQ08XL6H4Xa+l1qEJvzfYLLSBs+3wz10WomAUYJKwO8NNaFLtSR4KqD42xYCWiRMDsBIQqsAdR9IBdRE5NbnJGhmf1bAf3VphFMCmiUYLH3pKjATkEooXbcMXxXQswfMSVizHlpAy2p5OAHSLeP2em0pQHNecHsvsBLQ49DkIkEqoGXgkvDhBSx51PU6Lq8mQPtsbwn/dXirlut/A1Z9YAwjCe4evpeElmBhw0sk5AOWzm7Y8FMSpAGk+zxc+FyCdkbDNj1PCZub/VzC04b3kLC5b4VP+aEUAAAAAAAAACAyP03REa3TP98xAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 18 38 L 30 26 L 62 26 L 78 34 L 82 56 L 68 72 L 34 72 L 20 58 L 18 38 M 78 40 L 90 34 L 94 42 L 90 50 L 80 48 M 34 42 L 44 38 M 54 58 L 64 54" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>board</b>
+      <span>blackboard</span>
+      
+      <small>★ 真图 · assets/sprites/board.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 10 12 L 90 12 L 90 64 L 10 64 L 10 12 M 26 88 L 74 88 M 34 68 L 34 88 M 66 68 L 66 88" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABBUlEQVR42u3bsQ3CMBCF4YxBS0PDCtQUVAzAGJSwCDUNI1GxQQokRAnCUiQECQn2Obrz/U96rZV8chw7gqoihBBCCGnJdDJ/lNJogPNhY75JAKvd2nwBAAAA2wD3yzHUPUAsQhGPgCqA+noTb85ZUMwiCEDkLCjqNagCIPfzLj0LzM6A95vtKwCsAbwFbG+EhiyUrvcB7neCrg9D7k+DfA/wDsA3QQAAAEANQN8WNvbEph5gv5yFpgA0Y4xVEYDPQS0BNAUgBeDfdl1AbKXGG/VXJSL6mcYDAAAAAAAAAAAAAAAAAAAQv/FXT9vFV1NOg7/GU3XzbReau2oQzP0RghBCCAl5Ap17X1rP4o+dAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABBUlEQVR42u3bsQ3CMBCF4YxBS0PDCtQUVAzAGJSwCDUNI1GxQQokRAnCUiQECQn2Obrz/U96rZV8chw7gqoihBBCCGnJdDJ/lNJogPNhY75JAKvd2nwBAAAA2wD3yzHUPUAsQhGPgCqA+noTb85ZUMwiCEDkLCjqNagCIPfzLj0LzM6A95vtKwCsAbwFbG+EhiyUrvcB7neCrg9D7k+DfA/wDsA3QQAAAEANQN8WNvbEph5gv5yFpgA0Y4xVEYDPQS0BNAUgBeDfdl1AbKXGG/VXJSL6mcYDAAAAAAAAAAAAAAAAAAAQv/FXT9vFV1NOg7/GU3XzbReau2oQzP0RghBCCAl5Ap17X1rP4o+dAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 10 12 L 90 12 L 90 64 L 10 64 L 10 12 M 26 88 L 74 88 M 34 68 L 34 88 M 66 68 L 66 88" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>book</b>
+      <span>book</span>
+      
+      <small>★ 真图 · assets/sprites/book.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 26 L 18 18 L 18 80 L 50 88 M 50 26 L 82 18 L 82 80 L 50 88 M 50 26 L 50 88" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABZUlEQVR42u3asc3CMBCG4YxBS03HAoxAQUlPzVj/KlR0SCxBgUQdlOIkfssk9tmcL/B+kivA9j1cgAh3HSGEEEIIIWQqy8Wql/GT+xsmvu62/el86V8XawUS7mHY17A/E4BwWIDECg5HM4ApkNxNxV6fsq4bgHD8rTejIOFjw/M167gFmALRFjxbAEGoVbgpwO3++DdaAoR7aQKgBdEATK3tAiAVJAUgdy2XAO9AYgClc88CQIYA1JrPFGB/OKpHLYDYvHQAAADYAWiu+xKAlPnpAAAAsAXQXPs5ALmfL3QAAADYA+Re+2MA2vsKOgCAxgA5rS/PF4DS22o6AAAA/HwN5vyULfkMoAMAAACAZgC1/smpBeDq73ELgFmdD6gB8FUHJFIAOCHiGUDO89TYeE0Amcvk3GLsRJemkBKAsOCmJ1i1IDkArgrWHHKMFToGECvWbcElXSIAs3l3P9klHSGEEGKaJ+aZJ8VZL1ZhAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABZUlEQVR42u3asc3CMBCG4YxBS03HAoxAQUlPzVj/KlR0SCxBgUQdlOIkfssk9tmcL/B+kivA9j1cgAh3HSGEEEIIIWQqy8Wql/GT+xsmvu62/el86V8XawUS7mHY17A/E4BwWIDECg5HM4ApkNxNxV6fsq4bgHD8rTejIOFjw/M167gFmALRFjxbAEGoVbgpwO3++DdaAoR7aQKgBdEATK3tAiAVJAUgdy2XAO9AYgClc88CQIYA1JrPFGB/OKpHLYDYvHQAAADYAWiu+xKAlPnpAAAAsAXQXPs5ALmfL3QAAADYA+Re+2MA2vsKOgCAxgA5rS/PF4DS22o6AAAA/HwN5vyULfkMoAMAAACAZgC1/smpBeDq73ELgFmdD6gB8FUHJFIAOCHiGUDO89TYeE0Amcvk3GLsRJemkBKAsOCmJ1i1IDkArgrWHHKMFToGECvWbcElXSIAs3l3P9klHSGEEGKaJ+aZJ8VZL1ZhAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 26 L 18 18 L 18 80 L 50 88 M 50 26 L 82 18 L 82 80 L 50 88 M 50 26 L 50 88" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>boy</b>
+      <span>boy</span>
+      
+      <small>★ 真图 · assets/sprites/boy.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 18 L 62 24 L 62 36 L 50 42 L 38 36 L 38 24 L 50 18 M 36 22 L 42 14 L 58 14 L 66 24 M 40 42 L 40 66 L 60 66 L 60 42 M 40 48 L 26 60 L 24 72 L 60 48 L 74 60 L 76 72 M 40 66 L 34 90 L 46 90 M 60 66 L 54 90 L 66 90" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABgklEQVR42u2asQ3CMBBFMwYtNRJDUFJRswIbIKRMQYlESc8KNEgswAaUbAAykqOTsc92HCX2+X/pNzEQ3+N8ORuaBoIgCIIgCIIgaCTNZ4uP6aoC362WfxYPwhV4NSBCATwv+w6EqODf93NnM2h9XQVPLQYCBUALH4VCrwMAAACAXACcqyiCrmBtRgZI6wV8IGjgYttiHwSxbbD26fb62Ra8HhO3S6SBm6aBm64CAGcAKB0Arfzb48NqDkDRRdGs9n0BFAnB9qhLAVAMBK7ZSQVAN0zFNThqbAgAWWaDr8XVk3VB8D0FuM+dHETMBGMBUHAhgCcDQHdv3KT6AnDBzmLHaALg0jIVgJkN2QHgJqLG2msbbQ5mNmcGejJjAgi9r9gMyCYLACAwDdX4+rCJckhQky+D0PWvqnYsgBAIAJADAF9LqgHY/hVicyyA7M8OzZ/Fhn59UecCsQCKhwAAANBvPYuoAynfpIgsAAAASFvHxdaB0I5v6PcCAABAEARB0foC8YyApIJEBd4AAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABgklEQVR42u2asQ3CMBBFMwYtNRJDUFJRswIbIKRMQYlESc8KNEgswAaUbAAykqOTsc92HCX2+X/pNzEQ3+N8ORuaBoIgCIIgCIIgaCTNZ4uP6aoC362WfxYPwhV4NSBCATwv+w6EqODf93NnM2h9XQVPLQYCBUALH4VCrwMAAACAXACcqyiCrmBtRgZI6wV8IGjgYttiHwSxbbD26fb62Ra8HhO3S6SBm6aBm64CAGcAKB0Arfzb48NqDkDRRdGs9n0BFAnB9qhLAVAMBK7ZSQVAN0zFNThqbAgAWWaDr8XVk3VB8D0FuM+dHETMBGMBUHAhgCcDQHdv3KT6AnDBzmLHaALg0jIVgJkN2QHgJqLG2msbbQ5mNmcGejJjAgi9r9gMyCYLACAwDdX4+rCJckhQky+D0PWvqnYsgBAIAJADAF9LqgHY/hVicyyA7M8OzZ/Fhn59UecCsQCKhwAAANBvPYuoAynfpIgsAAAASFvHxdaB0I5v6PcCAABAEARB0foC8YyApIJEBd4AAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 18 L 62 24 L 62 36 L 50 42 L 38 36 L 38 24 L 50 18 M 36 22 L 42 14 L 58 14 L 66 24 M 40 42 L 40 66 L 60 66 L 60 42 M 40 48 L 26 60 L 24 72 L 60 48 L 74 60 L 76 72 M 40 66 L 34 90 L 46 90 M 60 66 L 54 90 L 66 90" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>boybig</b>
+      <span>brother</span>
+      
+      <small>★ 真图 · assets/sprites/boybig.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 12 L 62 18 L 62 32 L 50 40 L 38 32 L 38 18 L 50 12 M 36 20 L 42 10 L 58 10 L 66 22 M 38 40 L 38 68 L 62 68 L 62 40 M 38 68 L 30 92 L 46 92 M 62 68 L 54 92 L 70 92" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABhklEQVR42u2aMW4CMRBFOQZt6kgcgjIVda7ADVAkTpEyUkr6XCENEhfgBpTcIMgIS5ORvev12sjz/Uf6DSxo/tvRMJ5lsWAwGAwGg/GMeFm+/qUK0vx2vUoWHISuAUw1DwchFwAEBN/UrsfvUbPuGn0dRBV4AFLadOh9bx6iCmJGpc6H3T9B9QACeJiUw440L18nAAJgDyAAOAAagjYbMg95IEqpAMjj8FA16EbYzXJEm+9yQ9SF+dja6/3zdNfX7wV7NSbNhuQAhNQNgBgEAkBZhoyZhwXgu3wuALMQ9LCTAiAGwdyAFJry5gIwMyzFRtxSAJqGMDTflwTQLAS5yXGSic79JTBxWtQAZJK5VSABmgKgE5wLYOz7m4NQA8DQ9xMAARgAsP/ZTxYBEIBBAPrgkms+BsDcqswl+/axyRLMPmDK/wNhFqOhw1GKmdzPEQCCeRgIJR57mX10VurumayC0kmbg9A1gFrJmoFQs2k13xBr36Xmq6DWOGtmRCaA3gEwGHbjBqJwNa5ky0zoAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABhklEQVR42u2aMW4CMRBFOQZt6kgcgjIVda7ADVAkTpEyUkr6XCENEhfgBpTcIMgIS5ORvev12sjz/Uf6DSxo/tvRMJ5lsWAwGAwGg/GMeFm+/qUK0vx2vUoWHISuAUw1DwchFwAEBN/UrsfvUbPuGn0dRBV4AFLadOh9bx6iCmJGpc6H3T9B9QACeJiUw440L18nAAJgDyAAOAAagjYbMg95IEqpAMjj8FA16EbYzXJEm+9yQ9SF+dja6/3zdNfX7wV7NSbNhuQAhNQNgBgEAkBZhoyZhwXgu3wuALMQ9LCTAiAGwdyAFJry5gIwMyzFRtxSAJqGMDTflwTQLAS5yXGSic79JTBxWtQAZJK5VSABmgKgE5wLYOz7m4NQA8DQ9xMAARgAsP/ZTxYBEIBBAPrgkms+BsDcqswl+/axyRLMPmDK/wNhFqOhw1GKmdzPEQCCeRgIJR57mX10VurumayC0kmbg9A1gFrJmoFQs2k13xBr36Xmq6DWOGtmRCaA3gEwGHbjBqJwNa5ky0zoAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 12 L 62 18 L 62 32 L 50 40 L 38 32 L 38 18 L 50 12 M 36 20 L 42 10 L 58 10 L 66 22 M 38 40 L 38 68 L 62 68 L 62 40 M 38 68 L 30 92 L 46 92 M 62 68 L 54 92 L 70 92" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>bread</b>
+      <span>bread</span>
+      
+      <small>★ 真图 · assets/sprites/bread.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 16 56 L 18 40 L 30 28 L 50 24 L 72 30 L 84 44 L 82 60 L 68 72 L 34 72 L 16 56 M 36 36 L 42 48 M 54 32 L 60 44 M 70 36 L 74 48" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABW0lEQVR42u2Zu23DMBRFPYbb1Ok8StbIJhkhExjexCOkSJ3eRVoFNkCDJvh5jwy/Pge4gAF9rHtES7K42wEAAAAAAAAANOBl/7r58jRlL+cPb5YQIi0ryXQySgof3w+3TDs6Ss92SoCdr8+3sSSUlrcFTCchVF5TRrONvU53CbEzrz2j0m1cAd0kSIZ9rIw5eDdmm+tniaQuEq5fFjpAycHGYgtIreNeD5pIkJZ3JUjK2+Vi24SWNxMguUJrCmlHQWx5dQkhAaXDOkdAFwnmJ6BJzigokVRNQE753FEg3d/2+/2QZQW4RacTkFtUm2kElBbdfk7eDCegVtHhBLQuGkqTW+AIRbsIUEv4h0L2M8QQAoyEmkW1pZsLuEvoWNS3z+bvBcxf0NTjb4t0fzMUe+ZfurzkFrl8+ZiEmsWHnR+oLWD4mSLfNeFpyqdmgEvD3DoAAAAAAAAAQCF/Vayp5jtSWQUAAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABW0lEQVR42u2Zu23DMBRFPYbb1Ok8StbIJhkhExjexCOkSJ3eRVoFNkCDJvh5jwy/Pge4gAF9rHtES7K42wEAAAAAAAAANOBl/7r58jRlL+cPb5YQIi0ryXQySgof3w+3TDs6Ss92SoCdr8+3sSSUlrcFTCchVF5TRrONvU53CbEzrz2j0m1cAd0kSIZ9rIw5eDdmm+tniaQuEq5fFjpAycHGYgtIreNeD5pIkJZ3JUjK2+Vi24SWNxMguUJrCmlHQWx5dQkhAaXDOkdAFwnmJ6BJzigokVRNQE753FEg3d/2+/2QZQW4RacTkFtUm2kElBbdfk7eDCegVtHhBLQuGkqTW+AIRbsIUEv4h0L2M8QQAoyEmkW1pZsLuEvoWNS3z+bvBcxf0NTjb4t0fzMUe+ZfurzkFrl8+ZiEmsWHnR+oLWD4mSLfNeFpyqdmgEvD3DoAAAAAAAAAQCF/Vayp5jtSWQUAAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 16 56 L 18 40 L 30 28 L 50 24 L 72 30 L 84 44 L 82 60 L 68 72 L 34 72 L 16 56 M 36 36 L 42 48 M 54 32 L 60 44 M 70 36 L 74 48" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>broccoli</b>
+      <span>vegetable</span>
+      
+      <small>★ 真图 · assets/sprites/broccoli.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 20 48 L 22 34 L 32 26 L 42 28 L 50 18 L 60 28 L 70 26 L 80 36 L 80 50 L 70 58 L 30 58 L 20 48 M 42 56 L 42 88 L 58 88 L 58 56 M 30 38 L 38 32 M 62 34 L 70 40" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABe0lEQVR42u2ZwQ3CMAxFOwZXzmzCiYGQugpHxJVV2IExioIUFFm16yRUdpL/JQvRlpD/SI3jThMEQRAEQRAEQZCBjofTMrT58/WyDAshAhgSQmp+OAhr5ruCEExwRsLx+Tkv99ftF+F9DAlCHNctpDi59NekQc1TACkEGnTcZpZ1jGiQAuAgSOEKAjXPGSkFwB13ASE1T03QiXMAtq7nzptD0JrfK0whWJs3h0ABaJZ1TXDjm9UQKQBNUvs3gPgdzQHISZaSeVcAcm4BKW9I51zfAnSSmqSlKZg4CFJd4KL4KcniJWOYbaS4srcGQK158xVQa6TWvMlWWtoA7QXA3eaodiX8A4CrDVEuhFoAbrfEuQA017tvn+VCyFk1bpshUt9urR0mnddG083S5f34ggivaWWXlrndtscBAAAAAAC2AHT5nDB9sqMF4P7/Pte4FkC8BehnmwLBTb4kBzRZAHGTRhIEAAAAAAAAAAAAgKEBdN/2giAIgqB29AF5TiXS/y00xwAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABe0lEQVR42u2ZwQ3CMAxFOwZXzmzCiYGQugpHxJVV2IExioIUFFm16yRUdpL/JQvRlpD/SI3jThMEQRAEQRAEQZCBjofTMrT58/WyDAshAhgSQmp+OAhr5ruCEExwRsLx+Tkv99ftF+F9DAlCHNctpDi59NekQc1TACkEGnTcZpZ1jGiQAuAgSOEKAjXPGSkFwB13ASE1T03QiXMAtq7nzptD0JrfK0whWJs3h0ABaJZ1TXDjm9UQKQBNUvs3gPgdzQHISZaSeVcAcm4BKW9I51zfAnSSmqSlKZg4CFJd4KL4KcniJWOYbaS4srcGQK158xVQa6TWvMlWWtoA7QXA3eaodiX8A4CrDVEuhFoAbrfEuQA017tvn+VCyFk1bpshUt9urR0mnddG083S5f34ggivaWWXlrndtscBAAAAAAC2AHT5nDB9sqMF4P7/Pte4FkC8BehnmwLBTb4kBzRZAHGTRhIEAAAAAAAAAAAAgKEBdN/2giAIgqB29AF5TiXS/y00xwAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 20 48 L 22 34 L 32 26 L 42 28 L 50 18 L 60 28 L 70 26 L 80 36 L 80 50 L 70 58 L 30 58 L 20 48 M 42 56 L 42 88 L 58 88 L 58 56 M 30 38 L 38 32 M 62 34 L 70 40" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>chair</b>
+      <span>chair</span>
+      
+      <small>★ 真图 · assets/sprites/chair.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 28 14 L 28 52 M 28 14 L 72 14 M 72 14 L 72 52 M 20 52 L 80 52 M 28 56 L 28 92 M 72 56 L 72 92" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA8UlEQVR42u3bOwrCUBCF4SzD1sbGLVi7Ca2tLWzdiDtwSa5GUQgEMfiAOzPqd+DUM/mTzLkM3K4jIiIi+lDTyfyc7XQAp8M6zQAAUADAcbdIc0kALQdeeQCtG4quB8A7DQ0HUyv3NUoDiDAAlVNADIpBMQiAc4BzgBgUg2JQCvwogEdT+X5N1ToFxur9xR4wfT/YA1httjdnPvSwh1AA1/+vL54Zg8MeQgHsl7NyBiASQO+xRlr5Wb2USIx8C9H1AAAAAAAAAAAAAAAAAAAAAAAAAAAAeGU/GLkSKwngJxehvgAzYLyhyCss5a7MENFX6wKHVu1Dm1auvwAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA8UlEQVR42u3bOwrCUBCF4SzD1sbGLVi7Ca2tLWzdiDtwSa5GUQgEMfiAOzPqd+DUM/mTzLkM3K4jIiIi+lDTyfyc7XQAp8M6zQAAUADAcbdIc0kALQdeeQCtG4quB8A7DQ0HUyv3NUoDiDAAlVNADIpBMQiAc4BzgBgUg2JQCvwogEdT+X5N1ToFxur9xR4wfT/YA1httjdnPvSwh1AA1/+vL54Zg8MeQgHsl7NyBiASQO+xRlr5Wb2USIx8C9H1AAAAAAAAAAAAAAAAAAAAAAAAAAAAeGU/GLkSKwngJxehvgAzYLyhyCss5a7MENFX6wKHVu1Dm1auvwAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 28 14 L 28 52 M 28 14 L 72 14 M 72 14 L 72 52 M 20 52 L 80 52 M 28 56 L 28 92 M 72 56 L 72 92" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>classroom</b>
+      <span>classroom</span>
+      
+      <small>★ 真图 · assets/sprites/classroom.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 12 12 L 88 12 L 88 50 L 12 50 L 12 12 M 20 55 L 48 55 L 48 68 L 20 68 L 20 55 M 52 55 L 80 55 L 80 68 L 52 68 L 52 55 M 20 68 L 20 88 L 48 88 L 48 68 M 52 68 L 52 88 L 80 88 L 80 68 M 22 42 L 78 42" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABHUlEQVR42u2bOw6CQBRFWYatjY1bsLaw0cTWZVjqRtiBS7GyM2ETFibW2hJkYD7vwXzOTW5D4GU4eXNnmISqQgghhFCflov1Nxd7A7g/nskbAAAIAPB6f5I3AAAAAACIAoh5wzMZgN3lEJ0BAICZAISGVPdFfJ+jAwCQwBSgAwAAAABkAaCpT9F5MgB8DgOgIADX7WrQzXHv5LF6Gg4CMBo+jgBswsw1/W3CEQAAAIAfgNt582fJzYtGva51OyABiwNod4brkmTqpPZ135pD4wWAJADJTYpGPQBorwKSA9aop74K2FA32aYDQutNPgUAAAAA5AuAVYCNEAAAQAiOhGDfPSbbhGBoPdEQnOMYO6pj8eIBFP3HCEIIocz1A0KEO+f6lovOAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABHUlEQVR42u2bOw6CQBRFWYatjY1bsLaw0cTWZVjqRtiBS7GyM2ETFibW2hJkYD7vwXzOTW5D4GU4eXNnmISqQgghhFCflov1Nxd7A7g/nskbAAAIAPB6f5I3AAAAAACIAoh5wzMZgN3lEJ0BAICZAISGVPdFfJ+jAwCQwBSgAwAAAABkAaCpT9F5MgB8DgOgIADX7WrQzXHv5LF6Gg4CMBo+jgBswsw1/W3CEQAAAIAfgNt582fJzYtGva51OyABiwNod4brkmTqpPZ135pD4wWAJADJTYpGPQBorwKSA9aop74K2FA32aYDQutNPgUAAAAA5AuAVYCNEAAAQAiOhGDfPSbbhGBoPdEQnOMYO6pj8eIBFP3HCEIIocz1A0KEO+f6lovOAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 12 12 L 88 12 L 88 50 L 12 50 L 12 12 M 20 55 L 48 55 L 48 68 L 20 68 L 20 55 M 52 55 L 80 55 L 80 68 L 52 68 L 52 55 M 20 68 L 20 88 L 48 88 L 48 68 M 52 68 L 52 88 L 80 88 L 80 68 M 22 42 L 78 42" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>cook</b>
+      <span>cook</span>
+      
+      <small>★ 真图 · assets/sprites/cook.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 20 L 62 26 L 62 38 L 50 44 L 38 38 L 38 26 L 50 20 M 30 20 L 36 10 L 44 14 L 50 6 L 56 14 L 64 10 L 70 20 M 38 44 L 32 68 L 68 68 L 62 44 M 40 68 L 34 90 M 60 68 L 66 90" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABtElEQVR42u2aQW4CMQxFOUa3rJE4BBdgwTG4QU/Dsldh1V2luQSqKnUNysKSsZyJJxNEvmNLFhKE0fxnzyR2stmEhYWFvdG2H7t7ABhZ/O3v/+4WQhKWE0fiyefGwQLiEeYipHgNAv0HNkM0kSRqDkDudygIOYFrHQbC0ADSTV6/f17mQ0OAegQ0XypWc/h1wfmwL7rLhZFVvEsISczv9VIULce4gUAAyKVozV0DyPn09fnkAcAjAD6lcfH8+wAQAAJAvATdAZAQpFhNvLslcSkT3EW+BoLbQkj2+jTxWinsQnyuxaWJh22C1PYHk0j6dAfA0hwlADkI0JsiKbXXAoCEQOIpA6bTscphIcjoDwWAz/OWzQ7+CMw9ChBrBLnIaQ2gawhadVcLABICL2OTW/f7cgA0CF3XCgHgBQAkhO6rRYKwZHt8CQCC0D0AeeKjdBrEMgYCgMyCuRnCMouUrhsAEABoHSALADkOCgDv5liib8kCyC6RNfq14+EAWMTU/CcAeBHvCsLQANa+zOBfhi0iCJsFraIHmwUtIweXBa2Pt+au13U53PpmA4DHQ9NhYWHd2ANMiQAOcWUClgAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABtElEQVR42u2aQW4CMQxFOUa3rJE4BBdgwTG4QU/Dsldh1V2luQSqKnUNysKSsZyJJxNEvmNLFhKE0fxnzyR2stmEhYWFvdG2H7t7ABhZ/O3v/+4WQhKWE0fiyefGwQLiEeYipHgNAv0HNkM0kSRqDkDudygIOYFrHQbC0ADSTV6/f17mQ0OAegQ0XypWc/h1wfmwL7rLhZFVvEsISczv9VIULce4gUAAyKVozV0DyPn09fnkAcAjAD6lcfH8+wAQAAJAvATdAZAQpFhNvLslcSkT3EW+BoLbQkj2+jTxWinsQnyuxaWJh22C1PYHk0j6dAfA0hwlADkI0JsiKbXXAoCEQOIpA6bTscphIcjoDwWAz/OWzQ7+CMw9ChBrBLnIaQ2gawhadVcLABICL2OTW/f7cgA0CF3XCgHgBQAkhO6rRYKwZHt8CQCC0D0AeeKjdBrEMgYCgMyCuRnCMouUrhsAEABoHSALADkOCgDv5liib8kCyC6RNfq14+EAWMTU/CcAeBHvCsLQANa+zOBfhi0iCJsFraIHmwUtIweXBa2Pt+au13U53PpmA4DHQ9NhYWHd2ANMiQAOcWUClgAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 20 L 62 26 L 62 38 L 50 44 L 38 38 L 38 26 L 50 20 M 30 20 L 36 10 L 44 14 L 50 6 L 56 14 L 64 10 L 70 20 M 38 44 L 32 68 L 68 68 L 62 44 M 40 68 L 34 90 M 60 68 L 66 90" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>crowd</b>
+      <span>people</span>
+      
+      <small>★ 真图 · assets/sprites/crowd.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 16 38 L 16 24 L 22 18 L 28 24 L 28 20 L 34 18 L 40 24 L 40 20 L 46 18 L 52 24 L 52 38 L 46 34 M 24 37 L 24 64 L 12 86 M 50 37 L 50 64 L 38 86 M 76 37 L 76 64 L 88 86 M 24 48 L 12 58 M 76 48 L 88 58" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACJUlEQVR42u2Zu00EQQyGrwwiJAIiJDogoQxCUjoguSrICcmJKQCJBmiAmA4OLZIlYzwej+2ZfdmSg9s7P/5vdz2ze4dDWlpaWlpaWlpaWlqawi7Ork7UW3PcXJ6fqM/Rh0n8w+31P9c2wQlvhQF1PH2Eii81YRUvgdD2AH0MFy814AUQ0YNZ/Pf786+XCsH39DfQAM5REotzwDEuXhIs9RACgBagxz9fHv/8hhOARdJjNAdcBVw81ODiIUc3ACWH4uASgB7xUo4QAHjK4qJ0OZIEaHJo41tyJIAEkAD6DkE6fDY5BHcJAO+/JbH0OC1MRXA5WuJrObo8E9TORK0wd99GxuMcXZ8IS8W1hUs5vPEtOVwA7p4+zMWn3xxfj2z8dFybg4v/ersfB2ByaAR/1gIAB+Hg2hyT2MkBPHweCoDzWgMUAHVNPIjlvPv9v0sAePquAUDoEshtN5cOIGxF4KbtmgC4IEhr9ZoAmCFYzv4SAMDSGA4AP5jsBgCdqGu5Arr8a6TZA0gAIF4SX4OgEd99L4CFclCk5vG2l54hCwAcPwRA6Z6qLT2apcmbI3T9TwAdmxsBIByCV4D27GivMgvA2QC0NObJMQxAbcrTJlo2JV6I3eaA5RK2vLPbPADL+z7rLTQLgIg3th6IXQC0DpelAAiDEAWgpRlrjkUAkFaE1QPw/HMzAkCXOcA9W2vOhCXOG++pGZ40AWwFQFpaWlpa2nbtB1nzG0Z7ODJmAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACJUlEQVR42u2Zu00EQQyGrwwiJAIiJDogoQxCUjoguSrICcmJKQCJBmiAmA4OLZIlYzwej+2ZfdmSg9s7P/5vdz2ze4dDWlpaWlpaWlpaWlqawi7Ork7UW3PcXJ6fqM/Rh0n8w+31P9c2wQlvhQF1PH2Eii81YRUvgdD2AH0MFy814AUQ0YNZ/Pf786+XCsH39DfQAM5REotzwDEuXhIs9RACgBagxz9fHv/8hhOARdJjNAdcBVw81ODiIUc3ACWH4uASgB7xUo4QAHjK4qJ0OZIEaHJo41tyJIAEkAD6DkE6fDY5BHcJAO+/JbH0OC1MRXA5WuJrObo8E9TORK0wd99GxuMcXZ8IS8W1hUs5vPEtOVwA7p4+zMWn3xxfj2z8dFybg4v/ersfB2ByaAR/1gIAB+Hg2hyT2MkBPHweCoDzWgMUAHVNPIjlvPv9v0sAePquAUDoEshtN5cOIGxF4KbtmgC4IEhr9ZoAmCFYzv4SAMDSGA4AP5jsBgCdqGu5Arr8a6TZA0gAIF4SX4OgEd99L4CFclCk5vG2l54hCwAcPwRA6Z6qLT2apcmbI3T9TwAdmxsBIByCV4D27GivMgvA2QC0NObJMQxAbcrTJlo2JV6I3eaA5RK2vLPbPADL+z7rLTQLgIg3th6IXQC0DpelAAiDEAWgpRlrjkUAkFaE1QPw/HMzAkCXOcA9W2vOhCXOG++pGZ40AWwFQFpaWlpa2nbtB1nzG0Z7ODJmAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 16 38 L 16 24 L 22 18 L 28 24 L 28 20 L 34 18 L 40 24 L 40 20 L 46 18 L 52 24 L 52 38 L 46 34 M 24 37 L 24 64 L 12 86 M 50 37 L 50 64 L 38 86 M 76 37 L 76 64 L 88 86 M 24 48 L 12 58 M 76 48 L 88 58" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>dinner</b>
+      <span>dinner</span>
+      
+      <small>★ 真图 · assets/sprites/dinner.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 16 54 L 84 54 L 78 74 L 22 74 L 16 54 M 24 54 L 18 36 L 26 32 L 34 54 M 76 54 L 82 36 L 74 32 L 66 54 M 18 38 L 28 42 L 22 48 L 16 44" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABLUlEQVR42u2YvQ3CMBBGMwYtNZtQMRBSJmABeiZgBCoa6DIGBRJ1UCIZnSwb4RDfHeI96Vru/PT5hzQNAAAAAAAAAAAAlLBcrPpQ/9A3OchufzARYNEXAXH8hiGsBJwu3VjqElICNCWEvkGAqoS4kUUKUgLUJKROXu39KOOfklB9DrkFrBKQE6CShKHBervp22P7Kk8JUBlACrBMgNltECRYHoKhn8mLUDa1OATNX4GyuWYKLB9fLoZyKUAzlm7+BE0ZLH4/vKufFHC7P8bKLaqE3G/IHm4+hJQubi4+TU2VhXukuggZQY9U3x5SgDcJcq7qKYgPJAshcW+Tj6TvTumaVXJtmt8ONRbsaoFxna9d9Zr6iJpNgMYiv5GDAMst4KEaAAAAAAAAAADI8wQFLRu2bQk2pwAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABLUlEQVR42u2YvQ3CMBBGMwYtNZtQMRBSJmABeiZgBCoa6DIGBRJ1UCIZnSwb4RDfHeI96Vru/PT5hzQNAAAAAAAAAAAAlLBcrPpQ/9A3OchufzARYNEXAXH8hiGsBJwu3VjqElICNCWEvkGAqoS4kUUKUgLUJKROXu39KOOfklB9DrkFrBKQE6CShKHBervp22P7Kk8JUBlACrBMgNltECRYHoKhn8mLUDa1OATNX4GyuWYKLB9fLoZyKUAzlm7+BE0ZLH4/vKufFHC7P8bKLaqE3G/IHm4+hJQubi4+TU2VhXukuggZQY9U3x5SgDcJcq7qKYgPJAshcW+Tj6TvTumaVXJtmt8ONRbsaoFxna9d9Zr6iJpNgMYiv5GDAMst4KEaAAAAAAAAAADI8wQFLRu2bQk2pwAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 16 54 L 84 54 L 78 74 L 22 74 L 16 54 M 24 54 L 18 36 L 26 32 L 34 54 M 76 54 L 82 36 L 74 32 L 66 54 M 18 38 L 28 42 L 22 48 L 16 44" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>doctor</b>
+      <span>doctor</span>
+      
+      <small>★ 真图 · assets/sprites/doctor.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 38 42 L 32 66 L 68 66 L 62 42 M 40 66 L 34 90 M 60 66 L 66 90 M 42 48 L 34 58 L 28 50 M 58 48 L 66 58 L 72 50 L 58 68 L 50 60 L 42 68" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABqElEQVR42u2ZMW4CMRBFOQYtdSQOkZYb5Aq5AfdIDU2kXCVSaiSqdGloQkUJciSvnOGP14aV8Iz/l0ZiAS/+j1mPZ3c2oyiKoiiKoh6jxfzp3I1RFK/Py+G1ewDBbC7cgigx7xpEMPP7uR2iBoRLABoI+Zl7ACj2H+shugOQmncNQAMS3mcGEAABEEAXAKTZEG7LYNoMlWSB6+ZoDEIX7THKhi5aYi0burgXcGu4AXA6/sDYfR+ujmO4AIAWPQ2A/J4LCLUAVpv3vzBVFbRrVit5JQAiBASguTUibWPjpHL1fuwSyEFAv9UUgDixEvNoEUQQUqjNbpXl5ErMa1VAQjBzsyQHobYMyiww0SRJACmEWwBoEJquDCgLNPPpao42QghA82UxGooANPMlAEKYMl+6/S0FgCqBOQAvb19XkQMQv5OaN7clRoYQALQISvPh2FxzFP9VZD5Erv1NAaAx5i4DZH5sjARgtiO8B0DNGHcAase4Me8KAgEQQMcApjBgGgIBEEDHAKacuEkIBEAA0zzlNfvEmABE2t474anP95AMaOl8FEX90wW3LiTxdiJfkgAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABqElEQVR42u2ZMW4CMRBFOQYtdSQOkZYb5Aq5AfdIDU2kXCVSaiSqdGloQkUJciSvnOGP14aV8Iz/l0ZiAS/+j1mPZ3c2oyiKoiiKoh6jxfzp3I1RFK/Py+G1ewDBbC7cgigx7xpEMPP7uR2iBoRLABoI+Zl7ACj2H+shugOQmncNQAMS3mcGEAABEEAXAKTZEG7LYNoMlWSB6+ZoDEIX7THKhi5aYi0burgXcGu4AXA6/sDYfR+ujmO4AIAWPQ2A/J4LCLUAVpv3vzBVFbRrVit5JQAiBASguTUibWPjpHL1fuwSyEFAv9UUgDixEvNoEUQQUqjNbpXl5ErMa1VAQjBzsyQHobYMyiww0SRJACmEWwBoEJquDCgLNPPpao42QghA82UxGooANPMlAEKYMl+6/S0FgCqBOQAvb19XkQMQv5OaN7clRoYQALQISvPh2FxzFP9VZD5Erv1NAaAx5i4DZH5sjARgtiO8B0DNGHcAase4Me8KAgEQQMcApjBgGgIBEEDHAKacuEkIBEAA0zzlNfvEmABE2t474anP95AMaOl8FEX90wW3LiTxdiJfkgAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 38 42 L 32 66 L 68 66 L 62 42 M 40 66 L 34 90 M 60 66 L 66 90 M 42 48 L 34 58 L 28 50 M 58 48 L 66 58 L 72 50 L 58 68 L 50 60 L 42 68" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>dog</b>
+      <span>puppy</span>
+      
+      <small>★ 真图 · assets/sprites/dog.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 34 26 L 26 16 L 18 22 L 22 40 L 32 46 L 54 46 L 66 38 L 68 24 L 58 18 L 50 28 L 34 26 M 30 46 L 26 66 L 34 78 L 58 78 L 68 64 L 62 46 M 28 62 L 20 86 M 42 76 L 40 90 M 58 76 L 62 90 M 66 54 L 82 46 L 88 34" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABwklEQVR42u2aMW4DIRBFfQy3adz4CqnTpnCbY7j1RXKDHCmnsbWRkAiCgWEH+Cz/S9MRwn8wwA4+nSiKoiiKoiiKqtHb+frcYlnzj4/LX1hCgAfqZt2ZtwSw9fP7/fWEXVmhcWsIDoALOBASgL0Qtr/9ub//A+CDmAJALQRnPgVgSgily9c3fxgAviEfRiykdlMCkExKQQACAK35sJ9uEFJGegJodUchgBwAyUgJgDBq8j82ru4AWkQtgGYbp/tHpQZKj8xUWkDNfrjTtgJQs/N3My/d5Hou+WGzH/2Ku32ahWbZDzffAkAOQph+hwSQSoVYyg01nypm1EbugmRxYkADiEGwOiqnAVAKAa5cZglAggBZK5SqOdb7AWS1OFfS2gsA+r2gFQAfwvIAYCGUVnUJ4IgAYjezHicB3EPpkgCc8dargAA845AAYhCsAYT9D4cQG5A1gFTfkAAsU0ACCwFAGpR1cdRVeKYBoK3eSG39Lz+oPUAzI5qKrdQWZhVoc3IvgFQKQAHIla81JWvp1Xk4gJqZ0D5XpYBJ0f3erxnIsgBybSVg2lgawPDrby2sPQCGf/trfwRZYwDKOEVR1FH1Ap7h/e7GGJvbAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABwklEQVR42u2aMW4DIRBFfQy3adz4CqnTpnCbY7j1RXKDHCmnsbWRkAiCgWEH+Cz/S9MRwn8wwA4+nSiKoiiKoiiKqtHb+frcYlnzj4/LX1hCgAfqZt2ZtwSw9fP7/fWEXVmhcWsIDoALOBASgL0Qtr/9ub//A+CDmAJALQRnPgVgSgily9c3fxgAviEfRiykdlMCkExKQQACAK35sJ9uEFJGegJodUchgBwAyUgJgDBq8j82ru4AWkQtgGYbp/tHpQZKj8xUWkDNfrjTtgJQs/N3My/d5Hou+WGzH/2Ku32ahWbZDzffAkAOQph+hwSQSoVYyg01nypm1EbugmRxYkADiEGwOiqnAVAKAa5cZglAggBZK5SqOdb7AWS1OFfS2gsA+r2gFQAfwvIAYCGUVnUJ4IgAYjezHicB3EPpkgCc8dargAA845AAYhCsAYT9D4cQG5A1gFTfkAAsU0ACCwFAGpR1cdRVeKYBoK3eSG39Lz+oPUAzI5qKrdQWZhVoc3IvgFQKQAHIla81JWvp1Xk4gJqZ0D5XpYBJ0f3erxnIsgBybSVg2lgawPDrby2sPQCGf/trfwRZYwDKOEVR1FH1Ap7h/e7GGJvbAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 34 26 L 26 16 L 18 22 L 22 40 L 32 46 L 54 46 L 66 38 L 68 24 L 58 18 L 50 28 L 34 26 M 30 46 L 26 66 L 34 78 L 58 78 L 68 64 L 62 46 M 28 62 L 20 86 M 42 76 L 40 90 M 58 76 L 62 90 M 66 54 L 82 46 L 88 34" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>door</b>
+      <span>door</span>
+      
+      <small>★ 真图 · assets/sprites/door.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 22 8 L 78 8 L 78 92 L 22 92 L 22 8 M 66 46 L 66 54" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAsElEQVR42u3boQ2DQBSAYcbA1tSwQnWn6Bi1SJZA13SIDoLqBlgkBElaRXrXR+77k6cJn+ByB1SVJEm7OtXNHGX+BjD0t6/zvF+STHs9fwwAAEEAxleXbQAAABD7IZhyDrEKAAAAAAAAAAAAAAAAAECRAM4Ef3TD0/uxmeIB1msCAAAAgFXAsTgAAABshgAAAAAAAAAAAAAAAAAgCECOT+O9GQIAAEAYgKL/GZKko7cAYbJVl9nrKeoAAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAsElEQVR42u3boQ2DQBSAYcbA1tSwQnWn6Bi1SJZA13SIDoLqBlgkBElaRXrXR+77k6cJn+ByB1SVJEm7OtXNHGX+BjD0t6/zvF+STHs9fwwAAEEAxleXbQAAABD7IZhyDrEKAAAAAAAAAAAAAAAAAECRAM4Ef3TD0/uxmeIB1msCAAAAgFXAsTgAAABshgAAAAAAAAAAAAAAAAAgCECOT+O9GQIAAEAYgKL/GZKko7cAYbJVl9nrKeoAAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 22 8 L 78 8 L 78 92 L 22 92 L 22 8 M 66 46 L 66 54" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>driver</b>
+      <span>driver</span>
+      
+      <small>★ 真图 · assets/sprites/driver.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 38 42 L 32 64 L 68 64 L 62 42 M 42 48 L 34 56 L 28 48 L 58 48 L 66 56 L 72 48 M 36 66 L 30 90 M 64 66 L 70 90 M 46 52 L 54 52 L 58 58 L 54 64 L 46 64 L 42 58 L 46 52" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABvUlEQVR42u2aPWoDQQyFfQy3qQ05RI6R9GncpM4dUqYJBNIEchA3Bl/AN3CZGyRsYIIspJlZe9cevXkCgdde8LxPbzU/9mLBYDAYDAaDwbhO3CxXP90Jlrm+uz26hhc/CM4lLIga8RoElPjv7UdRtL4HBkICkNISrhMagJf7r+ejJABEAHLKk+Ll+wRAAATAJggPQIu1Em41WHKCFA67MSpB6GJ7nGuC3Z0NdFF1fQiip8L3zcH9HAbA/esumwMEnRAAasR7AMJAyFm2FsAYFzT3iHjL15L4h8envxwDoMmlshyUXMiMBVCCYH1PU4+BHFya3izhCU4CIIHlekHzy2Q9yJx4D4AHIcQeYQyAl7fPfwDD6yHDA5AQSvaXANK17BsehOanxVzzk+IlAMsFFoRQCyMLgnzOk1gJQfYDDSDcqrDWBRYEa1oMV31vLaBdYIGw7g29OcodgFq7Q7gtsgVAOwX2ZKhWHCwEr/rn3gtVfVgXnFJRGBecWk0IF5wrIjyErgFMNfiwEKZsYuEa4tRVC+eCOSoWxgVzVSuMC+asVPMumLtKzbvgEgcXTf96TAAXGhjs/wcYDMbV4hcDoBXADTy7wwAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABvUlEQVR42u2aPWoDQQyFfQy3qQ05RI6R9GncpM4dUqYJBNIEchA3Bl/AN3CZGyRsYIIspJlZe9cevXkCgdde8LxPbzU/9mLBYDAYDAaDwbhO3CxXP90Jlrm+uz26hhc/CM4lLIga8RoElPjv7UdRtL4HBkICkNISrhMagJf7r+ejJABEAHLKk+Ll+wRAAATAJggPQIu1Em41WHKCFA67MSpB6GJ7nGuC3Z0NdFF1fQiip8L3zcH9HAbA/esumwMEnRAAasR7AMJAyFm2FsAYFzT3iHjL15L4h8envxwDoMmlshyUXMiMBVCCYH1PU4+BHFya3izhCU4CIIHlekHzy2Q9yJx4D4AHIcQeYQyAl7fPfwDD6yHDA5AQSvaXANK17BsehOanxVzzk+IlAMsFFoRQCyMLgnzOk1gJQfYDDSDcqrDWBRYEa1oMV31vLaBdYIGw7g29OcodgFq7Q7gtsgVAOwX2ZKhWHCwEr/rn3gtVfVgXnFJRGBecWk0IF5wrIjyErgFMNfiwEKZsYuEa4tRVC+eCOSoWxgVzVSuMC+asVPMumLtKzbvgEgcXTf96TAAXGhjs/wcYDMbV4hcDoBXADTy7wwAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 38 42 L 32 64 L 68 64 L 62 42 M 42 48 L 34 56 L 28 48 L 58 48 L 66 56 L 72 48 M 36 66 L 30 90 M 64 66 L 70 90 M 46 52 L 54 52 L 58 58 L 54 64 L 46 64 L 42 58 L 46 52" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>drop</b>
+      <span>water</span>
+      
+      <small>★ 真图 · assets/sprites/drop.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 12 L 70 46 L 74 64 L 50 88 L 26 64 L 30 46 L 50 12" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABdElEQVR42u3aPQoCMRAF4BzD1tpDeTRbr2IvHsHa2mYlQiCEmfysATNv3oNFEJv5Jrsbk4TAMAzDMAzzpxwPp40Anou/PJ6bWwTXAKn4dLlCKIt3h+AaIC/+/np/P8/Xmx8EDSAhQAOUxUsAsAjlfS8BQCNI3U8A8KNA674EAImgdV8DgHog1rrfAjCP0Fu8BACBUBv6JUANwSRAq/sjACYRWt3vBTA5Cnq6PwJgDkHqfvwuBRpA6n5efI4wAmAGQeq+lD0A8VoaoLf7vwAsPQpGAGKkVSECWL4NXANIC501AKl4088BDUB7C8AD5DO+2QBL3gat6W/rFQgHICHE32jTYNMA2k6P9idoBsBSzwENYA9CL8DyoyAvcDbAsrPBUQS4/wI1hBkAJtcEaqNAA8gDsSymIfQApEmT+ZXhFkI+1MtAbY70AMBvj5Xb49B7gy0EbXfYzSEJN8XXRoKrQ1KB5wRlBNfHZd2fGA8MwzAMw/wjHx+IJKAx+1uAAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABdElEQVR42u3aPQoCMRAF4BzD1tpDeTRbr2IvHsHa2mYlQiCEmfysATNv3oNFEJv5Jrsbk4TAMAzDMAzzpxwPp40Anou/PJ6bWwTXAKn4dLlCKIt3h+AaIC/+/np/P8/Xmx8EDSAhQAOUxUsAsAjlfS8BQCNI3U8A8KNA674EAImgdV8DgHog1rrfAjCP0Fu8BACBUBv6JUANwSRAq/sjACYRWt3vBTA5Cnq6PwJgDkHqfvwuBRpA6n5efI4wAmAGQeq+lD0A8VoaoLf7vwAsPQpGAGKkVSECWL4NXANIC501AKl4088BDUB7C8AD5DO+2QBL3gat6W/rFQgHICHE32jTYNMA2k6P9idoBsBSzwENYA9CL8DyoyAvcDbAsrPBUQS4/wI1hBkAJtcEaqNAA8gDsSymIfQApEmT+ZXhFkI+1MtAbY70AMBvj5Xb49B7gy0EbXfYzSEJN8XXRoKrQ1KB5wRlBNfHZd2fGA8MwzAMw/wjHx+IJKAx+1uAAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 12 L 70 46 L 74 64 L 50 88 L 26 64 L 30 46 L 50 12" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>drumstick</b>
+      <span>chicken</span>
+      
+      <small>★ 真图 · assets/sprites/drumstick.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 24 46 L 26 32 L 38 22 L 56 22 L 70 32 L 72 48 L 62 60 L 42 62 L 28 56 L 24 46 M 62 54 L 78 70 L 88 74 M 78 70 L 84 64 L 90 68" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABYklEQVR42u2ZQQrCMBBFewy3rt116y28hjcRT+AJxJt4BBeu3btwW4kQCGEmmbQVZjL/wYDUFPJfpmlphwEAAAAAAAAAAABrs93spjnVTfj3/UTWeT/+ivvftIS4ilw4iQCzEsKkJeHiGIkEMyLiqkvDcWPy44/LQb+EvOXndkEIG4+F32mp7YYwqTDB1hbnwnIC1HYCJaDUBbWwqbwuBEQJ1IpyYU11geR+TwWRdIF6Adzq59d4SQI1xpyA1hWujTGzD7QIkHSBRJw5AdIukJ5jUgBX1K2xawGlZwJpmRPQGvh6HIul8jmgtb1bQ5sUsGZoteFbJcwJrT68RMCS4OrD56/C/iFget1svRmiRCwJH8vcK7JURq3FqcoFpCK6+j5QOo8SYFLCUnmuJZS6ARKSzdGFjFxCt98WpRLyPcKVhLQoAS5kuPrk3ipg+jz9XBI1KYM33AsAAAAAAAAAAMDwBbLT+ekkcgdLAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABYklEQVR42u2ZQQrCMBBFewy3rt116y28hjcRT+AJxJt4BBeu3btwW4kQCGEmmbQVZjL/wYDUFPJfpmlphwEAAAAAAAAAAABrs93spjnVTfj3/UTWeT/+ivvftIS4ilw4iQCzEsKkJeHiGIkEMyLiqkvDcWPy44/LQb+EvOXndkEIG4+F32mp7YYwqTDB1hbnwnIC1HYCJaDUBbWwqbwuBEQJ1IpyYU11geR+TwWRdIF6Adzq59d4SQI1xpyA1hWujTGzD7QIkHSBRJw5AdIukJ5jUgBX1K2xawGlZwJpmRPQGvh6HIul8jmgtb1bQ5sUsGZoteFbJcwJrT68RMCS4OrD56/C/iFget1svRmiRCwJH8vcK7JURq3FqcoFpCK6+j5QOo8SYFLCUnmuJZS6ARKSzdGFjFxCt98WpRLyPcKVhLQoAS5kuPrk3ipg+jz9XBI1KYM33AsAAAAAAAAAAMDwBbLT+ekkcgdLAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 24 46 L 26 32 L 38 22 L 56 22 L 70 32 L 72 48 L 62 60 L 42 62 L 28 56 L 24 46 M 62 54 L 78 70 L 88 74 M 78 70 L 84 64 L 90 68" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>family</b>
+      <span>family</span>
+      
+      <small>★ 真图 · assets/sprites/family.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 22 18 L 30 22 L 30 32 L 22 38 L 14 32 L 14 22 L 22 18 M 50 12 L 58 18 L 58 30 L 50 36 L 42 30 L 42 18 L 50 12 M 76 26 L 83 30 L 83 40 L 76 46 L 69 40 L 69 30 L 76 26 M 22 38 L 22 64 L 10 86 M 50 36 L 50 66 L 38 88 M 76 46 L 76 68 L 88 88" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACA0lEQVR42u2bO04DQQyGcwxaaiQOwTEoabkBTU5BT0lPzQGQuAAXoOYGQRNpkGXm4efsTNaWrETajeX/i8c7j+RwCAsLCwsLCwvbyK6vbk67FZ788e72lN/vBkYWjn0XAGril4AAS1VSsun+n4+Xf74EhFbZUhOuAYAg0utSADggegCyTweglLhk/OY4NRDw+vQAMAhK4hdVAZLEvSrAHZg1gJJ/vT79OUUQfBJxm7EpAE7itTgwBjXO0HmE9TdXEi2FuCkEbvK4fGEcaglTJlOuQyG55JsrNS3c9DQAhj5FYBlrm4/VdHr4Y1QjHHbw49uRtbboAeBWozjx++fPs0sWRlk4dg0A6XBkA8jCsXMaYEk8FUKvGbuW/wwAWs14SPObAUCpGoY1vpkAaJvx8kMg+ff7w9ndQbTEbwEgC4ceAPYOwBVCAAgAbQBUCAEgAASAdQFoZ4I98ZwV4XAALQjcvcCe+CkB4JUXBMBdjWk2RKYBgHd2uSfEGAL3VKgEwW1B1BLKhWABMt+PxbvtC1gB8IqDt8nMIfToUulbAKjd57Y7RAnMTV4D0nI4DgVgcY/2uot4y+QsY0wFwCKOtke4irdsUBcHwCKOdq4xRHzts5Lnc+sAdCkAmslJKc6wUyNtJ9UmPwUAi/N/bTPSxtj8h5dWIKUxdvc/hLCwsLAwpv0CKmJcLRPgrT8AAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACA0lEQVR42u2bO04DQQyGcwxaaiQOwTEoabkBTU5BT0lPzQGQuAAXoOYGQRNpkGXm4efsTNaWrETajeX/i8c7j+RwCAsLCwsLCwvbyK6vbk67FZ788e72lN/vBkYWjn0XAGril4AAS1VSsun+n4+Xf74EhFbZUhOuAYAg0utSADggegCyTweglLhk/OY4NRDw+vQAMAhK4hdVAZLEvSrAHZg1gJJ/vT79OUUQfBJxm7EpAE7itTgwBjXO0HmE9TdXEi2FuCkEbvK4fGEcaglTJlOuQyG55JsrNS3c9DQAhj5FYBlrm4/VdHr4Y1QjHHbw49uRtbboAeBWozjx++fPs0sWRlk4dg0A6XBkA8jCsXMaYEk8FUKvGbuW/wwAWs14SPObAUCpGoY1vpkAaJvx8kMg+ff7w9ndQbTEbwEgC4ceAPYOwBVCAAgAbQBUCAEgAASAdQFoZ4I98ZwV4XAALQjcvcCe+CkB4JUXBMBdjWk2RKYBgHd2uSfEGAL3VKgEwW1B1BLKhWABMt+PxbvtC1gB8IqDt8nMIfToUulbAKjd57Y7RAnMTV4D0nI4DgVgcY/2uot4y+QsY0wFwCKOtke4irdsUBcHwCKOdq4xRHzts5Lnc+sAdCkAmslJKc6wUyNtJ9UmPwUAi/N/bTPSxtj8h5dWIKUxdvc/hLCwsLAwpv0CKmJcLRPgrT8AAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 22 18 L 30 22 L 30 32 L 22 38 L 14 32 L 14 22 L 22 18 M 50 12 L 58 18 L 58 30 L 50 36 L 42 30 L 42 18 L 50 12 M 76 26 L 83 30 L 83 40 L 76 46 L 69 40 L 69 30 L 76 26 M 22 38 L 22 64 L 10 86 M 50 36 L 50 66 L 38 88 M 76 46 L 76 68 L 88 88" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>fan</b>
+      <span>fan</span>
+      
+      <small>★ 真图 · assets/sprites/fan.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 50 L 50 12 M 50 50 L 82 64 M 50 50 L 18 64 M 50 50 L 50 88 M 32 88 L 68 88" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABfUlEQVR42u2asQ0CMQxFGYOWmg1omABRUNJTswgL0DMJPSUSG9BRMADISJZM5DgXyB0k/l/6QsBdlP8UconDaARBEARB0JCajKePmF2E3+0PUTcPAQC8A7AguAgvIVxv95ePp7Ov8AAAAAAAAAAAAAAAAAAAAAAAAC4ByPAMwBUE1wAo5HqzVQHQ5y5KYm4BcOmbyl8cWprLYs1C4HAy9Hy2eHvvCgCFZ7sE0NwISB11fToH/OURmtYpLVT4fQyCDK/dZ7U7KBSrU5rlYy7WcQtkeL/l3kHkBJcBQsdAWNfnuDcIpQBwKHqlxQ85dW2VAFKBQgClIPQKIPf3r1luhhgAL4O/BTDIhJgLQusch5XhS7X900dh17+/xACUaLuqmkAMgJuiiHsAl9XSLwAKz8YIwBwAAP4AhKtAjAAPodmxvUBTNcFUoSMEYBVOqi5+ypBsDYDmKoulHN4K1hWABFEdAAtCDoAqD09TVd3UHKDNBc2cFTS/14cgCKpFT8CyNt4XLwtvAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABfUlEQVR42u2asQ0CMQxFGYOWmg1omABRUNJTswgL0DMJPSUSG9BRMADISJZM5DgXyB0k/l/6QsBdlP8UconDaARBEARB0JCajKePmF2E3+0PUTcPAQC8A7AguAgvIVxv95ePp7Ov8AAAAAAAAAAAAAAAAAAAAAAAAC4ByPAMwBUE1wAo5HqzVQHQ5y5KYm4BcOmbyl8cWprLYs1C4HAy9Hy2eHvvCgCFZ7sE0NwISB11fToH/OURmtYpLVT4fQyCDK/dZ7U7KBSrU5rlYy7WcQtkeL/l3kHkBJcBQsdAWNfnuDcIpQBwKHqlxQ85dW2VAFKBQgClIPQKIPf3r1luhhgAL4O/BTDIhJgLQusch5XhS7X900dh17+/xACUaLuqmkAMgJuiiHsAl9XSLwAKz8YIwBwAAP4AhKtAjAAPodmxvUBTNcFUoSMEYBVOqi5+ypBsDYDmKoulHN4K1hWABFEdAAtCDoAqD09TVd3UHKDNBc2cFTS/14cgCKpFT8CyNt4XLwtvAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 50 L 50 12 M 50 50 L 82 64 M 50 50 L 18 64 M 50 50 L 50 88 M 32 88 L 68 88" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>farmer</b>
+      <span>farmer</span>
+      
+      <small>★ 真图 · assets/sprites/farmer.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 18 L 62 24 L 62 38 L 50 46 L 38 38 L 38 24 L 50 18 M 26 22 L 34 14 L 66 14 L 74 22 L 66 28 L 34 28 L 26 22 M 38 46 L 32 70 L 68 70 L 62 46 M 40 70 L 34 90 M 60 70 L 66 90 M 78 36 L 84 24 L 90 36" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABk0lEQVR42u2ZsQ3CMBBFMwYtDQ1D0DEIYyCh7EFFSU9NR8MILEDNBqBERJyscEmcc+zv/C9dk0TC/935sM5FQVEURVEURdlquVi/rQPO/PO6MwsYCCHMw0AIaT55CFOYTxaCa/523ASLPhCiNM4YALS1HLarOiaHUEVIAF2ZleYnByAXEcp8n9+WAKJCsGiMQ/Zzm/loANyFve6nOqSh5pn7/HHe1zF04e7eTwbCFADaGl+0ZpgKgGQghAagmUwOgBaNcUsA8n3WAJI7GXZBcM36mocckmgVADf8sNwS2Rv/Vw2zyLoGYtYD0vJS5jEI1cxXJn0DHgIBzBnAWPPQAGSTmx0E+f9uBQDuaqwCYGEergrkMdcSAMxRuRloWJU/3DYggC8AS/OQfYAACOC3aG1Pawcm9x0UADnXaxuBd02J3Nk+1JyQAJzy7jP7076DHpD0yb7Pt7DT3yEA4CH4ZDSbKvDNZjZVMCaT8FUwNovwVWCRQdgqsMoebBVYZg6uCqyvt+CuzEIslgByvTSlKCoJfQAO0uSCBiVNvQAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABk0lEQVR42u2ZsQ3CMBBFMwYtDQ1D0DEIYyCh7EFFSU9NR8MILEDNBqBERJyscEmcc+zv/C9dk0TC/935sM5FQVEURVEURdlquVi/rQPO/PO6MwsYCCHMw0AIaT55CFOYTxaCa/523ASLPhCiNM4YALS1HLarOiaHUEVIAF2ZleYnByAXEcp8n9+WAKJCsGiMQ/Zzm/loANyFve6nOqSh5pn7/HHe1zF04e7eTwbCFADaGl+0ZpgKgGQghAagmUwOgBaNcUsA8n3WAJI7GXZBcM36mocckmgVADf8sNwS2Rv/Vw2zyLoGYtYD0vJS5jEI1cxXJn0DHgIBzBnAWPPQAGSTmx0E+f9uBQDuaqwCYGEergrkMdcSAMxRuRloWJU/3DYggC8AS/OQfYAACOC3aG1Pawcm9x0UADnXaxuBd02J3Nk+1JyQAJzy7jP7076DHpD0yb7Pt7DT3yEA4CH4ZDSbKvDNZjZVMCaT8FUwNovwVWCRQdgqsMoebBVYZg6uCqyvt+CuzEIslgByvTSlKCoJfQAO0uSCBiVNvQAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 18 L 62 24 L 62 38 L 50 46 L 38 38 L 38 24 L 50 18 M 26 22 L 34 14 L 66 14 L 74 22 L 66 28 L 34 28 L 26 22 M 38 46 L 32 70 L 68 70 L 62 46 M 40 70 L 34 90 M 60 70 L 66 90 M 78 36 L 84 24 L 90 36" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>father</b>
+      <span>father</span>
+      
+      <small>★ 真图 · assets/sprites/father.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 38 42 L 30 66 L 70 66 L 62 42 M 38 48 L 22 60 L 62 48 L 78 60 M 40 66 L 34 90 M 60 66 L 66 90 L 58 90 M 48 44 L 52 58 L 56 44" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABwUlEQVR42u2ZMU4DMRBFcwxaaiQKLoDEBVLQcQVuwD0okShzEJpIXCA3oOQGoJUwmgzj8Tgx9nrmf2mK3U12/Z9n7bF3s4EgCIIgCILG6PLi6iucYRqPd9dHx+7NL4a1cAvCYp6DcGX+c/9aNM1/4wZCApBCMs7DNYBcHHZPRwEAHgHQKY+ap+cBAAAAAIOgewDcrBTuqsFSJlDjbhdGJQghlsfaIBhubyBEr/NNED4Vvrx9ZK+7AfDw/P4nDvfb31gg8AgDYHdz6xNASmPJvAXAtBDo+20FsBxrEKYAkZveSu//AkDLgtVPlVqVV+r9GgCrA2Epb2sA5F4DrWocAsJi3DoAWgBYn7WaWp42pmYMSNekWcAKvQsAumQt9YIEgJqnAKQs4PeUQHRdPnMAWvpZX4EUUgbkagEKYhiA0gM1ABSEdN5aDA3ZQksPbQEgFzXVoLU93bOgB4ChGWABcA4Ey7J42C5yTdpRIzXGW7dj2DiQqxWkzZHaeX06AKV0ngqAJVV7AFj1KvEUQ262yQEgMoBzjLiAEBrAqXN6q/9P3fsusiA0gJYNnxJCaACtv/BqX5VDAPivewIABEHQj74BppYa+mr6zvoAAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABwUlEQVR42u2ZMU4DMRBFcwxaaiQKLoDEBVLQcQVuwD0okShzEJpIXCA3oOQGoJUwmgzj8Tgx9nrmf2mK3U12/Z9n7bF3s4EgCIIgCILG6PLi6iucYRqPd9dHx+7NL4a1cAvCYp6DcGX+c/9aNM1/4wZCApBCMs7DNYBcHHZPRwEAHgHQKY+ap+cBAAAAAIOgewDcrBTuqsFSJlDjbhdGJQghlsfaIBhubyBEr/NNED4Vvrx9ZK+7AfDw/P4nDvfb31gg8AgDYHdz6xNASmPJvAXAtBDo+20FsBxrEKYAkZveSu//AkDLgtVPlVqVV+r9GgCrA2Epb2sA5F4DrWocAsJi3DoAWgBYn7WaWp42pmYMSNekWcAKvQsAumQt9YIEgJqnAKQs4PeUQHRdPnMAWvpZX4EUUgbkagEKYhiA0gM1ABSEdN5aDA3ZQksPbQEgFzXVoLU93bOgB4ChGWABcA4Ey7J42C5yTdpRIzXGW7dj2DiQqxWkzZHaeX06AKV0ngqAJVV7AFj1KvEUQ262yQEgMoBzjLiAEBrAqXN6q/9P3fsusiA0gJYNnxJCaACtv/BqX5VDAPivewIABEHQj74BppYa+mr6zvoAAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 38 42 L 30 66 L 70 66 L 62 42 M 38 48 L 22 60 L 62 48 L 78 60 M 40 66 L 34 90 M 60 66 L 66 90 L 58 90 M 48 44 L 52 58 L 56 44" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>fish</b>
+      <span>fish</span>
+      
+      <small>★ 真图 · assets/sprites/fish.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 22 50 L 46 26 L 74 26 L 86 50 L 74 74 L 46 74 L 22 50 M 22 50 L 6 32 L 6 68 L 22 50 M 62 42 L 68 46" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABuElEQVR42u2ZMU4DMRBFcwxaagoOwplouEiqNDkQEgU1N6ANSiRHw8gzY4+/d7Pa/6SRItZY+5+9trM5HAghhBBCCCGEEELIMjw/vVwQtdnwx8+v4Xo7nrYnQYZ/ff+4V1bCpgTURl5KyMiAz4JZRq1pXxPQKwEuAL3A6Gk/IqB2DToLSnhUp3rkWwVYEqy/TxEw2rH1zM8QAJOgBWQ79p5573mOJKwioLdzb59vEdBzXa5ZkMfWEtAqYSS8t8iVul4vn/WpcLqASEJ0wvME1ALWyhMAkRAJsCSU8NEW5oXbjAAtoXa8zYQbFSDbpSW0CpALkJ7CloSecCNtYAK8PdobZavNkgLSEnoE1KberBlw+f2+1bVN+SxL9zN9Bug1QAvIBLTCybLaePcHF2DtAlbI6OZbr/9r83O+Fyx8i4DoHDAcTgSrlW7Te49DAqKOy/+iwmUEQE+C2Y5vEgDhojbw0bcEZL8NZsLJ6hUA/zY42qmUUAvk7TKtkqYKQL0RyoTpLfgbIfQ7wRLaOzU+jIBZb4WjY/Pq4Zf4XeChR39JCbsMLyXsWsDufx0mhBBCCCGEEELIqvwBbSi4ELfFYn0AAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABuElEQVR42u2ZMU4DMRBFcwxaagoOwplouEiqNDkQEgU1N6ANSiRHw8gzY4+/d7Pa/6SRItZY+5+9trM5HAghhBBCCCGEEELIMjw/vVwQtdnwx8+v4Xo7nrYnQYZ/ff+4V1bCpgTURl5KyMiAz4JZRq1pXxPQKwEuAL3A6Gk/IqB2DToLSnhUp3rkWwVYEqy/TxEw2rH1zM8QAJOgBWQ79p5573mOJKwioLdzb59vEdBzXa5ZkMfWEtAqYSS8t8iVul4vn/WpcLqASEJ0wvME1ALWyhMAkRAJsCSU8NEW5oXbjAAtoXa8zYQbFSDbpSW0CpALkJ7CloSecCNtYAK8PdobZavNkgLSEnoE1KberBlw+f2+1bVN+SxL9zN9Bug1QAvIBLTCybLaePcHF2DtAlbI6OZbr/9r83O+Fyx8i4DoHDAcTgSrlW7Te49DAqKOy/+iwmUEQE+C2Y5vEgDhojbw0bcEZL8NZsLJ6hUA/zY42qmUUAvk7TKtkqYKQL0RyoTpLfgbIfQ7wRLaOzU+jIBZb4WjY/Pq4Zf4XeChR39JCbsMLyXsWsDufx0mhBBCCCGEEELIqvwBbSi4ELfFYn0AAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 22 50 L 46 26 L 74 26 L 86 50 L 74 74 L 46 74 L 22 50 M 22 50 L 6 32 L 6 68 L 22 50 M 62 42 L 68 46" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>floor</b>
+      <span>floor</span>
+      
+      <small>★ 真图 · assets/sprites/floor.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 8 28 L 92 28 M 8 60 L 92 60 M 40 28 L 40 60 M 70 60 L 70 92 M 26 60 L 26 92" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAtUlEQVR42u3asQ2DMBRFUY+RloaGFaiZImPQpmQJNmAIBmEJViBigmDJAcs+V3qtZV39/ywhQgAAAAAAAEAIzas7Ss1lAdv8TprP0CY/MzYEEEDAdQHL2CfNKSD1mbF5dAJyiAkggAAClKAJIIAAApSgCfgt4LxwaSGAgAgB+zoVl79MwFONns0KEFC7gLvf8uxegWIFeAWsAAEEKEElaAUIIEAJKkEr4JsgARUKqPpPUQDV8AVTKU1mDw2zGwAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAtUlEQVR42u3asQ2DMBRFUY+RloaGFaiZImPQpmQJNmAIBmEJViBigmDJAcs+V3qtZV39/ywhQgAAAAAAAEAIzas7Ss1lAdv8TprP0CY/MzYEEEDAdQHL2CfNKSD1mbF5dAJyiAkggAAClKAJIIAAApSgCfgt4LxwaSGAgAgB+zoVl79MwFONns0KEFC7gLvf8uxegWIFeAWsAAEEKEElaAUIIEAJKkEr4JsgARUKqPpPUQDV8AVTKU1mDw2zGwAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 8 28 L 92 28 M 8 60 L 92 60 M 40 28 L 40 60 M 70 60 L 70 92 M 26 60 L 26 92" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>fridge</b>
+      <span>fridge</span>
+      
+      <small>★ 真图 · assets/sprites/fridge.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 26 10 L 74 10 L 74 90 L 26 90 L 26 10 M 26 48 L 74 48 M 64 26 L 68 26 L 68 40 L 64 40 L 64 26 M 64 58 L 68 58 L 68 72 L 64 72 L 64 58" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA8klEQVR42u3bsQ4BQRSF4X0Mrdoj6dUeypuoNHTbalUkRJREsXKNzdoYy9x7/pOc2u63N2tmRFURQgghJCfj0eT6rxYDsFzXP29RAG3ZH89f62pTvxQAAIIAXLaLpwIAQCCA9Ob6FABz47vD6dH754QHSJ+8BWgWPy4BprN5Z8MDMAE9nj4ToDgBMgDyEwCAKkBuUwDJ84DmCIwDkZIB2i5w6AJQEsC7zc4QZQJ4CQIAgNRCyOWZoK19g3+6FHa9F0i/xqQBJCfAIsgC5G6HAQAAAAAAUAVwvxRmMwQAAAAAAEBQAPnfBeQBpP8xQgghxGlunMuiD5b/PTIAAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA8klEQVR42u3bsQ4BQRSF4X0Mrdoj6dUeypuoNHTbalUkRJREsXKNzdoYy9x7/pOc2u63N2tmRFURQgghJCfj0eT6rxYDsFzXP29RAG3ZH89f62pTvxQAAIIAXLaLpwIAQCCA9Ob6FABz47vD6dH754QHSJ+8BWgWPy4BprN5Z8MDMAE9nj4ToDgBMgDyEwCAKkBuUwDJ84DmCIwDkZIB2i5w6AJQEsC7zc4QZQJ4CQIAgNRCyOWZoK19g3+6FHa9F0i/xqQBJCfAIsgC5G6HAQAAAAAAUAVwvxRmMwQAAAAAAEBQAPnfBeQBpP8xQgghxGlunMuiD5b/PTIAAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 26 10 L 74 10 L 74 90 L 26 90 L 26 10 M 26 48 L 74 48 M 64 26 L 68 26 L 68 40 L 64 40 L 64 26 M 64 58 L 68 58 L 68 72 L 64 72 L 64 58" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>garden</b>
+      <span>garden</span>
+      
+      <small>★ 真图 · assets/sprites/garden.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 10 62 L 90 62 M 12 62 L 12 82 L 24 82 L 24 62 L 46 62 L 46 82 L 68 82 L 68 62 L 88 62 L 88 82 M 24 54 L 24 38 L 18 32 L 24 26 L 30 32 L 24 38 M 50 54 L 50 36 L 44 30 L 50 24 L 56 30 L 50 36 M 76 54 L 76 40 L 70 34 L 76 28 L 82 34 L 76 40" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABeUlEQVR42u2XMU7FMAyGewxWZm7CxBk4B9K7CiM7MwdgYnniCIwMSMygIPlhWWmq2FbyCt8veWhT/3G+pGmzLAghhBBCCCGEEEKDdXlx9fVvB25j1wPw5r893e4PQG32egagBy8RBTkUoB2AF4BdAV6P4RCiADL2gIwapr0CGct3KoCMTVB7zJyEMICZHlM/o+cAIMsDAAAAAAAAAABHx9d3N+EfocPjIfwvEPUIASidewuQ4iU/w2MqAM+BRvIzPYYNXgB4Z07nz/IIDV72gIhH5CQY8UgBENn8zsHDddx8ON7/hO68N7I87Ercim4AUmgtpOP3j89TtJ6vRVZuqWPr+RCAWqEiuf/88nqKWqH6nlY0V+e36nUBKKHNtOkWgFqezV0D0JNrAdTy3K/AWpHlugWgVWT5ZLUA6PZeb12X9XYBWJuJPQYAPAD00tt7AAAA7AEA4BUAAAB8v8IWRjl96TbbrmXbde5Ib/dh6C/FghBCCCGEfvUNDwXLWGrEsBgAAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABeUlEQVR42u2XMU7FMAyGewxWZm7CxBk4B9K7CiM7MwdgYnniCIwMSMygIPlhWWmq2FbyCt8veWhT/3G+pGmzLAghhBBCCCGEEEKDdXlx9fVvB25j1wPw5r893e4PQG32egagBy8RBTkUoB2AF4BdAV6P4RCiADL2gIwapr0CGct3KoCMTVB7zJyEMICZHlM/o+cAIMsDAAAAAAAAAABHx9d3N+EfocPjIfwvEPUIASidewuQ4iU/w2MqAM+BRvIzPYYNXgB4Z07nz/IIDV72gIhH5CQY8UgBENn8zsHDddx8ON7/hO68N7I87Ercim4AUmgtpOP3j89TtJ6vRVZuqWPr+RCAWqEiuf/88nqKWqH6nlY0V+e36nUBKKHNtOkWgFqezV0D0JNrAdTy3K/AWpHlugWgVWT5ZLUA6PZeb12X9XYBWJuJPQYAPAD00tt7AAAA7AEA4BUAAAB8v8IWRjl96TbbrmXbde5Ib/dh6C/FghBCCCGEfvUNDwXLWGrEsBgAAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 10 62 L 90 62 M 12 62 L 12 82 L 24 82 L 24 62 L 46 62 L 46 82 L 68 82 L 68 62 L 88 62 L 88 82 M 24 54 L 24 38 L 18 32 L 24 26 L 30 32 L 24 38 M 50 54 L 50 36 L 44 30 L 50 24 L 56 30 L 50 36 M 76 54 L 76 40 L 70 34 L 76 28 L 82 34 L 76 40" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>girl</b>
+      <span>girl</span>
+      
+      <small>★ 真图 · assets/sprites/girl.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 18 L 62 24 L 62 36 L 50 42 L 38 36 L 38 24 L 50 18 M 38 22 L 28 12 L 24 26 L 32 34 M 62 22 L 72 12 L 76 26 L 68 34 M 40 42 L 34 64 L 50 72 L 66 64 L 60 42 M 42 70 L 36 90 M 58 70 L 64 90" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAB+0lEQVR42u2azU0EMQyFtwyunJEoggZA4kgJ2wFXuuDEkSNXSqAEOuBIB4OCFMn7NE6ceH7sjC35spPZ+H378jezp1NEREREREREhDKur26mkfsTFbRVUVv2FQBaCuoprKd9b1+bASgVhu3Od7diMS397Aogi5prl65xWRKGsMwDQAg18QiCA2cOgORXlQL4/Xqbvt+fm+7bHUKpQCoiiatlEk9TAsEdAGpfKp5+7goAVyCOfw0ASR/mIKwNwNxOEJcq/FwLoPT95g9F2knQ9CFICqUmdi5dipUC6HWAawg1EFT4UOJb3DCkcDrDT68f/zknPl8zd9hZAkAWh0mFYx4CQCkDgHcAdCz/PL3M5ufDuZhuIdDZnhMvAeByZcClTgvADQTukKMBgBDMguA2OEsCMOmG2hY3C+1ZBTgAZtxQEp6vrQXAhBvow4uUWBS1vwZAXg65g5MZAGjLpQBQoBmEOQDc0xvpRNeyGar1uwsEDoBWPLcbLPVrwgHZrksBMOkCSREaEKWlzhQA6attre3NDYNWAGn2zuI40S0HIJcAcElDq2M78wAkW1J8M4TXpG17+zd1UNLAcv8oXCqotX0AGMX+Qw6DANBp52GGwaEBaKw8xDA4JICL//o83l+kdNdYutfFrg+LRyFr3m/KAVyueX9EREREREP8AdieUmk83CoqAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAB+0lEQVR42u2azU0EMQyFtwyunJEoggZA4kgJ2wFXuuDEkSNXSqAEOuBIB4OCFMn7NE6ceH7sjC35spPZ+H378jezp1NEREREREREhDKur26mkfsTFbRVUVv2FQBaCuoprKd9b1+bASgVhu3Od7diMS397Aogi5prl65xWRKGsMwDQAg18QiCA2cOgORXlQL4/Xqbvt+fm+7bHUKpQCoiiatlEk9TAsEdAGpfKp5+7goAVyCOfw0ASR/mIKwNwNxOEJcq/FwLoPT95g9F2knQ9CFICqUmdi5dipUC6HWAawg1EFT4UOJb3DCkcDrDT68f/zknPl8zd9hZAkAWh0mFYx4CQCkDgHcAdCz/PL3M5ufDuZhuIdDZnhMvAeByZcClTgvADQTukKMBgBDMguA2OEsCMOmG2hY3C+1ZBTgAZtxQEp6vrQXAhBvow4uUWBS1vwZAXg65g5MZAGjLpQBQoBmEOQDc0xvpRNeyGar1uwsEDoBWPLcbLPVrwgHZrksBMOkCSREaEKWlzhQA6attre3NDYNWAGn2zuI40S0HIJcAcElDq2M78wAkW1J8M4TXpG17+zd1UNLAcv8oXCqotX0AGMX+Qw6DANBp52GGwaEBaKw8xDA4JICL//o83l+kdNdYutfFrg+LRyFr3m/KAVyueX9EREREREP8AdieUmk83CoqAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 18 L 62 24 L 62 36 L 50 42 L 38 36 L 38 24 L 50 18 M 38 22 L 28 12 L 24 26 L 32 34 M 62 22 L 72 12 L 76 26 L 68 34 M 40 42 L 34 64 L 50 72 L 66 64 L 60 42 M 42 70 L 36 90 M 58 70 L 64 90" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>girlbig</b>
+      <span>sister</span>
+      
+      <small>★ 真图 · assets/sprites/girlbig.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 12 L 62 18 L 62 32 L 50 40 L 38 32 L 38 18 L 50 12 M 38 20 L 28 10 L 24 26 L 34 34 M 62 20 L 72 10 L 76 26 L 66 34 M 38 40 L 32 68 L 50 78 L 68 68 L 62 40 M 42 74 L 36 92 M 58 74 L 64 92" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAB60lEQVR42u2bS07EMAyG5xhsWSNxCC4AEkuOMDdgyy1YsWTJliNwBG7AkhsMyiLItRzHebS1XVuyRpqmqf8vbhqnM6dTWFhYWFhY2KhdX91cPF9PFFBLULl9j5De81YHcL67ZQODolPb7C0wJNfZFQAXHBZOOQdCco1d058LUCIeg+DEq7oNYEAUhPT5+/XGCk7Hs1PnU+LVA8gBQ3FYJHUMQyjNF+YyoObf788LN5EB3L29BoDaXKEeABw9KB5+bw5AKcC1AaibB0ojMwqg1r/6xdDoHKB6ESRZqs4EoFp8qVKjUh6LpcRT/ZgvmSUZYF6o5KlBAVBZ5m6VDYcRTkFwLx6v37NfXj/+vdTGDQAoVuouAPSKdwMhABwZQAr+5+mF9c+HM+tmAeRZfBSASQjw+T4DgCkIcIVXE98CwMSCCS9vZwNQDYEqcNYAoBYC3MrKJe1MAMlVl8sBAAGQiHcFAEMIAEcGIL3/WwFkCOq3xaXiewCYWAzBbe1ZtYCJ0ccAJBkhHXHcr4n9P0llyAmn+jC/P4BBuNoDkNYKEAS+z92+J8AAqLSm2rgVP6NtAPAm3iWEAND5AtTFi9ORkXSRBYcGMEOAOQiL3/o93i+89U8RtT707guioCkRW/WzawZwvlU/YWFhVfsD7N0TB9Z7tJIAAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAB60lEQVR42u2bS07EMAyG5xhsWSNxCC4AEkuOMDdgyy1YsWTJliNwBG7AkhsMyiLItRzHebS1XVuyRpqmqf8vbhqnM6dTWFhYWFhY2KhdX91cPF9PFFBLULl9j5De81YHcL67ZQODolPb7C0wJNfZFQAXHBZOOQdCco1d058LUCIeg+DEq7oNYEAUhPT5+/XGCk7Hs1PnU+LVA8gBQ3FYJHUMQyjNF+YyoObf788LN5EB3L29BoDaXKEeABw9KB5+bw5AKcC1AaibB0ojMwqg1r/6xdDoHKB6ESRZqs4EoFp8qVKjUh6LpcRT/ZgvmSUZYF6o5KlBAVBZ5m6VDYcRTkFwLx6v37NfXj/+vdTGDQAoVuouAPSKdwMhABwZQAr+5+mF9c+HM+tmAeRZfBSASQjw+T4DgCkIcIVXE98CwMSCCS9vZwNQDYEqcNYAoBYC3MrKJe1MAMlVl8sBAAGQiHcFAEMIAEcGIL3/WwFkCOq3xaXiewCYWAzBbe1ZtYCJ0ccAJBkhHXHcr4n9P0llyAmn+jC/P4BBuNoDkNYKEAS+z92+J8AAqLSm2rgVP6NtAPAm3iWEAND5AtTFi9ORkXSRBYcGMEOAOQiL3/o93i+89U8RtT707guioCkRW/WzawZwvlU/YWFhVfsD7N0TB9Z7tJIAAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 12 L 62 18 L 62 32 L 50 40 L 38 32 L 38 18 L 50 12 M 38 20 L 28 10 L 24 26 L 34 34 M 62 20 L 72 10 L 76 26 L 66 34 M 38 40 L 32 68 L 50 78 L 68 68 L 62 40 M 42 74 L 36 92 M 58 74 L 64 92" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>home</b>
+      <span>home</span>
+      
+      <small>★ 真图 · assets/sprites/home.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 12 44 L 50 12 L 88 44 L 88 88 L 12 88 L 12 44 M 40 88 L 40 64 L 60 64 L 60 88 M 24 52 L 38 52 L 38 66 L 24 66 L 24 52 M 70 30 L 70 14 L 80 14 L 80 36" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABbklEQVR42u2bOw7CMBBEOUZa6nTUSByBgqvQ5yi0UHMKKrpIXICSAok6KIVRCP6tHTu7ZkaaBge884KdaKMsFhAEQRAEQTNpWdUd9XiXRYW/7bakotV3TBYDYBzEt/AiAJhC+BQvGoBao64ArhD9+HG1+TH78LbglDMpDgA1vAuCKACh4W0QxACIDW+CwB6Az2YXAkEFZA0gRfgxBF14FgBSBdeBYAcgV3gbhNkA5A5vgpAdQMr1HrIvZAXAITzl9rmIv3zM7XPx4ZNA0HVbTNdgTp6sSyQlsA8QAAAAAAjfCC/XVqyjrwoAUNXd4/nSuh87tPePh2Omz3MbAAAAANICmDMcAAAA9gA5AE77NdkAwB0AxQAAAAAAAAAAAG6rNjYAYAkwA9Ccmy9zA2Cq7y8AjGubDIDqCOsmGNqnOxsCwPZ7lJqiHoyETFgkgOGkugJ8+vNUhwKY7NlASNExoWJgiXmJoqg3PiAIgqTrDVnnW9/12GtSAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABbklEQVR42u2bOw7CMBBEOUZa6nTUSByBgqvQ5yi0UHMKKrpIXICSAok6KIVRCP6tHTu7ZkaaBge884KdaKMsFhAEQRAEQTNpWdUd9XiXRYW/7bakotV3TBYDYBzEt/AiAJhC+BQvGoBao64ArhD9+HG1+TH78LbglDMpDgA1vAuCKACh4W0QxACIDW+CwB6Az2YXAkEFZA0gRfgxBF14FgBSBdeBYAcgV3gbhNkA5A5vgpAdQMr1HrIvZAXAITzl9rmIv3zM7XPx4ZNA0HVbTNdgTp6sSyQlsA8QAAAAAAjfCC/XVqyjrwoAUNXd4/nSuh87tPePh2Omz3MbAAAAANICmDMcAAAA9gA5AE77NdkAwB0AxQAAAAAAAAAAAG6rNjYAYAkwA9Ccmy9zA2Cq7y8AjGubDIDqCOsmGNqnOxsCwPZ7lJqiHoyETFgkgOGkugJ8+vNUhwKY7NlASNExoWJgiXmJoqg3PiAIgqTrDVnnW9/12GtSAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 12 44 L 50 12 L 88 44 L 88 88 L 12 88 L 12 44 M 40 88 L 40 64 L 60 64 L 60 88 M 24 52 L 38 52 L 38 66 L 24 66 L 24 52 M 70 30 L 70 14 L 80 14 L 80 36" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>juice</b>
+      <span>juice</span>
+      
+      <small>★ 真图 · assets/sprites/juice.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 26 34 L 74 34 L 70 82 L 30 82 L 26 34 M 30 56 L 70 56 M 56 34 L 68 16 L 78 20 M 34 44 L 42 40 L 50 44 L 42 48 L 34 44" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA80lEQVR42u2YPQrCQBBG9xi21nZewCNYeICAZ7PIJTyAvY2VnXU6wSYyxYRlWWzCZMfMe/ARAinyvexP2JQAAAAAAMA7281uLBOq/ON0HPv9YYrchxEi5fLSpQzJagXkhbVkbTqsUkBeXr9+yHkfrnxt3ocrX857hv6//JzMTY1fzzcX0BIXArr+1iwIQICDBVJe4j58Fo+b3UEFKOEElLuBZWkZ9u7KIwABCEAAAhCAgEnA+3kxiwiQKwIQEHgNeF3PPo/JVIK1ALdnhAhAAAIQgABDAbL9IQABCECAawH5y1rE5VkAAjIBSyUBAAAAAMAcvrtfr4R/bLzCAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA80lEQVR42u2YPQrCQBBG9xi21nZewCNYeICAZ7PIJTyAvY2VnXU6wSYyxYRlWWzCZMfMe/ARAinyvexP2JQAAAAAAMA7281uLBOq/ON0HPv9YYrchxEi5fLSpQzJagXkhbVkbTqsUkBeXr9+yHkfrnxt3ocrX857hv6//JzMTY1fzzcX0BIXArr+1iwIQICDBVJe4j58Fo+b3UEFKOEElLuBZWkZ9u7KIwABCEAAAhCAgEnA+3kxiwiQKwIQEHgNeF3PPo/JVIK1ALdnhAhAAAIQgABDAbL9IQABCECAawH5y1rE5VkAAjIBSyUBAAAAAMAcvrtfr4R/bLzCAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 26 34 L 74 34 L 70 82 L 30 82 L 26 34 M 30 56 L 70 56 M 56 34 L 68 16 L 78 20 M 34 44 L 42 40 L 50 44 L 42 48 L 34 44" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>kitchen</b>
+      <span>kitchen</span>
+      
+      <small>★ 真图 · assets/sprites/kitchen.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 12 58 L 88 58 L 88 84 L 12 84 L 12 58 M 28 58 L 28 42 L 72 42 L 72 58 M 38 42 L 38 30 L 62 30 L 62 42 L 38 42 M 46 30 L 50 20 L 54 30 M 58 30 L 64 20 L 68 30" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABZUlEQVR42u2ZsQ3CMBBFMwYtdTagyQRMQE/NIiyQnkmgoYEuY1AgUQcZydKJ2M45OOZ8+V/6TXAs/xf77ISqgiAIgiAIgiAI+oPWq7o35l5XF/5677wAfL+pD69+FnCfrspZEBtKHYTFA4gNpbIO2FAuq336NOT51vWXthnYXKftVIX3hfbZwlAxrU2YKQCazZa1VMQBMAOntgC4EGzb734oEPGz4dieBqYgxrzbHz6m9xexJHzhOTBsaOrv+0RD4IandoX2hRcNIVQEQ2BCAMb6FLnV+TwFQKi/4gCkNgAAgNBCuNjwAEAAxJ4FYiwewJTDUIyLfhdIEV7cCc9l11tcKk8Zz88A5gw0t5MAyLm/i9sxAAAA6v7xfBXrbABMweEOyhYoFQBclTemPReWqy2nj2wA6FfdVLBCALj9ZJ0BiwcQG0jFEsAusAQA5l/aUg0AAAAAffYPItJcQRAEQRAEQUO9AT72mXY1pJysAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABZUlEQVR42u2ZsQ3CMBBFMwYtdTagyQRMQE/NIiyQnkmgoYEuY1AgUQcZydKJ2M45OOZ8+V/6TXAs/xf77ISqgiAIgiAIgiAI+oPWq7o35l5XF/5677wAfL+pD69+FnCfrspZEBtKHYTFA4gNpbIO2FAuq336NOT51vWXthnYXKftVIX3hfbZwlAxrU2YKQCazZa1VMQBMAOntgC4EGzb734oEPGz4dieBqYgxrzbHz6m9xexJHzhOTBsaOrv+0RD4IandoX2hRcNIVQEQ2BCAMb6FLnV+TwFQKi/4gCkNgAAgNBCuNjwAEAAxJ4FYiwewJTDUIyLfhdIEV7cCc9l11tcKk8Zz88A5gw0t5MAyLm/i9sxAAAA6v7xfBXrbABMweEOyhYoFQBclTemPReWqy2nj2wA6FfdVLBCALj9ZJ0BiwcQG0jFEsAusAQA5l/aUg0AAAAAffYPItJcQRAEQRAEQUO9AT72mXY1pJysAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 12 58 L 88 58 L 88 84 L 12 84 L 12 58 M 28 58 L 28 42 L 72 42 L 72 58 M 38 42 L 38 30 L 62 30 L 62 42 L 38 42 M 46 30 L 50 20 L 54 30 M 58 30 L 64 20 L 68 30" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>milkbox</b>
+      <span>milk</span>
+      
+      <small>★ 真图 · assets/sprites/milkbox.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 26 26 L 68 26 L 78 36 L 78 84 L 22 84 L 22 36 L 26 26 M 26 26 L 38 16 L 78 26 M 22 50 L 78 50 M 34 60 L 50 64 L 66 60" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABPklEQVR42u2ZPw7CIBhHewxXZw/hPbyEp3HU07iYmLh5BicHE2cNJiRYQSiF8kHfS35TqeV7mPKnXQcAAACQieVi9bJlVgI2u/NXEICAmQiwFW9KaFqEKi6E5l6OupAQ7o/nT6oWElq4q/iqheQo3szpcv1EpBDVEd3B3BH5L1CdihnVmIgTMGXxIiWUECBGQqnixUhIKUCvEKuSkEpAf5lcjQTb3B8zura9wtC1gVgBIYUNFSBmbZBLQOjIVyFgzAuuGQGpI0KAeuj+eBOTySUgAAEIcB54lggCEFBAwHp7EBMEIECYAHOKcrUxGfM7RQT49gL/5mx13fW9wHdfNZsh38LFhu8eBLQkoC8hpH1zArSE0LbVHYik3Ow0cSIUW3CzR2KhBVcjYMrNDwIQgAC+C4gQICUdAAAAAMAg3p/xOI4TlLemAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABPklEQVR42u2ZPw7CIBhHewxXZw/hPbyEp3HU07iYmLh5BicHE2cNJiRYQSiF8kHfS35TqeV7mPKnXQcAAACQieVi9bJlVgI2u/NXEICAmQiwFW9KaFqEKi6E5l6OupAQ7o/nT6oWElq4q/iqheQo3szpcv1EpBDVEd3B3BH5L1CdihnVmIgTMGXxIiWUECBGQqnixUhIKUCvEKuSkEpAf5lcjQTb3B8zura9wtC1gVgBIYUNFSBmbZBLQOjIVyFgzAuuGQGpI0KAeuj+eBOTySUgAAEIcB54lggCEFBAwHp7EBMEIECYAHOKcrUxGfM7RQT49gL/5mx13fW9wHdfNZsh38LFhu8eBLQkoC8hpH1zArSE0LbVHYik3Ow0cSIUW3CzR2KhBVcjYMrNDwIQgAC+C4gQICUdAAAAAMAg3p/xOI4TlLemAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 26 26 L 68 26 L 78 36 L 78 84 L 22 84 L 22 36 L 26 26 M 26 26 L 38 16 L 78 26 M 22 50 L 78 50 M 34 60 L 50 64 L 66 60" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>mother</b>
+      <span>mother</span>
+      
+      <small>★ 真图 · assets/sprites/mother.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 34 22 L 28 42 L 34 58 L 50 68 L 66 58 L 72 42 L 66 22 M 34 58 L 26 86 L 50 90 L 74 86 L 66 58 M 58 52 L 76 60 L 82 76 M 76 60 L 82 54 L 88 60 L 82 68 L 76 60" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABpklEQVR42u2ZsW0DMQxFb4y0qQNkiEyQPl1ab+DWi6TMCik8QEbIAoFLb2BDBgTQBHWi7nSWSP0PELAPxtn/geKR9DRBEARBEARBbfT89HIZzjCN3dvr3Xv35oPhuXALQmOeg3Bl/vz7lTXNP+MGQgQQQzLOwzwAWtgkg1L8fe/vIlwzWyDpmV8KIITJ48ALHjWZygx6XQJgCgIAjAxAet7XAmACQg7A0iLoDoBk1i0AbRbwHsBci6zp9zUQzM4J2oFnDoDpQal04is13jWAUvOpCXBICC7MA8CDIJjtAwBgFABbQjA7DtcEYGJFtiUAaYRO/enSfCF6+jio4+d9l41U+8yNN4dQal4LQNowh+GJGv4/ft6iGYT4I2sDiEb4NokCoMbp6+7TvxQC/R5XAHIQJDP8zPMjYOL8LwVAF6jmi6AGQg4AzYimj8A15kuygNaArpqgtQC0WeAaQAoCACRaX3fmtRC6G4IAoDIACUK3G+EtzJuBMDSArc1LELqq/EvGXzdZsHb6Mw9hbh1VCwy/Z/cANHA0RrX3nKypuyUmBEEQNKiuIb8WT+U+ZewAAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABpklEQVR42u2ZsW0DMQxFb4y0qQNkiEyQPl1ab+DWi6TMCik8QEbIAoFLb2BDBgTQBHWi7nSWSP0PELAPxtn/geKR9DRBEARBEARBbfT89HIZzjCN3dvr3Xv35oPhuXALQmOeg3Bl/vz7lTXNP+MGQgQQQzLOwzwAWtgkg1L8fe/vIlwzWyDpmV8KIITJ48ALHjWZygx6XQJgCgIAjAxAet7XAmACQg7A0iLoDoBk1i0AbRbwHsBci6zp9zUQzM4J2oFnDoDpQal04is13jWAUvOpCXBICC7MA8CDIJjtAwBgFABbQjA7DtcEYGJFtiUAaYRO/enSfCF6+jio4+d9l41U+8yNN4dQal4LQNowh+GJGv4/ft6iGYT4I2sDiEb4NokCoMbp6+7TvxQC/R5XAHIQJDP8zPMjYOL8LwVAF6jmi6AGQg4AzYimj8A15kuygNaArpqgtQC0WeAaQAoCACRaX3fmtRC6G4IAoDIACUK3G+EtzJuBMDSArc1LELqq/EvGXzdZsHb6Mw9hbh1VCwy/Z/cANHA0RrX3nKypuyUmBEEQNKiuIb8WT+U+ZewAAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 34 22 L 28 42 L 34 58 L 50 68 L 66 58 L 72 42 L 66 22 M 34 58 L 26 86 L 50 90 L 74 86 L 66 58 M 58 52 L 76 60 L 82 76 M 76 60 L 82 54 L 88 60 L 82 68 L 76 60" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>noodles</b>
+      <span>noodles</span>
+      
+      <small>★ 真图 · assets/sprites/noodles.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 12 50 L 88 50 M 16 50 L 24 82 L 76 82 L 84 50 M 24 42 L 34 36 L 44 42 L 54 36 L 64 42 L 74 36 M 62 22 L 44 76 M 74 20 L 56 74" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABaElEQVR42u2YMW4CMRBF9xi0qXMFJO6RMhdIk6ukTUXDIXIAJKR0adOlpIiEKINcbDQs67GdDZ4x+770hbTMaP2fBy/QdQghhBBCCCHUkO4W9z/Bswg5FnQ2ADbPy4ugses3GT4GYDa7P3sAjD/jf8MA5GNOhmpy/GNhtPrj5/rMfa+2++G6rHUBQwuTWy+tARi7j/mua2FyQkzpMwOQG0QusqQnt88EgFzQ19vjr1NhYvWpgLEe8/DDQBqIsbpgbZdTPS5GP7bInBoZKLz2J3xuj4sJkI+j1KKHi8+tH4IynQQJYOykzglRUt9Pk/yoVAMw/HITvP8+nFl7L+bSetmn3V/znwGULtKjJwHYvn80bwBMASDdWuh//8Hk5Uy42o63AsEsPAAEgIeXnTtXBbB6enXnKgB6CB4BVPttAADjg9DsAASA06dB9fAAAAAAzA5D88MPAAAAQPKf49ruEEIIIYQQQqU6Aa5EvD71Jjl5AAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABaElEQVR42u2YMW4CMRBF9xi0qXMFJO6RMhdIk6ukTUXDIXIAJKR0adOlpIiEKINcbDQs67GdDZ4x+770hbTMaP2fBy/QdQghhBBCCCHUkO4W9z/Bswg5FnQ2ADbPy4ugses3GT4GYDa7P3sAjD/jf8MA5GNOhmpy/GNhtPrj5/rMfa+2++G6rHUBQwuTWy+tARi7j/mua2FyQkzpMwOQG0QusqQnt88EgFzQ19vjr1NhYvWpgLEe8/DDQBqIsbpgbZdTPS5GP7bInBoZKLz2J3xuj4sJkI+j1KKHi8+tH4IynQQJYOykzglRUt9Pk/yoVAMw/HITvP8+nFl7L+bSetmn3V/znwGULtKjJwHYvn80bwBMASDdWuh//8Hk5Uy42o63AsEsPAAEgIeXnTtXBbB6enXnKgB6CB4BVPttAADjg9DsAASA06dB9fAAAAAAzA5D88MPAAAAQPKf49ruEEIIIYQQQqU6Aa5EvD71Jjl5AAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 12 50 L 88 50 M 16 50 L 24 82 L 76 82 L 84 50 M 24 42 L 34 36 L 44 42 L 54 36 L 64 42 L 74 36 M 62 22 L 44 76 M 74 20 L 56 74" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>nurse</b>
+      <span>nurse</span>
+      
+      <small>★ 真图 · assets/sprites/nurse.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 16 L 62 22 L 62 36 L 50 44 L 38 36 L 38 22 L 50 16 M 36 22 L 36 10 L 64 10 L 64 22 M 48 12 L 52 12 L 52 20 L 60 20 L 60 24 L 52 24 L 52 32 L 48 32 L 48 24 L 40 24 L 40 20 L 48 12 M 38 44 L 32 68 L 68 68 L 62 44 M 40 68 L 34 90 M 60 68 L 66 90" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABXElEQVR42u3bMQ7CMAwFUI7BysxhGLgNp2HkKp3YkHoJhJCYQRmCLDdp0iZI+PtbshCoA35NQ+KWzYbBYDAYDMavYrfdv1vTPMD9+ZrkeDxMMnUcAQgAAJAqtjYJQAAC2AZoQYAoPgI8hnMxx8vpm+G9a4CQkAByiSuLl58TgAAEwAVwPwm6BJCNkVyxunCo4mtHA9xZrx0NchJ01y+EWvKuRXAz5FM5XG+4HeFSXzBkAIivOmF6Abni4QHiJFcDAIcgZ/gWAJMIevPTCmDqp1IvcOaK1wA5BIlpAkCu63sAmNoctQKkEMwClK7/WgBTCD0ATI8CCVAqngBoAEsnwDkAjWCiVaav/5i5Bx+WHmMGQH/BVPentIDKHfP3AKl9fE8Ak32CXgAQXeC5wiARXAOk7gEsATCPsOaMQo0C1wAthUAgEMAzQI8CTCMQoPEfIObvFRLAOwCDwTATH/En13AhrL2xAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABXElEQVR42u3bMQ7CMAwFUI7BysxhGLgNp2HkKp3YkHoJhJCYQRmCLDdp0iZI+PtbshCoA35NQ+KWzYbBYDAYDMavYrfdv1vTPMD9+ZrkeDxMMnUcAQgAAJAqtjYJQAAC2AZoQYAoPgI8hnMxx8vpm+G9a4CQkAByiSuLl58TgAAEwAVwPwm6BJCNkVyxunCo4mtHA9xZrx0NchJ01y+EWvKuRXAz5FM5XG+4HeFSXzBkAIivOmF6Abni4QHiJFcDAIcgZ/gWAJMIevPTCmDqp1IvcOaK1wA5BIlpAkCu63sAmNoctQKkEMwClK7/WgBTCD0ATI8CCVAqngBoAEsnwDkAjWCiVaav/5i5Bx+WHmMGQH/BVPentIDKHfP3AKl9fE8Ak32CXgAQXeC5wiARXAOk7gEsATCPsOaMQo0C1wAthUAgEMAzQI8CTCMQoPEfIObvFRLAOwCDwTATH/En13AhrL2xAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 16 L 62 22 L 62 36 L 50 44 L 38 36 L 38 22 L 50 16 M 36 22 L 36 10 L 64 10 L 64 22 M 48 12 L 52 12 L 52 20 L 60 20 L 60 24 L 52 24 L 52 32 L 48 32 L 48 24 L 40 24 L 40 20 L 48 12 M 38 44 L 32 68 L 68 68 L 62 44 M 40 68 L 34 90 M 60 68 L 66 90" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>parents</b>
+      <span>parents</span>
+      
+      <small>★ 真图 · assets/sprites/parents.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 30 16 L 40 22 L 40 34 L 30 40 L 20 34 L 20 22 L 30 16 M 70 18 L 80 24 L 80 36 L 70 42 L 60 36 L 60 24 L 70 18 M 30 40 L 30 68 L 16 90 M 70 42 L 70 70 L 86 90 M 30 50 L 16 58 M 70 52 L 86 60" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACCUlEQVR42u2aMU7EQAxFcwxaaiQOwTG4Ajeg2VNQIm25PVfYBomShhtQcgMQkSxZlp3YM/bMJPGXXCwrzfi/TCaZv0xTKpVKpVKpVCqVsur25u5XqkOYf3q4F8sbxlCQ18xzMGqNt4AcYr4GgmWuZhD+J/p5P8/FNQLf4SppsgR0EwgYwFp9XZ7nAghWABJkDnYzCFoAYB6XtjlpDm6F1UCuBoA3IdwU3a29AGhA7w4AHUuaJwEkgA4AWmyChwcw3CaIX0+XzOK/W19XhwegbbSmIW5sDnQ389JqoPdnxNgc5O5HcLpxtVhpw2UPkQ3R1dDN+FIK9PjyMVdkUtT1qlOjUr1ev9myPAalOr2d5uoSx7UEAEalunye2QoDAPffmvklCJ4AJAghAMC85ur3BhACYVQATSDQR48WAAdB05TF/BIAt0clPWnVANBA8ATgAqEGQMkqsAKQILidDw4PAEM4PACreQ5CBAAOgjuAkqu/GwDQWCkADCEKgATh0ABc3wjxRlhyS2hPasMDgMCTi6bBKDZsjazosddSNCYPOxNIb1nw2SO5ofDAoGRYuihNAXjng9w41Jy2py7mIwBoAtPQTKAXgFZzJoDa3N8zurYYC4VQ2ohXDJ4ACgC4QtgCgLBVYB10JABukdhWAISsAsvPTxE/VVnHdO9hawAm7/8sPzyAVCq1a/0Bx1kZvF5XU8IAAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACCUlEQVR42u2aMU7EQAxFcwxaaiQOwTG4Ajeg2VNQIm25PVfYBomShhtQcgMQkSxZlp3YM/bMJPGXXCwrzfi/TCaZv0xTKpVKpVKpVCqVsur25u5XqkOYf3q4F8sbxlCQ18xzMGqNt4AcYr4GgmWuZhD+J/p5P8/FNQLf4SppsgR0EwgYwFp9XZ7nAghWABJkDnYzCFoAYB6XtjlpDm6F1UCuBoA3IdwU3a29AGhA7w4AHUuaJwEkgA4AWmyChwcw3CaIX0+XzOK/W19XhwegbbSmIW5sDnQ389JqoPdnxNgc5O5HcLpxtVhpw2UPkQ3R1dDN+FIK9PjyMVdkUtT1qlOjUr1ev9myPAalOr2d5uoSx7UEAEalunye2QoDAPffmvklCJ4AJAghAMC85ur3BhACYVQATSDQR48WAAdB05TF/BIAt0clPWnVANBA8ATgAqEGQMkqsAKQILidDw4PAEM4PACreQ5CBAAOgjuAkqu/GwDQWCkADCEKgATh0ABc3wjxRlhyS2hPasMDgMCTi6bBKDZsjazosddSNCYPOxNIb1nw2SO5ofDAoGRYuihNAXjng9w41Jy2py7mIwBoAtPQTKAXgFZzJoDa3N8zurYYC4VQ2ohXDJ4ACgC4QtgCgLBVYB10JABukdhWAISsAsvPTxE/VVnHdO9hawAm7/8sPzyAVCq1a/0Bx1kZvF5XU8IAAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 30 16 L 40 22 L 40 34 L 30 40 L 20 34 L 20 22 L 30 16 M 70 18 L 80 24 L 80 36 L 70 42 L 60 36 L 60 24 L 70 18 M 30 40 L 30 68 L 16 90 M 70 42 L 70 70 L 86 90 M 30 50 L 16 58 M 70 52 L 86 60" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>pc</b>
+      <span>computer</span>
+      
+      <small>★ 真图 · assets/sprites/pc.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 12 16 L 88 16 L 88 58 L 12 58 L 12 16 M 36 68 L 64 68 M 50 58 L 50 68 M 22 68 L 78 68 L 78 86 L 22 86 L 22 68" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABOUlEQVR42u2aMQoCMRBF9xi21t7AxhN4NC9gY6MnsbeSbe0sRQQRbJQRhLAmo5vNxEzmf/gIWVj3P2eyIbFpIAiCIAiCIAjyaTyaPLR7MIDZdK7WyQCs2qM6mwSwP99fNgfgHdwcgG7wLABOl2syu/e9HdaDDQAWAdDzmQXghs8GQMq/huSuZVkHpKwA11xAHwTfWLUAfIGrB8AFDrVF1QC+tUQ2ABIrN3LsxKemArhla/ctwIXkrAYA9xqMDV88gNh1AACUCIDGzQKgMfoy+gz1c9VbYhSaxrEnaAmA+W1x0wAkvFhuPlzkyZDkkVs3vLkzx2oBSLaAyl83lQEAAAoDEOrT7a4Vc1Fzg3TYPlAA4F8ApHaI+xgVAABoAVRAsRWQIqDaCkgJQOUkaAJAFf8HhiAIgiDIpJ5pR6y+sUpREgAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABOUlEQVR42u2aMQoCMRBF9xi21t7AxhN4NC9gY6MnsbeSbe0sRQQRbJQRhLAmo5vNxEzmf/gIWVj3P2eyIbFpIAiCIAiCIAjyaTyaPLR7MIDZdK7WyQCs2qM6mwSwP99fNgfgHdwcgG7wLABOl2syu/e9HdaDDQAWAdDzmQXghs8GQMq/huSuZVkHpKwA11xAHwTfWLUAfIGrB8AFDrVF1QC+tUQ2ABIrN3LsxKemArhla/ctwIXkrAYA9xqMDV88gNh1AACUCIDGzQKgMfoy+gz1c9VbYhSaxrEnaAmA+W1x0wAkvFhuPlzkyZDkkVs3vLkzx2oBSLaAyl83lQEAAAoDEOrT7a4Vc1Fzg3TYPlAA4F8ApHaI+xgVAABoAVRAsRWQIqDaCkgJQOUkaAJAFf8HhiAIgiDIpJ5pR6y+sUpREgAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 12 16 L 88 16 L 88 58 L 12 58 L 12 16 M 36 68 L 64 68 M 50 58 L 50 68 M 22 68 L 78 68 L 78 86 L 22 86 L 22 68" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>pencil</b>
+      <span>pencil</span>
+      
+      <small>★ 真图 · assets/sprites/pencil.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 16 88 L 24 74 L 74 16 L 84 28 L 34 84 L 16 88 M 74 16 L 84 28" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABBUlEQVR42u2YsQ3CMBBFMwYtNSNBxSpskZoBWICKnhIpFR1iA0ojI51kHJ0dSu6/J90A79mJnQwDAAAAAAD8G+vVJknLp/GUJCOYvI1chCz83B40I2TRy/U2CyARweQtgFSEUr4VIWSALPU472cBJCKYvE0vQjj51/34FaAVIdz29wJ4EUKuvk0vQGj5XgQJeS+ClHwdQE6+jCArnyfscYc88shrBEAeeZ575JFXks93d8kXXvk/T05+GnefKT9fJQKU8ksjhJbvRQi79VsRJOXrCJLyFiDkcbc0QDj5XyKEvOXVIyPvBfAiSKy+F0Fq9esIsvI2Q0RkxZFXE/YuPgAAABCCN3y4cP5CmdOWAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABBUlEQVR42u2YsQ3CMBBFMwYtNSNBxSpskZoBWICKnhIpFR1iA0ojI51kHJ0dSu6/J90A79mJnQwDAAAAAAD8G+vVJknLp/GUJCOYvI1chCz83B40I2TRy/U2CyARweQtgFSEUr4VIWSALPU472cBJCKYvE0vQjj51/34FaAVIdz29wJ4EUKuvk0vQGj5XgQJeS+ClHwdQE6+jCArnyfscYc88shrBEAeeZ575JFXks93d8kXXvk/T05+GnefKT9fJQKU8ksjhJbvRQi79VsRJOXrCJLyFiDkcbc0QDj5XyKEvOXVIyPvBfAiSKy+F0Fq9esIsvI2Q0RkxZFXE/YuPgAAABCCN3y4cP5CmdOWAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 16 88 L 24 74 L 74 16 L 84 28 L 34 84 L 16 88 M 74 16 L 84 28" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>phone</b>
+      <span>phone</span>
+      
+      <small>★ 真图 · assets/sprites/phone.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 30 8 L 70 8 L 70 92 L 30 92 L 30 8 M 42 18 L 58 18 M 46 82 L 54 82" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABLElEQVR42u3aQQ7BQBTG8R7D1toNbJzACeyt3aBHcQhXEUfoUkRiY0NGUplUZ0w7U/He+3/Jl1ioeD/MFK0qQgghpHjms8WjdMUNv1qui1UMwhTDi0JwT/B8vU1WUQB9ryIAABgCMLsG7E9N0R4v91fdbfEAY195AAAAQAfA0IXPryoA8+8AAAAAQD9AzpanYhcoCdA+JgAWAfy1wxxAd/EUuwvk/hACAAAAAKDqVDi218eqAmDs8OIB6kP9rj+8iY+AP7yPkLo+qARwNQEQGt4MgPl3QAhgyDmCeIDYdqcWoOTf4gAAAAAAAFj6e1z0t8GUy143291HUy+XFQ/QN3wqgkiA7oDfAGIgAGgAcPfpG749VixAaLDQsN0OOVY8QE7/GuBXrQghhOTnCeGX9nnpdXr2AAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABLElEQVR42u3aQQ7BQBTG8R7D1toNbJzACeyt3aBHcQhXEUfoUkRiY0NGUplUZ0w7U/He+3/Jl1ioeD/MFK0qQgghpHjms8WjdMUNv1qui1UMwhTDi0JwT/B8vU1WUQB9ryIAABgCMLsG7E9N0R4v91fdbfEAY195AAAAQAfA0IXPryoA8+8AAAAAQD9AzpanYhcoCdA+JgAWAfy1wxxAd/EUuwvk/hACAAAAAKDqVDi218eqAmDs8OIB6kP9rj+8iY+AP7yPkLo+qARwNQEQGt4MgPl3QAhgyDmCeIDYdqcWoOTf4gAAAAAAAFj6e1z0t8GUy143291HUy+XFQ/QN3wqgkiA7oDfAGIgAGgAcPfpG749VixAaLDQsN0OOVY8QE7/GuBXrQghhOTnCeGX9nnpdXr2AAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 30 8 L 70 8 L 70 92 L 30 92 L 30 8 M 42 18 L 58 18 M 46 82 L 54 82" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>photo</b>
+      <span>photo</span>
+      
+      <small>★ 真图 · assets/sprites/photo.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 18 20 L 82 20 L 82 80 L 18 80 L 18 20 M 28 66 L 36 52 L 50 48 L 64 52 L 72 66 M 50 48 L 50 36 L 58 30 L 66 36 L 66 48 M 44 20 L 50 10 L 56 20" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABFklEQVR42u3aKw7CQBSF4S4Di2YLrACDQLMLNF0KmiCxrKMJG0AiSNAlFUMK6WM6fd079z/JUTU9XzOtaZIQQgghZK4sF6vc9HhXAKwCPF9vmwBuvKsphP/xqhDK51ZqZ3l6UgrAVACn7CGuAAAQAcB9t/3WHEB5fAiCaoCq8V0R1AI0je+CoBLAZ7wvQnQAJl6C58M6v12yygIAAAC2AYpr5QIQI0Dd+GiPwH5z/OkQw8UD/I9uAwjFEAfQNNxnfFcIACQBFDc91HhfBDEAbeNDAdoQ1ACEjlcB4G50LIAmBBUAfceLBqgbP8RoHwRRAGOMFgWQXlNxBQAAAAAAYAqAsT9xfQrAFACm/xIjhBBCCCGERJEPloz9wFVLJI4AAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABFklEQVR42u3aKw7CQBSF4S4Di2YLrACDQLMLNF0KmiCxrKMJG0AiSNAlFUMK6WM6fd079z/JUTU9XzOtaZIQQgghZK4sF6vc9HhXAKwCPF9vmwBuvKsphP/xqhDK51ZqZ3l6UgrAVACn7CGuAAAQAcB9t/3WHEB5fAiCaoCq8V0R1AI0je+CoBLAZ7wvQnQAJl6C58M6v12yygIAAAC2AYpr5QIQI0Dd+GiPwH5z/OkQw8UD/I9uAwjFEAfQNNxnfFcIACQBFDc91HhfBDEAbeNDAdoQ1ACEjlcB4G50LIAmBBUAfceLBqgbP8RoHwRRAGOMFgWQXlNxBQAAAAAAYAqAsT9xfQrAFACm/xIjhBBCCCGERJEPloz9wFVLJI4AAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 18 20 L 82 20 L 82 80 L 18 80 L 18 20 M 28 66 L 36 52 L 50 48 L 64 52 L 72 66 M 50 48 L 50 36 L 58 30 L 66 36 L 66 48 M 44 20 L 50 10 L 56 20" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>picture</b>
+      <span>picture</span>
+      
+      <small>★ 真图 · assets/sprites/picture.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 12 16 L 88 16 L 88 84 L 12 84 L 12 16 M 22 68 L 38 48 L 50 60 L 64 42 L 82 68 M 66 28 L 74 28 L 74 36 L 66 36 L 66 28 M 34 30 L 42 30" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABS0lEQVR42u3aPw6CMBiHYY7h6uLiFZwdvIOLZ3BVjuJsHF31GhyBa2ggaYK1rf2DbSnvL/kSrUL6PbbIQFURQgghhBDyleVi/SqlvAFO21Vf1+NmciXmDgAAAIwHcGnaaNU+D9bj3ZgYLwbA1KzpfRYA3bEu4y7nFaX7TnIAMbnhROXXIY3/QkgKoJqU7ZgNgNjrJoSiLoJys2JsOD4cK+4iKC9/FUCxK2D2W2CSF8GYENn+DXIjxK1w2gIAAACmD/C4NX3td+ePmgWArnlbhOIBus+yB9A1ENq8zXmSA/guYXGcDYDpPFkAuE7etXnTVkgK4PsL+gDoVkEyAJ8m5ONcAVQISQB8GwhtXrUVogOENDEGgIyQFCCk+RCA4VaICuDbgKr5UACxCv4KUN/r7AsAAAAAAAAAeEYIAAAAGAFg1s8KE0IIIYSUnDfIOIOx1vm4LAAAAABJRU5ErkJggg==" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABS0lEQVR42u3aPw6CMBiHYY7h6uLiFZwdvIOLZ3BVjuJsHF31GhyBa2ggaYK1rf2DbSnvL/kSrUL6PbbIQFURQgghhBDyleVi/SqlvAFO21Vf1+NmciXmDgAAAIwHcGnaaNU+D9bj3ZgYLwbA1KzpfRYA3bEu4y7nFaX7TnIAMbnhROXXIY3/QkgKoJqU7ZgNgNjrJoSiLoJys2JsOD4cK+4iKC9/FUCxK2D2W2CSF8GYENn+DXIjxK1w2gIAAACmD/C4NX3td+ePmgWArnlbhOIBus+yB9A1ENq8zXmSA/guYXGcDYDpPFkAuE7etXnTVkgK4PsL+gDoVkEyAJ8m5ONcAVQISQB8GwhtXrUVogOENDEGgIyQFCCk+RCA4VaICuDbgKr5UACxCv4KUN/r7AsAAAAAAAAAeEYIAAAAGAFg1s8KE0IIIYSUnDfIOIOx1vm4LAAAAABJRU5ErkJggg==" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 12 16 L 88 16 L 88 84 L 12 84 L 12 16 M 22 68 L 38 48 L 50 60 L 64 42 L 82 68 M 66 28 L 74 28 L 74 36 L 66 36 L 66 28 M 34 30 L 42 30" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>rice</b>
+      <span>rice</span>
+      
+      <small>★ 真图 · assets/sprites/rice.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 12 54 L 88 54 M 16 54 L 24 82 L 76 82 L 84 54 M 26 54 L 32 42 L 42 36 L 54 38 L 66 44 L 74 54 M 42 48 L 48 42 L 54 48" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABI0lEQVR42u2ZTQrCMBBGPYZb1x7Ce3gJT+PW+wiCO4/hQnBdKTgwhDT9TWbSvgcfVOqi88ZOmrrbAQAAAAAAAAAAAABk4bA/Nm02W7wgImJZbdeF9+fbpFiViLDwMCH6XNUiYl2P5f58Jc+LiFV1XRevBbTH1UuQ4rsKDovXScmq5pZoLzBVhCCdl+M+Afo7biWkuh9DS5DPfb8C17dE2H0paEjxsZnhYiakHljClGbMtU0WZlFYLlmTBcQmdm1BwBwBOrUVvfgmKzUThi5hSyRbx+dI8CIg+xKJgL+A8/XhLkUEiASPAoo+ISIAARsW0LUaWK4CxbfIIuB0uZkHARYCRIIHAWZviBBgMAhdDEDLfYErAWPfG+YK/7sDAAAAAIzmB10bsPkxZ6oVAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABI0lEQVR42u2ZTQrCMBBGPYZb1x7Ce3gJT+PW+wiCO4/hQnBdKTgwhDT9TWbSvgcfVOqi88ZOmrrbAQAAAAAAAAAAAABk4bA/Nm02W7wgImJZbdeF9+fbpFiViLDwMCH6XNUiYl2P5f58Jc+LiFV1XRevBbTH1UuQ4rsKDovXScmq5pZoLzBVhCCdl+M+Afo7biWkuh9DS5DPfb8C17dE2H0paEjxsZnhYiakHljClGbMtU0WZlFYLlmTBcQmdm1BwBwBOrUVvfgmKzUThi5hSyRbx+dI8CIg+xKJgL+A8/XhLkUEiASPAoo+ISIAARsW0LUaWK4CxbfIIuB0uZkHARYCRIIHAWZviBBgMAhdDEDLfYErAWPfG+YK/7sDAAAAAIzmB10bsPkxZ6oVAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 12 54 L 88 54 M 16 54 L 24 82 L 76 82 L 84 54 M 26 54 L 32 42 L 42 36 L 54 38 L 66 44 L 74 54 M 42 48 L 48 42 L 54 48" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>room</b>
+      <span>room</span>
+      
+      <small>★ 真图 · assets/sprites/room.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 12 18 L 88 18 L 88 88 L 12 88 L 12 18 M 24 30 L 48 30 L 48 54 L 24 54 L 24 30 M 60 58 L 76 58 L 76 88 L 60 88 M 30 42 L 42 42 M 66 68 L 72 68" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABHElEQVR42u3auw3CMBSF4YxBS80KTEBDQQtbUDMIGyBWYA6kLEGBRA1KYWRdbOMHBnL9H+kUpAi5XyIrstJ1hBBCCCGEEOLIdDK7j73FAJfrbbQFAAAAAAAAgIoAp+M5uwAAAAAAzQFsFrt2AYbh1QPIIeXxZgAkQhMA9pD2sK5jzQD4qg4gZXgAtAGkDq/yCWj2TZANkYrt9+ukAgAAALoADtt5dFUugmY43x0frg0AAAAAAAAAAADg5wD9avm2o3sTtIVlYwaOacqQuc1GcAGEhvHt/NRCCN2gKgDD75iBY1qKYD6CrA4gFx2DUDK8BJD/Y5oKEFosPwJgI5RAmKGf5/FceOpT8RUAF0ROYzY4/gJAS/nsnRBCyGseaYflDb5aXo8AAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABHElEQVR42u3auw3CMBSF4YxBS80KTEBDQQtbUDMIGyBWYA6kLEGBRA1KYWRdbOMHBnL9H+kUpAi5XyIrstJ1hBBCCCGEEOLIdDK7j73FAJfrbbQFAAAAAAAAgIoAp+M5uwAAAAAAzQFsFrt2AYbh1QPIIeXxZgAkQhMA9pD2sK5jzQD4qg4gZXgAtAGkDq/yCWj2TZANkYrt9+ukAgAAALoADtt5dFUugmY43x0frg0AAAAAAAAAAADg5wD9avm2o3sTtIVlYwaOacqQuc1GcAGEhvHt/NRCCN2gKgDD75iBY1qKYD6CrA4gFx2DUDK8BJD/Y5oKEFosPwJgI5RAmKGf5/FceOpT8RUAF0ROYzY4/gJAS/nsnRBCyGseaYflDb5aXo8AAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 12 18 L 88 18 L 88 88 L 12 88 L 12 18 M 24 30 L 48 30 L 48 54 L 24 54 L 24 30 M 60 58 L 76 58 L 76 88 L 60 88 M 30 42 L 42 42 M 66 68 L 72 68" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>running</b>
+      <span>sports</span>
+      
+      <small>★ 真图 · assets/sprites/running.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 54 18 L 64 24 L 64 34 L 54 40 L 44 34 L 44 24 L 54 18 M 50 40 L 46 60 L 62 56 L 76 44 M 48 44 L 32 38 L 22 28 M 50 58 L 34 76 L 18 78 M 54 58 L 72 74 L 88 76" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABrUlEQVR42u2avW3DQAyFNUZa1wFcZAEDWSBFOq+QDbyHSwMuNUiaAFnAG6TMBglk5ASaJqnT2YpE3nvAa2zDR36i7odS00AQBEEQBEEQBM2g1cPjD3dVib89r68cHoSWeBUgcpPnIMIk//1xPLtKCBRAMp38pM86n9rd8gCUzNrhAJxeX86WljIp4HgA2t2Fh4IMBaAEggRAMv/PxQKgcwEPdsxtICXsBoBVDbScJWg5VUBvCxfLHAcg3ddjQLjaDVoArKQ0CC7K3jJN5vD+deX0O+27UEddKUnLIQ9B1QPIrYYq+gHb/Wfv0Fc+LABr9kcF3ACgSggcgJut770qoHPXV2ifNr3DQuhPj3/NlGSafFgIdHucCyAMBH42GAPAPQStFTYEIEwVDAHoEg1bBVryDeksJwASBHc9gtzkNQB8V+kWQm6Xp+RZwuIh3Dto6/8W926B1eTkJV68h6DdZ7aczgpCa43zIFOgpXAtAP8KQnqElRNcKQBxTGOMSUCYCWckfisAM56Jx1LLfMxVmbI0tfEnqwBr6Zpzcpp9daj21TcIgiAIgiAIgtzoFx35SbbdL302AAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABrUlEQVR42u2avW3DQAyFNUZa1wFcZAEDWSBFOq+QDbyHSwMuNUiaAFnAG6TMBglk5ASaJqnT2YpE3nvAa2zDR36i7odS00AQBEEQBEEQBM2g1cPjD3dVib89r68cHoSWeBUgcpPnIMIk//1xPLtKCBRAMp38pM86n9rd8gCUzNrhAJxeX86WljIp4HgA2t2Fh4IMBaAEggRAMv/PxQKgcwEPdsxtICXsBoBVDbScJWg5VUBvCxfLHAcg3ddjQLjaDVoArKQ0CC7K3jJN5vD+deX0O+27UEddKUnLIQ9B1QPIrYYq+gHb/Wfv0Fc+LABr9kcF3ACgSggcgJut770qoHPXV2ifNr3DQuhPj3/NlGSafFgIdHucCyAMBH42GAPAPQStFTYEIEwVDAHoEg1bBVryDeksJwASBHc9gtzkNQB8V+kWQm6Xp+RZwuIh3Dto6/8W926B1eTkJV68h6DdZ7aczgpCa43zIFOgpXAtAP8KQnqElRNcKQBxTGOMSUCYCWckfisAM56Jx1LLfMxVmbI0tfEnqwBr6Zpzcpp9daj21TcIgiAIgiAIgtzoFx35SbbdL302AAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 54 18 L 64 24 L 64 34 L 54 40 L 44 34 L 44 24 L 54 18 M 50 40 L 46 60 L 62 56 L 76 44 M 48 44 L 32 38 L 22 28 M 50 58 L 34 76 L 18 78 M 54 58 L 72 74 L 88 76" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>soup</b>
+      <span>soup</span>
+      
+      <small>★ 真图 · assets/sprites/soup.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 12 52 L 88 52 M 16 52 L 24 82 L 76 82 L 84 52 M 30 40 L 26 32 L 32 24 M 50 40 L 46 32 L 52 24 M 70 40 L 66 32 L 72 24" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA50lEQVR42u2YMQ6DMAxFOQZrZzYu0CN06CW5Sic2pF6iQ6XOrSIxdMiSWNgf6z3JIwK/OA7xMAAAAAAAAACYuIzTt4TiMy7JP9at6cO8npFc/XTJ9ySTovRZ/cYPS5V87+qnKX0qgCqgCXIMUgXcAwAg+4AjQ3QLyIBJQDl3zx4IsAj4j7Mlbe4BLT3h9f64xWErbpGgIuDw32QE7AKe95tcuN0Uy0uW+SoXbrdEBCBgkuwBroOS2mkQeQq4T4kQUBHgud8REC2gJiFKQNiUOKIPSOx/BARejKQEqAxOGV8DAAAAADTzA31K6/KwzkDdAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA50lEQVR42u2YMQ6DMAxFOQZrZzYu0CN06CW5Sic2pF6iQ6XOrSIxdMiSWNgf6z3JIwK/OA7xMAAAAAAAAACYuIzTt4TiMy7JP9at6cO8npFc/XTJ9ySTovRZ/cYPS5V87+qnKX0qgCqgCXIMUgXcAwAg+4AjQ3QLyIBJQDl3zx4IsAj4j7Mlbe4BLT3h9f64xWErbpGgIuDw32QE7AKe95tcuN0Uy0uW+SoXbrdEBCBgkuwBroOS2mkQeQq4T4kQUBHgud8REC2gJiFKQNiUOKIPSOx/BARejKQEqAxOGV8DAAAAADTzA31K6/KwzkDdAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 12 52 L 88 52 M 16 52 L 24 82 L 76 82 L 84 52 M 30 40 L 26 32 L 32 24 M 50 40 L 46 32 L 52 24 M 70 40 L 66 32 L 72 24" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>study</b>
+      <span>study</span>
+      
+      <small>★ 真图 · assets/sprites/study.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 15 22 L 50 10 L 85 22 L 85 88 L 15 88 L 15 22 M 22 34 L 42 34 L 42 76 L 22 76 L 22 34 M 28 48 L 42 48 M 28 60 L 42 60 M 50 68 L 78 68 L 78 82 L 50 82 L 50 68" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABZUlEQVR42u3Zuw3CMBAG4IxBS0PDCkh0tBR0iDFoGYMmG8AclCyQCRgjyEgXHZbtvOz4cf9JfwHCwfcpJMapKhQKhUKhUDFqvdq2FJFNt59nl6IxbE3bUgTG2KaLwPDVdFYYfFKhGndBRMGI0XR0jJSajoKRatMuDAAAAAAAyArgdtiMDgBiAuj33b4UB0CTON/ff7FN9nHdeQFQx0kGoDkdu8Zf9f4XNUGeqQB8LH9PFICOIAbANl4kAB1DDIA+3hTxAHTcoi+CWawDFABlLkB2/wVoEcQRVMQCiD8DAAAAAABgCQD6Hp4kb4NNfekSEiDqGaAmQI3TijA0gL5qBAAACgTgY02viwHgnxkTDsBhxACYAoBYABT9+cAYANNmR9+pn8RPwBV94qaLlWnr27U1NvSBi1cAdbCh+3RTMxfAFG8IAAgIMGUj1PXMEAChAHxOdKkAAAAA8AeQayoUCoVCoaz1BUDZJwj7iawAAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABZUlEQVR42u3Zuw3CMBAG4IxBS0PDCkh0tBR0iDFoGYMmG8AclCyQCRgjyEgXHZbtvOz4cf9JfwHCwfcpJMapKhQKhUKhUDFqvdq2FJFNt59nl6IxbE3bUgTG2KaLwPDVdFYYfFKhGndBRMGI0XR0jJSajoKRatMuDAAAAAAAyArgdtiMDgBiAuj33b4UB0CTON/ff7FN9nHdeQFQx0kGoDkdu8Zf9f4XNUGeqQB8LH9PFICOIAbANl4kAB1DDIA+3hTxAHTcoi+CWawDFABlLkB2/wVoEcQRVMQCiD8DAAAAAABgCQD6Hp4kb4NNfekSEiDqGaAmQI3TijA0gL5qBAAACgTgY02viwHgnxkTDsBhxACYAoBYABT9+cAYANNmR9+pn8RPwBV94qaLlWnr27U1NvSBi1cAdbCh+3RTMxfAFG8IAAgIMGUj1PXMEAChAHxOdKkAAAAA8AeQayoUCoVCoaz1BUDZJwj7iawAAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 15 22 L 50 10 L 85 22 L 85 88 L 15 88 L 15 22 M 22 34 L 42 34 L 42 76 L 22 76 L 22 34 M 28 48 L 42 48 M 28 60 L 42 60 M 50 68 L 78 68 L 78 82 L 50 82 L 50 68" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>teacher</b>
+      <span>teacher</span>
+      
+      <small>★ 真图 · assets/sprites/teacher.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 12 L 62 18 L 64 30 L 56 38 L 44 38 L 36 30 L 38 18 L 50 12 M 44 40 L 44 66 L 56 66 L 56 40 M 44 46 L 26 58 L 24 70 M 56 46 L 70 56 L 86 28 M 44 66 L 34 90 M 56 66 L 66 90" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAByklEQVR42u2avW0DMQyFPYbb1AaygoGMkRVSuM8eaQIkcJlB3ATwAt7AZTZwcIUODMGTqB9fKOoReI3vLNz7KFE/d5sNAoFAIBAIxMrxsN3dgoY0/fL0OGsIENy0JNcgNADcgsgxz0G4AfDzfRwTQDBPNRQECUAKxuXrdZY7AHQqDNf4b7UAeHsmAPCH0qgEwHT/6X0/ywyAtXoABRDaNl0DuKj5XAA8+10CqCmC5rIfg8AzPYlf6z77pT3BxdivgVBb+c0CkOZoSSVtdmH+XkC7yb6mF5QMqW7MB5PPb+dZH6frH7mq/Nz49IDUvAQgQEgZCe3RKbSLyq8BoJkNWmyaVss6NaQBkIJgPvtL8z03rwFAN0vmsy9lvQUADsJk9mPGaQGkVXtJSwCkfYSJ3V7KfLgvB0CYDWIA/j37KeN83OYAoOBMZ1/azi5V7hIAvJeZGvtSNY6ZzymC0qrQ1GEnB5BatLQAYHKVBwCKYjQ0gJj5FADTEFp0fwDwAEAz/veHz2IBQA+nuyUA+KImdo+Lk9vUGt78Cc89zbuGAAAjAygx5AoCAADArvhjh+4B1GTSRS8YGkDtq+9WH04AgCUIa/8fgUAgNPELYJVghfSKkKUAAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAByklEQVR42u2avW0DMQyFPYbb1AaygoGMkRVSuM8eaQIkcJlB3ATwAt7AZTZwcIUODMGTqB9fKOoReI3vLNz7KFE/d5sNAoFAIBAIxMrxsN3dgoY0/fL0OGsIENy0JNcgNADcgsgxz0G4AfDzfRwTQDBPNRQECUAKxuXrdZY7AHQqDNf4b7UAeHsmAPCH0qgEwHT/6X0/ywyAtXoABRDaNl0DuKj5XAA8+10CqCmC5rIfg8AzPYlf6z77pT3BxdivgVBb+c0CkOZoSSVtdmH+XkC7yb6mF5QMqW7MB5PPb+dZH6frH7mq/Nz49IDUvAQgQEgZCe3RKbSLyq8BoJkNWmyaVss6NaQBkIJgPvtL8z03rwFAN0vmsy9lvQUADsJk9mPGaQGkVXtJSwCkfYSJ3V7KfLgvB0CYDWIA/j37KeN83OYAoOBMZ1/azi5V7hIAvJeZGvtSNY6ZzymC0qrQ1GEnB5BatLQAYHKVBwCKYjQ0gJj5FADTEFp0fwDwAEAz/veHz2IBQA+nuyUA+KImdo+Lk9vUGt78Cc89zbuGAAAjAygx5AoCAADArvhjh+4B1GTSRS8YGkDtq+9WH04AgCUIa/8fgUAgNPELYJVghfSKkKUAAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 12 L 62 18 L 64 30 L 56 38 L 44 38 L 36 30 L 38 18 L 50 12 M 44 40 L 44 66 L 56 66 L 56 40 M 44 46 L 26 58 L 24 70 M 56 46 L 70 56 L 86 28 M 44 66 L 34 90 M 56 66 L 66 90" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>twofriends</b>
+      <span>friend</span>
+      
+      <small>★ 真图 · assets/sprites/twofriends.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 26 18 L 34 22 L 34 32 L 26 38 L 18 32 L 18 22 L 26 18 M 74 18 L 82 22 L 82 32 L 74 38 L 66 32 L 66 22 L 74 18 M 26 38 L 26 64 L 14 84 M 74 38 L 74 64 L 86 84 M 26 48 L 50 58 L 74 48 M 42 56 L 50 64 L 58 56" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAB3ElEQVR42u2azU3EMBCFtwyunJEogjKghO2Ayx6ogQsnjhyRqGIlGqADjnSwyJGMBu94PE5mHMf7njRabRJ53ny2E+dnt4MgCIIgCIIgSKvrq5tTKUbKe2Zif3crhocRTV6v3NUmrI3U5HWFwBn5Ob5OsQaEXG7X6RAajolz4dELEUApt/sUSCNNTrdbmaHtlfK69z4AXDIAaubr7ZENr7lIi5ZyN1sLrHEikvI2WwhxZu6fP//C2lA67A8fh3/RrNdrAViMBq7HuwCQGpMAzDWYG+4cgKYQOGMlALUGpbmeA9AEQkhAi83FEgg1xXPhvg7QAJgLIVd82K4pnkJYHUAtBKn4uH9zAEJwhWkBzCm+KwC0gFoA9JjNA+DuI0r3Gem+zQNYmhcAAAAAxgOgfYAxFIA5LzeGARD+fz88TXF6eZ9+wzU/bovR5WVw7iqwBICLpQBcIFgDkGJYABoIFueArgFIEKTjhwLAQSgdu1kAGgilY7oBEGNp4Wm7NflXeSQWGqRvYCQQ3g8mcxCiJ+rRFQDtlVbFcyMhLbwpAGrIPKnCCx3ukkfzpNp9LQC4eymR7RWAmR8AuGQAmgZ7AmAOAQAAoFxcbwBMPWm+vGr9sXKPniAIgiBoo/oFLVZQ5KMWpk8AAAAASUVORK5CYII=" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAB3ElEQVR42u2azU3EMBCFtwyunJEogjKghO2Ayx6ogQsnjhyRqGIlGqADjnSwyJGMBu94PE5mHMf7njRabRJ53ny2E+dnt4MgCIIgCIIgSKvrq5tTKUbKe2Zif3crhocRTV6v3NUmrI3U5HWFwBn5Ob5OsQaEXG7X6RAajolz4dELEUApt/sUSCNNTrdbmaHtlfK69z4AXDIAaubr7ZENr7lIi5ZyN1sLrHEikvI2WwhxZu6fP//C2lA67A8fh3/RrNdrAViMBq7HuwCQGpMAzDWYG+4cgKYQOGMlALUGpbmeA9AEQkhAi83FEgg1xXPhvg7QAJgLIVd82K4pnkJYHUAtBKn4uH9zAEJwhWkBzCm+KwC0gFoA9JjNA+DuI0r3Gem+zQNYmhcAAAAAxgOgfYAxFIA5LzeGARD+fz88TXF6eZ9+wzU/bovR5WVw7iqwBICLpQBcIFgDkGJYABoIFueArgFIEKTjhwLAQSgdu1kAGgilY7oBEGNp4Wm7NflXeSQWGqRvYCQQ3g8mcxCiJ+rRFQDtlVbFcyMhLbwpAGrIPKnCCx3ukkfzpNp9LQC4eymR7RWAmR8AuGQAmgZ7AmAOAQAAoFxcbwBMPWm+vGr9sXKPniAIgiBoo/oFLVZQ5KMWpk8AAAAASUVORK5CYII=" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 26 18 L 34 22 L 34 32 L 26 38 L 18 32 L 18 22 L 26 18 M 74 18 L 82 22 L 82 32 L 74 38 L 66 32 L 66 22 L 74 18 M 26 38 L 26 64 L 14 84 M 74 38 L 74 64 L 86 84 M 26 48 L 50 58 L 74 48 M 42 56 L 50 64 L 58 56" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>uncle</b>
+      <span>uncle</span>
+      
+      <small>★ 真图 · assets/sprites/uncle.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 38 42 L 30 66 L 70 66 L 62 42 M 38 48 L 22 60 M 62 48 L 78 60 M 40 66 L 34 90 M 60 66 L 66 90 L 58 90" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABm0lEQVR42u2ZwW3DMAxFM0ZOBXLoqTN0gm7UZdJLgK7SBQpki2zQQgcCCmFKlGRYIvk/QCCwA1v/mZZI+XSCIAiCIAiC5uj99eUvnOFShDbvGkSLeXcQkpnHz1fVMP/P5fzmA0IyksxRbBnn4SoLOAAp7t+fT+E2A0IDSL8pcvP5cQAAAADAJOgaQFrfudkU/LgbAASBQJSqPzLuyjwHUSqH3RrXQAhhXuoQ3T9xKdIccP29i+fdAPi43sRIALYiDAAJgnkAlMY18+6yIH+/tQBqEEyAkGr8UQC8XzBhnEJrXgNgORAl4z0AJAjStaeB0BhvmQA1q4HmXku0tnwwoxDoWlrohwDIW9baU9gLQCn7Dm2fOYBS+vWY33oNJLAEYhqA2g17AdSyoHc8u0NYAUDLeA7PAvcZoAEwAkHTFk/bRW5Ju9xIi/G9xzFtHpBqha3Nkdb13ByA0pJpDoAmVY8AsHSXqC1VewEsvz/QA8ANhNAAWg2FB+BqHpDW/rAAWqo6ALAOYGQyAwDrAEa/8Jr/OgwA0QFAEGRO/wArtX9ULvqzAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABm0lEQVR42u2ZwW3DMAxFM0ZOBXLoqTN0gm7UZdJLgK7SBQpki2zQQgcCCmFKlGRYIvk/QCCwA1v/mZZI+XSCIAiCIAiC5uj99eUvnOFShDbvGkSLeXcQkpnHz1fVMP/P5fzmA0IyksxRbBnn4SoLOAAp7t+fT+E2A0IDSL8pcvP5cQAAAADAJOgaQFrfudkU/LgbAASBQJSqPzLuyjwHUSqH3RrXQAhhXuoQ3T9xKdIccP29i+fdAPi43sRIALYiDAAJgnkAlMY18+6yIH+/tQBqEEyAkGr8UQC8XzBhnEJrXgNgORAl4z0AJAjStaeB0BhvmQA1q4HmXku0tnwwoxDoWlrohwDIW9baU9gLQCn7Dm2fOYBS+vWY33oNJLAEYhqA2g17AdSyoHc8u0NYAUDLeA7PAvcZoAEwAkHTFk/bRW5Ju9xIi/G9xzFtHpBqha3Nkdb13ByA0pJpDoAmVY8AsHSXqC1VewEsvz/QA8ANhNAAWg2FB+BqHpDW/rAAWqo6ALAOYGQyAwDrAEa/8Jr/OgwA0QFAEGRO/wArtX9ULvqzAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 50 14 L 62 20 L 62 34 L 50 42 L 38 34 L 38 20 L 50 14 M 38 42 L 30 66 L 70 66 L 62 42 M 38 48 L 22 60 M 62 48 L 78 60 M 40 66 L 34 90 M 60 66 L 66 90 L 58 90" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>wall</b>
+      <span>wall</span>
+      
+      <small>★ 真图 · assets/sprites/wall.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 8 22 L 92 22 M 8 50 L 92 50 M 8 78 L 92 78 M 34 22 L 34 50 M 62 22 L 62 50 M 20 50 L 20 78 M 70 50 L 70 78" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAk0lEQVR42u3asQ1AQBSAYWNo1Tqt2hJGMIqYyjQqhURNolYcLiLn+5PX8+VykhdZJkmSJEnSUZGXW6oTDDD1XXID4ArA2Da3Z6irKPPkGc4GAAAAAACEAszLmtw4AQAAAAAAIBAg1kt8aQDYBwAA8PgOiH0zv/mFAQAAAAAANkJOAAAAAAAAsBAB4B8hSZIkSfpvO1jzNWYs8+VdAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAk0lEQVR42u3asQ1AQBSAYWNo1Tqt2hJGMIqYyjQqhURNolYcLiLn+5PX8+VykhdZJkmSJEnSUZGXW6oTDDD1XXID4ArA2Da3Z6irKPPkGc4GAAAAAACEAszLmtw4AQAAAAAAIBAg1kt8aQDYBwAA8PgOiH0zv/mFAQAAAAAANkJOAAAAAAAAsBAB4B8hSZIkSfpvO1jzNWYs8+VdAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 8 22 L 92 22 M 8 50 L 92 50 M 8 78 L 92 78 M 34 22 L 34 50 M 62 22 L 62 50 M 20 50 L 20 78 M 70 50 L 70 78" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+  <div class="row ok">
+    <div class="hd">
+      <b>win</b>
+      <span>window</span>
+      
+      <small>★ 真图 · assets/sprites/win.png　64×64</small>
+    </div>
+    <div class="pane"><div class="cap">简笔画</div><svg viewBox="-4 -4 108 108" class="cv">
+    <rect x="0" y="0" width="100" height="100" fill="#fdf6e5"/>
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#c8a86a" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M 14 14 L 86 14 L 86 86 L 14 86 L 14 14 M 50 14 L 50 86 M 14 50 L 86 50" fill="none" stroke="#2b2033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+    <div class="pane"><div class="cap">实物图 ★真图</div><div class="cv"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABWUlEQVR42u3bvQrCMBQF4D6Gq7MP5aO5+h5OXXSRPoKjiODionRIKaVN709Kbm7OgbtJyPko2gRsGgRBEARBkIXsd4df6aMGeL4/yae9dcNssX4YAAAAAADYBOD++qpmDuDUPcTTr1kEQJ/UAGFN8wAhKQHGa5oGGG80FcA4pgGm5VMATMubBZgrrwWYK28SYKm8BmCpvDmAWHkpQKy8KYC18hIAypomACgb5QJQ18wOQNkkF4BaPjsApzwVgFM+KwC3PAWAWz4bgKT8GoCkfBYAafkYgLR8MafBGIB2zc0AxpstbQAAANwJAmATAO0F5hzA8dyqpgiA2M8gp+zl2g3T77FqgH7MA1BehNw+AdQ3QbffAdUCcM8CrgAkhyE3ANLToAsAzXG4eADtfUDRANTi4fOuADjF3QFwi7sCkBR3AyAt7gYAN0IAAAAAqgGo+v8CCIIgCOI3f61lA8ZZo/PTAAAAAElFTkSuQmCC" class="lay pixel" alt=""></div></div>
+    <div class="pane"><div class="cap">叠加对齐</div><div class="cv over">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABWUlEQVR42u3bvQrCMBQF4D6Gq7MP5aO5+h5OXXSRPoKjiODionRIKaVN709Kbm7OgbtJyPko2gRsGgRBEARBkIXsd4df6aMGeL4/yae9dcNssX4YAAAAAADYBOD++qpmDuDUPcTTr1kEQJ/UAGFN8wAhKQHGa5oGGG80FcA4pgGm5VMATMubBZgrrwWYK28SYKm8BmCpvDmAWHkpQKy8KYC18hIAypomACgb5QJQ18wOQNkkF4BaPjsApzwVgFM+KwC3PAWAWz4bgKT8GoCkfBYAafkYgLR8MafBGIB2zc0AxpstbQAAANwJAmATAO0F5hzA8dyqpgiA2M8gp+zl2g3T77FqgH7MA1BehNw+AdQ3QbffAdUCcM8CrgAkhyE3ANLToAsAzXG4eADtfUDRANTi4fOuADjF3QFwi7sCkBR3AyAt7gYAN0IAAAAAqgGo+v8CCIIgCOI3f61lA8ZZo/PTAAAAAElFTkSuQmCC" class="lay pixel" alt="">
+      <svg viewBox="0 0 100 100" class="oline" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M 14 14 L 86 14 L 86 86 L 14 86 L 14 14 M 50 14 L 50 86 M 14 50 L 86 50" fill="none" stroke="#ff3b30" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+      </svg>
+    </div></div>
+  </div>
+<footer>生成命令：<code>node tools/sprite-sheet.js</code>　·　规范见《实物像素图规范.md》</footer>
+</body></html>

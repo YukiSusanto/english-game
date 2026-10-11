@@ -1,0 +1,80 @@
+{
+  "fps": 12,
+  "width": 256,
+  "height": 256,
+  "frames": 36,
+  "sections": {
+    "ch1_open": {
+      "frames": 36,
+      "dir": "assets/story/ch1_open"
+    },
+    "ch1_mid": {
+      "frames": 36,
+      "dir": "assets/story/ch1_mid"
+    },
+    "ch1_end": {
+      "frames": 36,
+      "dir": "assets/story/ch1_end"
+    },
+    "ch2_open": {
+      "frames": 36,
+      "dir": "assets/story/ch2_open"
+    },
+    "ch2_mid": {
+      "frames": 36,
+      "dir": "assets/story/ch2_mid"
+    },
+    "ch2_end": {
+      "frames": 36,
+      "dir": "assets/story/ch2_end"
+    },
+    "ch3_open": {
+      "frames": 36,
+      "dir": "assets/story/ch3_open"
+    },
+    "ch3_mid": {
+      "frames": 36,
+      "dir": "assets/story/ch3_mid"
+    },
+    "ch3_end": {
+      "frames": 36,
+      "dir": "assets/story/ch3_end"
+    },
+    "ch4_open": {
+      "frames": 36,
+      "dir": "assets/story/ch4_open"
+    },
+    "ch4_mid": {
+      "frames": 36,
+      "dir": "assets/story/ch4_mid"
+    },
+    "ch4_end": {
+      "frames": 36,
+      "dir": "assets/story/ch4_end"
+    },
+    "ch5_open": {
+      "frames": 36,
+      "dir": "assets/story/ch5_open"
+    },
+    "ch5_mid": {
+      "frames": 36,
+      "dir": "assets/story/ch5_mid"
+    },
+    "ch5_end": {
+      "frames": 36,
+      "dir": "assets/story/ch5_end"
+    },
+    "ch6_open": {
+      "frames": 36,
+      "dir": "assets/story/ch6_open"
+    },
+    "ch6_mid": {
+      "frames": 36,
+      "dir": "assets/story/ch6_mid"
+    },
+    "ending": {
+      "frames": 36,
+      "dir": "assets/story/ending"
+    }
+  }
+}
