@@ -1,0 +1,281 @@
+/* The adventure is one continuous scene-and-controls board on every screen. */
+body.playing .site-header { height: 64px; }
+body.playing .brand-mark { width: 38px; height: 38px; font-size: 24px; }
+body.playing .brand small { display: none; }
+body.playing #app { min-height: 0; padding-top: 4px; }
+body.playing .site-footer { display: none; }
+body.playing .page-heading { align-items: center; margin: 4px 0 12px; }
+body.playing .page-heading h1 { font-size: 23px; margin: 6px 0; }
+body.playing .page-heading p, body.playing .page-heading .eyebrow { display: none; }
+body.playing .page-steps { margin: 0; }
+body.playing .play-layout {
+  display: block;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fffcf3;
+  box-shadow: var(--shadow);
+}
+body.playing .play-layout .adventure-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  padding: 0;
+  width: 100%;
+}
+.scene-stack, .interaction-dock, .dock-content, .learning-slot { min-width: 0; }
+.scene-stack { align-self: start; }
+body.playing .play-layout .scene-panel { padding: 6px; border-radius: 15px; box-shadow: none; background: #f6eddb; }
+body.playing .play-layout .room-scene { height: clamp(190px, 30dvh, 345px); }
+body.playing .play-layout .scene-caption { padding: 6px 7px 8px; font-size: 11px; }
+body.playing .play-layout .goal-strip { padding: 8px 11px; margin-bottom: 9px; font-size: 12px; }
+body.playing .play-layout .stats-bar { padding: 9px 4px 0; gap: 15px; }
+.interaction-dock { border-radius: 14px; background: #f4f3e8; padding: 10px; }
+.dock-content { display: flex; flex-direction: column; gap: 9px; }
+body.playing .play-layout .interaction-dock .hand-area { margin: 0; grid-area: auto; max-height: none; overflow: visible; }
+body.playing .play-layout .interaction-dock .hand-heading { margin: 0 0 5px; padding: 0 3px; font-size: 11px; }
+body.playing .play-layout .interaction-dock .hand { flex-wrap: nowrap; gap: 8px; overflow-x: auto; padding: 5px 3px 9px; }
+body.playing .play-layout .interaction-dock .word-card { flex: 0 0 104px; max-width: none; min-height: 126px; padding: 9px; }
+body.playing .play-layout .interaction-dock .word-card.selected { padding: 8px; transform: none; }
+body.playing .play-layout .interaction-dock .word-card .word-art { width: 44px; height: 44px; margin: 0 auto 5px; }
+body.playing .play-layout .interaction-dock .word-card b { font-size: 17px; }
+body.playing .play-layout .interaction-dock .word-card .cn { font-size: 11px; margin: 2px 0 6px; }
+body.playing .play-layout .interaction-dock .card-effect { font-size: 11px; padding-top: 5px; }
+body.playing .play-layout .interaction-dock .action-panel {
+  position: static;
+  inset: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+  gap: 7px;
+  margin: 0;
+  padding: 10px;
+  box-shadow: none;
+}
+body.playing .play-layout .interaction-dock .action-panel b { font-size: 12px; }
+body.playing .play-layout .interaction-dock .action-panel p { font-size: 11px; line-height: 1.45; margin: 4px 0 0; }
+.interaction-dock .action-tools { display: flex; gap: 5px; flex-wrap: nowrap; }
+body.playing .play-layout .interaction-dock .action-tools .btn { padding: 8px; font-size: 12px; flex: 1; min-height: 48px; }
+.interaction-dock .action-tools [data-action="cancel-card"],
+.interaction-dock .action-tools [data-action="card-audio"] { flex: 0 0 44px !important; }
+body.playing .play-layout .interaction-dock .turn-actions {
+  position: static;
+  inset: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+body.playing .play-layout .interaction-dock .turn-actions .btn { min-height: 48px; padding: 9px 10px; font-size: 12px; }
+body.playing .play-layout .interaction-dock .turn-actions .primary { margin-left: auto; }
+body.playing .play-layout .intro-grid, body.playing .play-layout .puzzle-choices { margin: 0; gap: 8px; }
+body.playing .play-layout .intro-word { min-height: 102px; padding: 9px 5px; }
+body.playing .play-layout .intro-word .word-art { width: 46px; height: 46px; margin-bottom: 5px; }
+body.playing .play-layout .intro-word strong { font-size: 17px; }
+body.playing .play-layout .intro-word small { font-size: 10px; }
+body.playing .play-layout .puzzle-choice { min-height: 90px; padding: 10px; gap: 9px; }
+body.playing .play-layout .puzzle-toolbar { margin: 0; gap: 7px; }
+body.playing .play-layout .puzzle-toolbar > span { width: 100%; }
+body.playing .play-layout .repair-banner { margin: 0; padding: 10px; font-size: 12px; }
+body.playing .play-layout .page-guide { border: 0; background: transparent; padding: 2px; }
+body.playing .play-layout .page-guide .hint-title, body.playing .play-layout .page-guide .objective { display: none; }
+body.playing .play-layout .page-guide h3 { font-size: 14px; margin: 4px 0; }
+body.playing .play-layout .page-guide p { font-size: 12px; margin: 5px 0 8px; line-height: 1.6; }
+body.playing .play-layout .page-guide .btn { margin-top: 4px; }
+body.playing .play-layout .page-guide [data-action="home"] { display: none; }
+.play-help { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 3px; }
+.play-help summary { min-height: 44px; padding: 13px 5px; cursor: pointer; color: var(--muted); font-size: 12px; }
+body.playing .play-layout .play-help .sidebar { display: grid; grid-template-columns: 1fr; gap: 10px; padding: 0; }
+body.playing .play-layout .play-help .guide-panel { padding: 14px; }
+
+/* A learning task replaces the dock; the scene remains visible without word-card answers. */
+.scene-question #app { visibility: visible; }
+.scene-question .interaction-dock { padding: 4px; }
+.scene-question .dock-content, .scene-question .play-help,
+.scene-question .scene-stack .goal-strip, .scene-question .scene-stack .stats-bar { display: none; }
+.modal.scene-modal { position: static; inset: auto; padding: 0; display: block; background: transparent; backdrop-filter: none; }
+.scene-modal .dialog {
+  width: 100%; max-width: none; max-height: calc(100dvh - 200px - clamp(100px, 20dvh, 190px));
+  display: flex; flex-direction: column; overflow: auto; padding: 12px; border-radius: 14px; box-shadow: none;
+}
+.scene-modal .dialog-head { margin-bottom: 4px; min-height: 44px; flex-shrink: 0; }
+.scene-modal .icon-btn { width: 44px; height: 44px; }
+.scene-modal .task-content { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; }
+.scene-modal .dialog h2 { font-size: 18px; margin: 5px 0 8px; }
+.scene-modal .task-prompt { margin: 5px 0 9px; }
+.scene-modal .task-prompt .word-art { width: 66px; height: 66px; }
+.scene-modal .task-prompt .meaning { font-size: 23px; margin: 6px 0; }
+.scene-modal .task-prompt p { margin: 5px 0; }
+.scene-modal .task-options { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.scene-modal .task-option { min-height: 52px; font-size: 17px; padding: 8px 4px; flex-wrap: wrap; overflow-wrap: anywhere; }
+.scene-modal .task-option .word-art { width: 42px; height: 42px; }
+.scene-modal .task-feedback { min-height: 0; font-size: 12px; margin: 9px 0 4px; }
+.scene-modal .task-bottom { flex-shrink: 0; margin-top: 7px; padding-top: 8px; gap: 5px; flex-wrap: nowrap; }
+.scene-modal .task-bottom .btn { min-height: 48px; font-size: 12px; padding: 8px; }
+.scene-modal .task-bottom .primary { margin-left: auto; }
+.scene-modal .spell-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3px; }
+.scene-modal .task-input { height: 46px; font-size: 23px; margin-bottom: 2px; }
+.scene-modal .spell-layout p { font-size: 10px; margin: 6px 0; }
+.scene-modal .keyboard { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; margin: 5px 0; }
+.scene-modal .key { min-height: 48px; }
+.scene-modal .task-spelling .task-content {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  grid-template-rows: 46px minmax(0, 1fr) auto;
+  gap: 6px;
+  overflow: hidden;
+}
+.scene-modal .task-spelling .task-content h2 { display: none; }
+.scene-modal .task-spelling .task-prompt { grid-area: 1 / 1; margin: 0; align-self: center; }
+.scene-modal .task-spelling .task-prompt .meaning { font-size: 20px; margin: 0; }
+.scene-modal .task-puzzle .task-prompt .meaning { font-size: 12px; line-height: 1.5; }
+.scene-modal .task-spelling .task-prompt p { display: none; }
+.scene-modal .task-spelling .spell-layout { display: contents; }
+.scene-modal .task-spelling .spell-layout > div:first-child { grid-area: 1 / 2; min-width: 0; }
+.scene-modal .task-spelling .spell-layout p, .scene-modal .task-spelling .answer-word { display: none; }
+.scene-modal .task-spelling .keyboard { grid-area: 2 / 1 / 3 / -1; min-height: 0; max-height: 324px; overflow-y: auto; align-content: start; margin: 0; overscroll-behavior: contain; touch-action: pan-y; scrollbar-width: thin; }
+.scene-modal .task-spelling .task-feedback { grid-area: 3 / 1 / 4 / -1; max-height: 42px; overflow: auto; margin: 0; }
+.scene-modal .task-spelling .task-feedback:not(.has-feedback) { display: none; }
+.scene-modal .lesson-card { min-height: 0; overflow: auto; }
+.scene-modal .lesson-card .word-art { width: 80px; height: 80px; }
+.scene-modal .lesson-card strong { font-size: 26px; margin: 6px; }
+.scene-modal .lesson-card p { font-size: 12px; margin: 8px 0; }
+.scene-modal .lesson-card .btn { min-height: 48px; font-size: 12px; margin: 5px 0; padding: 10px; }
+body.playing.scene-question .play-layout .room-scene { height: clamp(100px, 20dvh, 190px); }
+body.scene-question .play-layout .scene-caption span { display: none; }
+.learning-question.scene-question .scene-caption strong { display: none; }
+.learning-question.scene-question .scene-caption::before { content: '教室 · 练习中的书页'; color: var(--teal); }
+
+@media (min-width: 1000px), (min-width: 600px) and (orientation: landscape) {
+  body.playing .play-layout .adventure-main { grid-template-columns: minmax(0, 1.45fr) minmax(310px, 1fr); gap: 16px; }
+  body.playing .play-layout .scene-stack { position: sticky; top: 12px; }
+  body.playing .play-layout .room-scene { height: clamp(230px, 40dvh, 420px); }
+  body.playing .play-layout .interaction-dock .hand { flex-wrap: wrap; overflow: visible; }
+  body.playing .play-layout .interaction-dock .word-card { flex: 0 0 calc((100% - 16px) / 3); }
+  body.playing .play-layout .intro-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.playing .play-layout .puzzle-choices { grid-template-columns: 1fr; }
+  body.playing .play-layout .play-help .sidebar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .scene-modal .dialog { max-height: calc(100dvh - 150px); }
+  body.playing.scene-question .play-layout .room-scene { height: clamp(200px, 42dvh, 420px); }
+}
+
+@media (max-width: 600px) {
+  body.playing .site-header { height: 52px; padding: 0 10px; }
+  body.playing .brand b { font-size: 13px; letter-spacing: 0; }
+  body.playing .brand-mark { width: 30px; height: 33px; font-size: 22px; }
+  body.playing .brand { gap: 5px; }
+  body.playing nav { gap: 7px; }
+  body.playing nav button { font-size: 10px; padding: 10px 1px; }
+  body.playing #app { padding: 3px 8px max(12px, env(safe-area-inset-bottom)); }
+  body.playing .page-heading { margin: 2px 2px 8px; min-height: 35px; gap: 5px; }
+  body.playing .page-heading h1 { font-size: 17px; letter-spacing: -.5px; }
+  body.playing .page-step { width: 19px; height: 19px; font-size: 9px; }
+  body.playing .page-steps { gap: 3px; }
+  body.playing .step-line { width: 3px; }
+  body.playing .play-layout { padding: 8px; border-radius: 17px; }
+  body.playing .play-layout .adventure-main { gap: 8px; }
+  body.playing .play-layout .room-scene { height: clamp(125px, 23dvh, 230px); }
+  body.playing .play-layout .scene-caption { font-size: 10px; gap: 4px; padding: 4px 4px 7px; flex-wrap: wrap; }
+  body.playing .play-layout .goal-strip { font-size: 10px; padding: 6px 8px; margin-bottom: 6px; }
+  body.playing .play-layout .stats-bar { gap: 11px; padding: 7px 2px 0; }
+  body.playing .play-layout .stat { font-size: 10px; gap: 4px; }
+  body.playing .play-layout .stat strong { font-size: 12px; }
+  .interaction-dock { padding: 7px; }
+  .dock-content { gap: 6px; }
+  body.playing .play-layout .interaction-dock .word-card { flex-basis: 90px; min-height: 113px; padding: 7px; }
+  body.playing .play-layout .interaction-dock .word-card.selected { padding: 6px; }
+  body.playing .play-layout .interaction-dock .word-card .word-art { width: 36px; height: 36px; }
+  body.playing .play-layout .interaction-dock .word-card b { font-size: 16px; }
+  body.playing .play-layout .interaction-dock .action-panel { padding: 7px; gap: 6px; }
+  body.playing .play-layout .interaction-dock .action-panel p { display: none; }
+  body.playing .play-layout .interaction-dock .action-panel b { font-size: 11px; }
+  body.playing .play-layout .interaction-dock .action-tools .btn { font-size: 11px; padding: 6px; }
+  body.playing .play-layout .interaction-dock .turn-actions .btn { font-size: 11px; padding: 8px; }
+  body.playing .play-layout .intro-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  body.playing .play-layout .intro-word { min-height: 90px; }
+  body.playing .play-layout .intro-word .word-art { width: 35px; height: 35px; }
+  body.playing .play-layout .intro-word strong { font-size: 14px; }
+  body.playing .play-layout .intro-word small { font-size: 9px; }
+  body.playing .play-layout .intro-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.playing .play-layout .page-guide h3 { font-size: 13px; }
+  body.playing .play-layout .page-guide p { font-size: 11px; }
+  body.playing .play-layout .page-guide .btn { font-size: 12px; }
+  body.playing .play-layout .puzzle-choice { flex-direction: column; align-items: center; text-align: center; }
+  body.playing .play-layout .puzzle-choice .word-art { width: 42px; height: 42px; }
+  body.playing .play-layout .puzzle-choice small { font-size: 11px; }
+  .scene-modal .dialog { max-height: calc(100dvh - 184px - clamp(100px, 20dvh, 190px)); padding: 5px; }
+  .scene-modal .dialog-head { font-size: 10px; }
+  .scene-modal .task-bottom .btn { font-size: 11px; padding: 7px; }
+  .scene-modal .task-option { font-size: 15px; }
+}
+
+@media (max-height: 600px) and (min-width: 600px) and (orientation: landscape) {
+  body.playing .site-header { height: 48px; }
+  body.playing #app { padding: 0 12px 10px; }
+  body.playing .page-heading { margin: 0 0 5px; }
+  body.playing .page-heading h1 { font-size: 17px; }
+  body.playing .play-layout { padding: 7px; }
+  body.playing .play-layout .adventure-main { grid-template-columns: minmax(0, 1.2fr) minmax(310px, 1fr); gap: 10px; }
+  body.playing .play-layout .room-scene, body.playing.scene-question .play-layout .room-scene { height: clamp(150px, 44dvh, 215px); }
+  body.playing .play-layout .goal-strip { font-size: 10px; padding: 5px 8px; margin-bottom: 5px; }
+  body.playing .play-layout .scene-caption { font-size: 9px; padding: 3px 4px 5px; }
+  body.playing .play-layout .interaction-dock .hand { flex-wrap: nowrap; overflow-x: auto; }
+  body.playing .play-layout .interaction-dock .word-card { flex: 0 0 90px; min-height: 105px; padding: 6px; }
+  body.playing .play-layout .interaction-dock .word-card.selected { padding: 5px; }
+  body.playing .play-layout .interaction-dock .word-card .word-art { width: 30px; height: 30px; margin-bottom: 3px; }
+  body.playing .play-layout .interaction-dock .word-card b { font-size: 15px; }
+  body.playing .play-layout .interaction-dock .word-card .cn { margin-bottom: 4px; font-size: 10px; }
+  body.playing .play-layout .interaction-dock .hand-heading { font-size: 10px; }
+  body.playing .play-layout .interaction-dock .hand-heading { display: none; }
+  body.playing .play-layout .interaction-dock .hand { padding-top: 2px; padding-bottom: 5px; }
+  body.playing .play-layout .interaction-dock .action-panel { padding: 7px; gap: 5px; }
+  body.playing .play-layout .interaction-dock .action-panel p { display: none; }
+  .dock-content { gap: 6px; }
+  .scene-modal .dialog { max-height: calc(100dvh - 110px); padding: 8px; }
+  body.scene-question .page-heading { display: none; }
+  .scene-modal .task-spelling { max-height: calc(100dvh - 80px); }
+  .scene-modal .task-prompt .word-art { width: 44px; height: 44px; }
+  .scene-modal .keyboard { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  body.playing .play-layout .intro-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  body.playing .play-layout .intro-word { min-height: 85px; }
+  body.playing .play-layout .intro-word .word-art { width: 30px; height: 30px; }
+  body.playing .play-layout .intro-word strong { font-size: 14px; }
+  body.playing .play-layout .intro-word small { font-size: 9px; }
+  body.playing .play-layout .intro-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.playing .play-layout .page-guide h3 { font-size: 12px; }
+  body.playing .play-layout .page-guide p { font-size: 10px; margin: 3px 0; }
+  body.playing .play-layout .page-guide .btn { min-height: 48px; font-size: 11px; margin-top: 3px; }
+}
+
+@supports (padding: env(safe-area-inset-left)) {
+  body.playing .site-header { padding-left: max(10px, env(safe-area-inset-left)); padding-right: max(10px, env(safe-area-inset-right)); }
+  body.playing #app { padding-left: max(8px, env(safe-area-inset-left)); padding-right: max(8px, env(safe-area-inset-right)); }
+}
+
+@media (max-width: 600px) and (max-height: 650px) and (orientation: portrait) {
+  body.playing .site-header { height: 48px; }
+  body.playing .page-heading { min-height: 28px; margin-bottom: 5px; }
+  body.playing .play-layout .goal-strip { display: none; }
+  body.playing .play-layout .room-scene { height: 125px; }
+  body.playing.scene-question .play-layout .room-scene { height: 100px; }
+  body.playing .play-layout .interaction-dock .hand-heading { display: none; }
+  body.playing .play-layout .interaction-dock .word-card { min-height: 94px; padding: 6px; }
+  body.playing .play-layout .interaction-dock .word-card.selected { padding: 5px; }
+  body.playing .play-layout .interaction-dock .word-card .word-art { width: 26px; height: 26px; margin-bottom: 3px; }
+  body.playing .play-layout .interaction-dock .word-card b { font-size: 14px; }
+  body.playing .play-layout .interaction-dock .word-card .cn { font-size: 10px; margin: 1px 0 4px; }
+  body.playing .play-layout .interaction-dock .card-effect { font-size: 10px; padding-top: 3px; }
+  .scene-modal .dialog { max-height: calc(100dvh - 275px); }
+}
+
+@media (min-width: 601px) and (max-width: 999px) and (orientation: portrait) {
+  body.playing.scene-question .play-layout .room-scene { height: clamp(240px, 30dvh, 360px); }
+  .scene-modal .dialog { max-height: calc(100dvh - 210px - clamp(240px, 30dvh, 360px)); }
+  .scene-modal .keyboard { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+}
+
+.play-layout .scene-zone, .play-layout .foe { touch-action: manipulation; }

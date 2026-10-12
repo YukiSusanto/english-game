@@ -29,6 +29,8 @@ npm run dev
 
 核心规则检查：`npm test`。原版检查：`npm run test:legacy`。浏览器验收：`npm run test:browser`，需要运行本地预览，并提供 Playwright 和 Edge；它们不是线上运行依赖。
 
+手机和平板布局与触控检查：`npm run test:layout`。覆盖 8 种横竖屏尺寸，检查场景与操作同屏、认词选项、48px 字母键、44px 墨团点击区，以及拼写后返回战斗。
+
 ## 版本与设计文档
 
 - `pre-v5-demo-20261011`：改版前的完整快照。

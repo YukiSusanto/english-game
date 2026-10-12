@@ -11,6 +11,7 @@
     "remotion:preview": "remotion still remotion/src/index.ts Opening assets/story/opening-preview.png --frame=300",
     "dev": "node tools/serve-v5.cjs",
     "test:browser": "node tests/v5-browser.cjs",
+    "test:layout": "node tests/v5-layout.cjs",
     "test:legacy": "node _selftest.js"
   },
   "keywords": [],

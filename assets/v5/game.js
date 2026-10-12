@@ -75,11 +75,14 @@
     document.body.classList.toggle('reduce-motion', save.settings.reducedMotion);
   }
   function render() {
+    const handScroll = $('.hand')?.scrollLeft || 0;
     nav();
+    document.body.classList.toggle('playing', S.view === 'adventure' && save.run?.page < 5);
     if (S.view === 'home') renderHome();
-    else if (S.view === 'adventure') renderAdventure();
+    else if (S.view === 'adventure') { renderAdventure(); arrangePlayBoard(); }
     else if (S.view === 'practice') renderPractice();
     else renderReport();
+    const hand = $('.hand'); if (hand) hand.scrollLeft = handScroll;
     if (storageMessage) app.insertAdjacentHTML('afterbegin', `<div class="storage-note">${esc(storageMessage)}</div>`);
   }
   function changeView(view) {
@@ -96,6 +99,28 @@
     return `<div class="page-heading"><div><div class="eyebrow">第一章 / THE CLASSROOM</div><h1>${pages[run.page][0]}</h1><p>${pages[run.page][1]}</p></div><div class="page-steps" aria-label="第 ${run.page + 1} 页，共 5 页">${pages.map((_, i) => `${i ? '<span class="step-line"></span>' : ''}<span class="page-step ${i === run.page ? 'current' : i < run.page ? 'done' : ''}">${i < run.page ? '✓' : i + 1}</span>`).join('')}</div></div>`;
   }
   function sceneHTML(scene, opt = {}) { return `<div class="scene-panel"><div class="scene-caption"><strong>${opt.title || '教室 · 正在修复的书页'}</strong><span>${opt.caption || '点选词卡，让物件成真'}</span></div>${Art.room(scene, opt)}</div>`; }
+  // Keep the scene and every page's controls in one board, including learning tasks.
+  function arrangePlayBoard() {
+    const layout = $('.adventure-layout'); if (!layout) return;
+    layout.classList.add('play-layout');
+    const main = layout.querySelector('.adventure-main'), sidebar = layout.querySelector('.sidebar');
+    const scene = document.createElement('div'); scene.className = 'scene-stack';
+    const dock = document.createElement('section'); dock.className = 'interaction-dock'; dock.setAttribute('aria-label', '书页操作');
+    const controls = document.createElement('div'); controls.className = 'dock-content';
+    const slot = document.createElement('div'); slot.className = 'learning-slot';
+    for (const child of [...main.children]) {
+      (child.matches('.scene-panel,.goal-strip,.stats-bar') ? scene : controls).append(child);
+    }
+    // Progression belongs beside the scene; longer explanations stay available below it.
+    const guide = sidebar?.firstElementChild;
+    if (guide?.querySelector('button')) { guide.classList.add('page-guide'); controls.append(guide); }
+    dock.append(controls, slot); main.append(scene, dock);
+    if (sidebar?.children.length) {
+      const help = document.createElement('details'); help.className = 'play-help';
+      const summary = document.createElement('summary'); summary.textContent = '本页目标与工具说明';
+      help.append(summary, sidebar); layout.append(help);
+    } else sidebar?.remove();
+  }
   function renderAdventure() {
     const r = save.run;
     if (!r) { S.view = 'home'; renderHome(); return; }
@@ -168,7 +193,7 @@
     const hand = repair ? C.required(b).map(w => ({ id: 'repair_' + w, word: w })) : b.hand;
     const highlight = selected ? ({ door:['door'], light:['light'], pencil:['board'], book:['book'], open:[b.phase === 1 ? 'window' : 'door'], clean:['board'] }[selected.word] || []) : [];
     const sidebar = won ? `<section class="guide-panel green"><div class="hint-title">PAGE RESTORED</div><h3>这一页，修好了。</h3><p>工具和你的选择，让场景发生了变化。+${{1:12,3:18,4:30}[b.page]} 星币。</p>${btn(b.page === 4 ? '看看完整教室 →' : '翻到下一页 →', 'battle-next', 'primary')}${btn('回到书桌', 'home', 'ghost')}</section>` : lost ? `<section class="guide-panel green"><h3>再试一次就好。</h3><p>词卡没有消失，学习记录也还在。重新开始这一场，换个出牌顺序吧。</p>${btn('重新守住这一页 →', 'retry', 'primary')}${btn('回到书桌', 'home', 'ghost')}</section>` : `<section class="guide-panel"><div class="hint-title">本页目标${b.page === 4 ? ` · ${b.phase + 1} / 3` : ''}</div>${objective(battleGoal(b), b.goal)}${objective('清除当前墨团', b.enemies.every(e => e.hp <= 0))}<p>${repair ? '没有敌方压力。下面的工具免费使用，完成修复就能继续。' : '清除墨团与场景修复，都完成才翻页。'}</p></section><section class="guide-panel"><div class="hint-title">下一次敌方行动</div>${b.enemies.filter(e => e.hp > 0).map(e => `<div class="enemy-intent"><span>${e.name}<small>${e.boost ? `强化 +${e.boost} · clean 可清除` : b.page === 3 && b.turn === 1 ? '下一回合强化 +2' : e.weak ? 'light 已减攻' : '准备擦除书页'}</small></span><strong>${Math.max(0,e.attack + e.boost - e.weak)} 攻击</strong></div>`).join('') || '<p>墨团已退场。</p>'}</section>`;
-    app.innerHTML = heading(r) + `<div class="adventure-layout battle-layout ${won || lost ? "finished" : ""}"><div class="adventure-main"><div class="goal-strip">${b.goal ? "✓" : "○"} ${battleGoal(b)}　·　${b.enemies.every(e=>e.hp<=0) ? "✓" : "○"} 清除墨团</div>${sceneHTML(b.scene, { title: b.page === 4 ? ['入口 · 第一层','照明 · 第二层','黑板 · 最后一层'][b.phase] : '教室 · 用词卡守住书页', caption: won ? '修复完成' : `回合 ${b.turn} · 准备 ${b.enemies.filter(e=>e.hp>0).reduce((n,e)=>n+Math.max(0,e.attack+e.boost-e.weak),0)} 攻击`, enemies: b.enemies, target: b.target, highlight })}<div class="stats-bar"><span class="stat"><span class="heart">♥</span>生命 <strong>${b.hp}/60</strong></span><span class="stat"><span class="shield-icon">◇</span>护盾 <strong>${C.shield(b)}</strong></span><span class="stat"><span class="energy-icon">✦</span>墨力 <strong>${b.energy}/3</strong></span><span class="stat">星币 <strong>${r.coins}</strong></span></div>${won ? (b.page !== 4 ? `<div class="repair-banner">选一个小奖励，再翻页。<div class="reward-row">${btn('pencil 清除 +2', 'reward', '', 'data-reward="pencil"')}${btn('door 护盾 +2', 'reward', '', 'data-reward="door"')}${btn('恢复 10 生命', 'reward', '', 'data-reward="heal"')}</div><span class="small">${r.rewardPage === r.page ? '奖励已领取。' : '也可以直接继续。'}</span></div>` : '') : lost ? '' : `<div class="hand-area"><div class="hand-heading"><span>${repair ? '免费收尾工具' : '手中的工具 · 先选中，再确认'}</span><span>${repair ? '不需要再答题' : `${b.draw.length} 待抽 / ${b.discard.length} 已用`}</span></div><div class="hand">${hand.map(card => { const cfg = C.config(b, card.word); return `<button class="word-card ${card.id === S.selected ? 'selected' : ''} ${!C.preview(b,card.word).valid ? 'dis' : ''}" data-action="select-card" data-card="${card.id}" data-word="${card.word}" ${S.busy ? 'disabled' : ''}><span class="cost">${repair ? '0' : cfg.cost}</span>${Art.word(card.word)}<b>${card.word}</b><div class="cn">${esc(word(card.word).cn)}</div><div class="card-effect">${cfg.effect === 'damage' ? '清除 ' + cfg.value : cfg.effect === 'shield' ? '挡住 ' + cfg.value : cfg.label}</div></button>`; }).join('')}</div></div>${repair ? '<div class="repair-banner">墨团退场了。使用一个适用词，把剩下的地方修好。</div>' : ''}<div class="action-panel"><div><b>${selected ? selected.word + ' · ' + (preview.valid ? preview.text : preview.reason) : '选一张词卡，看看它能做什么。'}</b><p>${esc(S.message || (selected ? C.CARDS[selected.word].detail : '先看敌人的攻击意图，再考虑挡住、减攻或清除。'))}</p></div><div class="action-tools">${selected ? `${btn('取消', 'cancel-card', 'ghost')}${btn('♫', 'card-audio', '', 'aria-label="听这个词"')}${!repair ? btn(b.reinforced.includes(selected.word) ? '已强化' : '拼写强化', 'reinforce', '', b.reinforced.includes(selected.word) ? 'disabled' : '') : ''}${btn(repair ? '完成修复 →' : '使用 ' + selected.word, 'use-card', 'primary', !preview.valid || S.busy ? 'disabled' : '')}` : ''}</div></div><div class="turn-actions">${btn('画笔普攻 · 3', 'basic', '', b.basicUsed || repair || S.busy ? 'disabled' : '')}${btn('帮助', 'help', 'ghost')}${btn('结束回合 →', 'end-turn', 'primary', repair || S.busy ? 'disabled' : '')}</div>`}</div><aside class="sidebar">${sidebar}</aside></div>`;
+    app.innerHTML = heading(r) + `<div class="adventure-layout battle-layout ${won || lost ? "finished" : ""}"><div class="adventure-main"><div class="goal-strip">${b.goal ? "✓" : "○"} ${battleGoal(b)}　·　${b.enemies.every(e=>e.hp<=0) ? "✓" : "○"} 清除墨团</div>${sceneHTML(b.scene, { title: b.page === 4 ? ['入口 · 第一层','照明 · 第二层','黑板 · 最后一层'][b.phase] : battleGoal(b), caption: won ? '修复完成' : `回合 ${b.turn} · 准备 ${b.enemies.filter(e=>e.hp>0).reduce((n,e)=>n+Math.max(0,e.attack+e.boost-e.weak),0)} 攻击`, enemies: b.enemies, target: b.target, highlight })}<div class="stats-bar"><span class="stat"><span class="heart">♥</span>生命 <strong>${b.hp}/60</strong></span><span class="stat"><span class="shield-icon">◇</span>护盾 <strong>${C.shield(b)}</strong></span><span class="stat"><span class="energy-icon">✦</span>墨力 <strong>${b.energy}/3</strong></span><span class="stat">星币 <strong>${r.coins}</strong></span></div>${won ? (b.page !== 4 ? `<div class="repair-banner">选一个小奖励，再翻页。<div class="reward-row">${btn('pencil 清除 +2', 'reward', '', 'data-reward="pencil"')}${btn('door 护盾 +2', 'reward', '', 'data-reward="door"')}${btn('恢复 10 生命', 'reward', '', 'data-reward="heal"')}</div><span class="small">${r.rewardPage === r.page ? '奖励已领取。' : '也可以直接继续。'}</span></div>` : '') : lost ? '' : `<div class="hand-area"><div class="hand-heading"><span>${repair ? '免费收尾工具' : '手中的工具 · 先选中，再确认'}</span><span>${repair ? '不需要再答题' : `${b.draw.length} 待抽 / ${b.discard.length} 已用`}</span></div><div class="hand">${hand.map(card => { const cfg = C.config(b, card.word); return `<button class="word-card ${card.id === S.selected ? 'selected' : ''} ${!C.preview(b,card.word).valid ? 'dis' : ''}" data-action="select-card" data-card="${card.id}" data-word="${card.word}" ${S.busy ? 'disabled' : ''}><span class="cost">${repair ? '0' : cfg.cost}</span>${Art.word(card.word)}<b>${card.word}</b><div class="cn">${esc(word(card.word).cn)}</div><div class="card-effect">${cfg.effect === 'damage' ? '清除 ' + cfg.value : cfg.effect === 'shield' ? '挡住 ' + cfg.value : cfg.label}</div></button>`; }).join('')}</div></div>${repair ? '<div class="repair-banner">墨团退场了。使用一个适用词，把剩下的地方修好。</div>' : ''}<div class="action-panel"><div><b>${selected ? selected.word + ' · ' + (preview.valid ? preview.text : preview.reason) : esc(S.message || '选一张词卡，看看它能做什么。')}</b><p>${esc(S.message || (selected ? C.CARDS[selected.word].detail : '先看敌人的攻击意图，再考虑挡住、减攻或清除。'))}</p></div><div class="action-tools">${selected ? `${btn('取消', 'cancel-card', 'ghost')}${btn('♫', 'card-audio', '', 'aria-label="听这个词"')}${!repair ? btn(b.reinforced.includes(selected.word) ? '已强化' : '拼写强化', 'reinforce', '', b.reinforced.includes(selected.word) ? 'disabled' : '') : ''}${btn(repair ? '完成修复 →' : '使用 ' + selected.word, 'use-card', 'primary', !preview.valid || S.busy ? 'disabled' : '')}` : ''}</div></div><div class="turn-actions">${btn('画笔普攻 · 3', 'basic', '', b.basicUsed || repair || S.busy ? 'disabled' : '')}${btn('帮助', 'help', 'ghost')}${btn('结束回合 →', 'end-turn', 'primary', repair || S.busy ? 'disabled' : '')}</div>`}</div><aside class="sidebar">${sidebar}</aside></div>`;
   }
   function commitBattle(result) {
     const r = save.run, b = r.battle; r.hp = b.hp; r.scene = C.copy(b.scene); S.message = result.text || ''; S.selected = null;
@@ -261,16 +286,28 @@
   function closeButton() { return '<button class="icon-btn" data-action="modal-close" aria-label="返回，不扣资源">×</button>'; }
   function showDialog(body, cls = '') {
     if (modal.hidden) priorFocus = document.activeElement;
+    const slot = S.view === 'adventure' ? $('.learning-slot') : null;
+    modal.classList.toggle('scene-modal', !!slot);
+    document.body.classList.toggle('scene-question', !!slot);
+    if (slot) {
+      slot.append(modal);
+      app.inert = false;
+      app.querySelectorAll('.page-heading,.scene-stack,.dock-content,.play-help').forEach(el => { el.inert = true; });
+      window.scrollTo({ top: 0 });
+    } else { document.body.append(modal); app.inert = true; }
     modal.hidden = false; modal.innerHTML = `<section class="dialog ${cls}" role="dialog" aria-modal="true" aria-label="英语学习任务" tabindex="-1">${body}</section>`;
-    app.inert = true; $('.site-header').inert = true; $('.site-footer').inert = true;
+    if (slot) $('.task-input')?.setAttribute('inputmode', 'none');
+    $('.site-header').inert = true; $('.site-footer').inert = true;
     document.body.classList.toggle('learning-question', !!S.task && !S.task.completed);
     $('.dialog').focus({ preventScroll: true });
   }
   function closeModal(cancel = false) {
     if (modal.hidden) return;
     const task = S.task; S.task = null; S.lesson = null; modal.hidden = true; modal.innerHTML = '';
+    document.body.append(modal); modal.classList.remove('scene-modal');
+    app.querySelectorAll('[inert]').forEach(el => { el.inert = false; });
     app.inert = false; $('.site-header').inert = false; $('.site-footer').inert = false;
-    document.body.classList.remove('learning-question');
+    document.body.classList.remove('learning-question', 'scene-question');
     if (window.speechSynthesis) speechSynthesis.cancel(); clearTimeout(speechTimer);
     priorFocus?.isConnected && priorFocus.focus({ preventScroll: true });
     if (task?.completed && !task.delivered && !cancel) { task.delivered = true; task.opt.onDone?.(task.result); }
@@ -302,7 +339,7 @@
     const title = t.opt.puzzle ? '把你的解法拼出来' : t.ability === 'usage' ? '根据指令，选择物件' : spell ? '这个词，怎么拼？' : t.ability === 'listening' ? '你听到了哪个词？' : '选出对应的英语词';
     const input = spell ? `<div class="spell-layout"><div><input class="task-input" id="task-input" aria-label="输入英语单词" autocomplete="off" autocapitalize="off" spellcheck="false" inputmode="text" maxlength="35" value="${esc(t.input)}">${answered ? `<div class="answer-word">${esc(t.opt.puzzle ? 'door / window' : t.word.word)}</div>` : ''}<p class="small muted">点字母或直接输入；可以撤回，不限次数。</p></div><div class="keyboard">${'abcdefghijklmnopqrstuvwxyz'.split('').map(ch => `<button class="key" data-action="task-key" data-key="${ch}">${ch}</button>`).join('')}</div></div>` : `<div class="task-options">${t.choices.map(w => `<button class="task-option ${t.failed.includes(w) ? 'wrong' : ''} ${t.cache.hints.includes('reduce-options') && w !== t.word.word && t.failed.includes(w) ? 'removed' : ''}" data-action="task-option" data-answer="${esc(w)}" ${t.ability === 'listening' && !t.heard ? 'disabled' : ''}>${t.ability === 'usage' ? `${taskArt(word(w))}<span class="small">${esc(word(w).cn)}</span>` : esc(w)}</button>`).join('')}</div>${answered ? `<div class="answer-word">${esc(t.word.word)}</div>` : ''}`;
     const feedback = t.feedback || (t.downgradedFrom ? '朗读不可用，已切换为看图认词，只记录认读。' : '慢慢来。答错不会让工具消失。');
-    showDialog(`<div class="dialog-head"><span>${t.opt.context === 'practice' ? '两个词的小练习' : '冒险中的英语准备'}</span>${closeButton()}</div><div class="task-content"><h2>${title}</h2><div class="task-prompt">${prompt}</div>${input}<div class="task-feedback" role="status">${esc(feedback)}</div></div><div class="task-bottom">${spell ? btn('⌫ 撤回', 'task-backspace', 'compact') : btn('返回', 'modal-close', 'ghost compact')}${btn('给我一点帮助', 'task-hint', 'compact')}${spell ? btn('提交 →', 'task-submit', 'primary compact') : answered ? btn('跟着完成 →', 'task-assisted', 'primary compact') : ''}</div>`, spell ? 'task-spelling' : '');
+    showDialog(`<div class="dialog-head"><span>${spell ? title + (t.opt.context === 'adventure' ? ' · 可滑动字母区' : '') : t.opt.context === 'practice' ? '两个词的小练习' : '冒险中的英语准备'}</span>${closeButton()}</div><div class="task-content"><h2>${title}</h2><div class="task-prompt">${prompt}</div>${input}<div class="task-feedback ${t.feedback || t.downgradedFrom ? 'has-feedback' : ''}" role="status">${esc(feedback)}</div></div><div class="task-bottom">${spell ? btn('⌫ 撤回', 'task-backspace', 'compact') : btn('返回', 'modal-close', 'ghost compact')}${btn('给我一点帮助', 'task-hint', 'compact')}${spell ? btn('提交 →', 'task-submit', 'primary compact') : answered ? btn('跟着完成 →', 'task-assisted', 'primary compact') : ''}</div>`, spell ? 'task-spelling' + (t.opt.puzzle ? ' task-puzzle' : '') : '');
   }
   function taskAudio() {
     const t = S.task; if (!t || t.completed) return;
